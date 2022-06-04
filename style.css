@@ -1,0 +1,60 @@
+#logo
+{
+    height:25vh;
+    width:25vh;
+    border-radius:50%;
+    position:relative;    
+    float: right;
+    right: 10%;
+    top:1.75vh;
+    border:5px dashed blue;
+}
+.button_text
+{
+    vertical-align:center;
+    transform:skew(20deg);
+    text-align:center;
+}
+.button_home
+{
+    height:10%;
+    width:60%;
+    background-color:red;
+    border:4px solid green;
+    border-radius:3px;
+    margin:10% 20%;
+    transform:skew(-20deg);
+}
+body
+{
+    height:100vh;
+    width:100vw;
+    margin:0px;
+}
+#top
+{
+    background-color:green;
+    height:30%;
+    width:100%;
+}
+#bottom
+{
+    position:absolute;
+    top:30vh;
+    height:70%;
+    width:100%;
+}
+#left
+{
+    width:25%;
+    background-color:blue;
+    height:100%;
+    float:left;
+}
+#right
+{
+    width:75%;
+    background-color:yellow;
+    height:100%;
+    float:right;
+}
