@@ -78,7 +78,25 @@ body
     text-align:justify;
     margin-bottom:10px;
 }
+.smlogo:hover
+{
+    height: 100%;
+    width: 21%;
+    margin: 5% 0.75%;
+}
+.smlogo:visited
+{
+    height: 100%;
+    width: 20%;
+    margin: 5% 1%;
+}
 .smlogo
+{
+    height: 80%;
+    width: 20%;
+    margin: 5% 1%;
+}
+.smlogo:active
 {
     height: 100%;
     width: 20%;
@@ -86,7 +104,7 @@ body
 }
 #sm
 {
-    height: 10%;
+    height: 15%;
     width: 60%;
     margin: 5% 20%;
     box-sizing: border-box;
