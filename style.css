@@ -1,14 +1,17 @@
-/*#name*/
-/*{*/
-/*    font-family: 'Parisienne', cursive;*/
-/*    position:relative;*/
-/*}*/
+#name
+{
+    font-family: 'Parisienne', cursive;
+    font-size:5em;
+    position:absolute;
+    top:4%;
+    left:5%;
+}
 #logo
 {
     height:25vh;
     width:25vh;
     border-radius:50%;
-    position:relative;    
+    position:absolute;    
     float: right;
     right: 10%;
     top:1.75vh;
