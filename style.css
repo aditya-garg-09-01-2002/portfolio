@@ -11,9 +11,10 @@
 }
 .button_text
 {
-    vertical-align:center;
+    vertical-align:middle;
     transform:skew(20deg);
     text-align:center;
+    font-size:70%;
 }
 .button_home
 {
@@ -23,6 +24,7 @@
     border:4px solid green;
     border-radius:3px;
     margin:10% 20%;
+    box-sizing:border-box;
     transform:skew(-20deg);
 }
 body
