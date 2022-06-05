@@ -92,7 +92,7 @@ body
 }
 #top
 {
-    background-color:green;
+    background-color:black;
     height:30%;
     width:100%;
 }
@@ -106,14 +106,14 @@ body
 #left
 {
     width:25%;
-    background-color:blue;
+    background-color:#050032;
     height:100%;
     float:left;
 }
 #right
 {
     width:75%;
-    background-color:yellow;
+    background-color:#f9f9ff;
     height:100%;
     float:right;
     padding:10px;
