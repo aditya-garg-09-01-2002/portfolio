@@ -70,6 +70,26 @@
     box-sizing:border-box;
     transform:skew(-20deg);
 }
+.form_inputs
+{
+    margin:14px;
+}
+#form_wtm
+{
+    margin:0px;
+    height:90%;
+    width:90%;
+}
+#ta
+{
+    height:100%;
+    width:60%;
+}
+#tad
+{
+    height:60%;
+    width:100%;
+}
 .button_home:hover
 {
     height:10%;
