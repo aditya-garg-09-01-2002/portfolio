@@ -84,12 +84,6 @@ body
     width: 21%;
     margin: 5% 0.75%;
 }
-.smlogo:visited
-{
-    height: 100%;
-    width: 20%;
-    margin: 5% 1%;
-}
 .smlogo
 {
     height: 80%;
@@ -98,7 +92,7 @@ body
 }
 .smlogo:active
 {
-    height: 100%;
+    height: 95%;
     width: 20%;
     margin: 5% 1%;
 }
