@@ -75,8 +75,8 @@ position: fixed;
 top: 0;
 left: 0;
 z-index:2;
-width: 99vw;
-height: 99vh;
+width: 100vw;
+height: 100vh;
 background-color: rgba(0, 0, 0,0.85); /* Semi-transparent overlay color */
 pointer-events: none; /* Allow interaction with underlying elements */
 }
