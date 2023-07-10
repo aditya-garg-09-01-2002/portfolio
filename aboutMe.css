@@ -1,0 +1,80 @@
+#aboutMe{
+    background-color:black;
+    height:auto;
+    width:100%;
+    box-sizing: border-box;
+}
+#scrollBar
+{
+    height:auto;
+    width:100%;
+    box-sizing: border-box;
+}
+.barContainer{
+    width:100%;
+    height:auto;
+    display:flex;
+    justify-content: center;
+}
+.bar{
+    width:80%;
+    height:200px;
+    overflow:hidden visible;
+    box-sizing: border-box;
+    /* white-space: nowrap; */
+}
+.placardEntertainment{
+    z-index:0;
+    /* display:inline-block; */
+    float:left;
+    z-index:0;
+    width:150px;
+    margin:10px 10px 10px 0;
+    height:100%;
+    position:relative;
+    background-color:pink;
+    z-index:0;
+    /* (100-30*3)/3 */
+}
+.placardEntertainment img{
+    width:100%;
+    position: absolute;
+    height:100%;
+    z-index:0;
+}
+.bar:has(.placardEntertainment:hover)
+{
+    width:calc( 80% + 150px );
+}
+.placardEntertainment:hover{
+    width:310px;
+}
+.placardEntertainment div{
+    visibility:hidden;
+    position:relative;
+    display:flex;
+    width:100%;
+    top:0;
+    left:0;
+    align-items: center;
+    color:white;
+    font-size: 24px;
+    text-shadow:-1px 1px 0 #000,
+    1px 1px 0 #000,
+   1px -1px 0 #000,
+  -1px -1px 0 #000;
+    height:100%;
+}
+.placardEntertainment:hover div{
+    visibility:visible;
+    background-color: rgba(0,0,0,0.4);
+    z-index:2;
+}
+.bar::-webkit-scrollbar {
+    width:0px;
+}
+.placardEntertainment:first-child{
+    margin-left: 0;
+}
+/* image mein enter hone pe bar hi bada kardo, also ek do second ka wait karke, kyuki possible hain if user dekhna hi na chah rha ho
+also fir clickable bana sakta hu har item ko dynammic div without scrolling if possible */
