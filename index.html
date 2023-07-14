@@ -113,15 +113,16 @@
         function openButton(){
             var x=document.getElementById('overlay');
             var y=document.getElementById('navbar');
+            var z=document.getElementById('menuButton');
             if(x.style.display==="none")
             {
-                x.style.border=2+"px solid white";
+                z.style.border=2+"px solid white";
                 y.style.height=350+"px";
                 x.style.display="block";
             }
             else 
             {
-                x.style.border="none";
+                z.style.border="none";
                 y.style.height=40+"px";
                 x.style.display="none";
             }
