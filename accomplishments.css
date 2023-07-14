@@ -189,12 +189,15 @@
     }
 }
 @media screen and (max-width: 600px) {
+    #timeline{
+        padding:10vh 0;
+    }
     #timeline ul li {
-      margin-left: 2rem;
+        margin-left: 0;
     }
   
     #timeline ul li div {
-      width: calc(100vw - 91px);
+      width: calc(70vw);
     }
     #timeline ul li:nth-child(even) div {
       left: 45px;
