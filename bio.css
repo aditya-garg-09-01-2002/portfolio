@@ -115,14 +115,6 @@
     transform: rotate(45 + 360deg);
   }
 }  
-#bioRight{
-  background-color:rgba(251, 37, 118,1);
-  width:60%;
-  height:100%;
-  margin:0px;
-  border:0px;
-  float:left;
-}
 #bioContent{
   z-index:0;
   top:0;
@@ -144,10 +136,7 @@
 }
 @media screen and (max-width:1000px)
 {
-  #bioRight{
-      width:100%;
-  }
   #bioLeft{
-      width:0%;
+      width:100%;
   }
 }
