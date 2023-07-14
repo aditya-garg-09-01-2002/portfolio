@@ -6,6 +6,9 @@
     z-index:1;
     background-color: transparent;
 }
+#collapse{
+    display:none;
+}
 #overlay{
     background-color: transparent;
     z-index:1;
@@ -52,6 +55,9 @@ body{
 }
 
 @media screen and (max-width: 1000px) {
+    #collapse{
+        display:flex;
+    }
     .overlayButton{
         width:100%;
         display:block;
