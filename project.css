@@ -3,7 +3,8 @@
     padding:10vh 10vw 10vh 10vw;
     height:auto;
     width:100%;
-    background-color: #3F0071;
+    background-image: repeating-radial-gradient(circle,#1f0039,#3F0071 70px);
+    /* background-color: ; */
 }
 .sectionTitle{
     z-index: 1;
@@ -37,10 +38,14 @@
     color:black;
     font-size:22px;
     text-shadow:
-        0.5px 0.5px 0.5px #150050,
-        -0.5px 0.5px 0.5px #150050,
-        0.5px -0.5px 0.5px #150050,
-        -0.5px -0.5px 0.5px #150050;
+        0.5px 0.5px 0.1px white,
+        -0.5px 0.5px 0.1px white,
+        0.5px -0.5px 0.1px white,
+        -0.5px -0.5px 0.1px white;
+        /* 1px 1px 0.25px #150050,
+        -1px 1px 0.25px #150050,
+        1px -1px 0.25px #150050,
+        -1px -1px 0.25px #150050; */
     ;
     height:100%;
     float:left;
