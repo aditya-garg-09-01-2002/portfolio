@@ -3,14 +3,15 @@
     padding:10vh 10vw 10vh 10vw;
     height:auto;
     width:100%;
-    background-color: blue;
+    background-color: #3F0071;
 }
 .sectionTitle{
+    z-index: 1;
     display:flex;
     width:100%;
     color:white;
     padding:0px;
-    font-size: 50px;
+    font-size: 60px;
     padding-left: 10px;
     height:auto;
     box-sizing: border-box;
@@ -33,7 +34,14 @@
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
-    color:white;
+    color:black;
+    font-size:22px;
+    text-shadow:
+        0.5px 0.5px 0.5px #150050,
+        -0.5px 0.5px 0.5px #150050,
+        0.5px -0.5px 0.5px #150050,
+        -0.5px -0.5px 0.5px #150050;
+    ;
     height:100%;
     float:left;
 }
@@ -48,7 +56,12 @@
 }
 .placard{
     box-sizing: border-box;
-    border:3px solid white;
+    border:2px solid #150050;
+    box-shadow:
+        0.5px 0.5px 0.5px white,
+        -0.5px 0.5px 0.5px white,
+        0.5px -0.5px 0.5px white,
+        -0.5px -0.5px 0.5px white;
     width:80%;
     height:80%;
     border-radius: 5%;  
