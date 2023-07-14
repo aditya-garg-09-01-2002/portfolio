@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="bio.css">
     <link rel="stylesheet" href="skills.css">
     <link rel="stylesheet" href="topBar.css">
@@ -10,6 +11,12 @@
     <link rel="stylesheet" href="accomplishments.css">
     <link rel="stylesheet" href="aboutMe.css">
     <style>
+        *{
+            font-family: "roboto",sans-serif;
+        }
+        body{
+            overflow-x: hidden;
+        }
         body::-webkit-scrollbar{
             width:0px;
         }
@@ -18,31 +25,37 @@
 <body>
     <div id="overlay2"></div>
     <section id="navbar">
-        <div id="TopBar">
-            
-        </div>
         <nav id="overlay">
-            <button class="overlayButton"><a href="#aboutMe" >About Me</a></button>
-            <button class="overlayButton"><a href="#" >Social Media</a></button>
-            <button class="overlayButton"><a href="#skills" >Skills</a></button>
-            <button class="overlayButton"><a href="#accomplishments" >Accomplishments</a></button>
-            <button class="overlayButton"><a href="#projects" >Projects</a></button>
             <button class="overlayButton"><a href="#bio">Home</a></button>
+            <button class="overlayButton"><a href="#projects" >Projects</a></button>
+            <button class="overlayButton"><a href="#accomplishments" >Accomplishments</a></button>
+            <button class="overlayButton"><a href="#skills" >Skills</a></button>
+            <button class="overlayButton"><a href="#" >Social Media</a></button>
+            <button class="overlayButton"><a href="#aboutMe" >About Me</a></button>
         </nav>
     </section>
     <section id="bio"> 
-        <div id="bioLeft"></div>
-        <div id="bioRight">
-            <div id = "bioContent">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio esse sapiente, eaque laboriosam voluptates eligendi minus enim expedita porro exercitationem eius omnis cum nulla adipisci quasi ipsum impedit atque commodi!
+        <div id="bioLeft">
+            <div id="night">
             </div>
+            <div id='bioContent'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo, illum amet nobis qui dicta dolores vitae rerum corporis quos veniam dolorem, minima eveniet voluptatibus nisi natus. Ratione, at saepe.</div>
         </div>
     </section>
     <section id="projects">
-        <div class="sectionTitle">Project</div>
+        <div class="sectionTitle" style="
+            color:#150050;
+            text-shadow: 
+                1px 1px 1px black,
+                -1px 1px 1px black,
+                1px -1px 1px black,
+                -1px -1px 1px black;
+                border-color:#150050;
+                border-width:7px;
+                box-shadow:-1px 1px 1px white;
+            ">Project</div>
         <div class="project">
             <div class="projectLeft">
-                <div>Game Automation using Python</div>
+                <div style="margin-bottom:10px; font-size:25px">Game Automation using Python</div>
                 <div>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor adipisci iure nulla accusamus, cumque culpa sequi, eos totam necessitatibus dicta libero deserunt consequuntur expedita. Impedit, sed accusamus. Pariatur, soluta 
                 </div>
@@ -52,10 +65,27 @@
             </div>
         </div>
     </section>
-    <section id="accomplishments">
-        <div class="sectionTitle">Experiences and Achievements</div>
-        <div id="timeline">
-        </div>
+    <section id="accomplishmentsWrapper">
+        <section id="accomplishments">
+            <div style="padding:10vh 10vw 0 10vw;height:auto;width:100%;box-sizing:border-box;z-index:0;position:relative">
+                <div class="sectionTitle" style="
+                color:black;
+                text-shadow:
+                    1px 1px 1.5px #FB2576,
+                    -1px 1px 1.5px #FB2576,
+                    1px -1px 1.5px #FB2576,
+                    -1px -1px 1.5px #FB2576;
+                border-color:#FB2576;
+                border-width: 3px;
+                box-shadow:
+                    -1px 1px 1.5px #FB2576;
+                    /* 1px -1px 1.5px #FB2576; */
+                    /* -1px -1px 1.5px #FB2576; */
+                "
+                >Experiences and Achievements</div>
+            </div>
+            <div id="timeline"></div>
+        </section>
     </section>
     <section id="skills">
         <div id="skillsLeft">Skills</div>
@@ -73,29 +103,8 @@
         var width=window.innerWidth;
         var height=window.innerHeight;
         document.addEventListener('DOMContentLoaded', function() {
-            function moving_lines()
-            {
-                const lineContainer = document.getElementById('TopBar');
-                lineContainer.innerHTML='';
-                // alert(lineContainer.clientHeight);
-                for(var j=0;j<lineContainer.clientHeight/20;j++)
-                {
-                    var x=Math.random(0,1)*10
-                    for( var i=0;i<25;i++)
-                    {
-                        const line = document.createElement('div');
-                        // line.innerText="dslmdms";
-                        line.classList.add('Line');
-                        line.style.left=-300+12*i+x+"%";
-                        line.style.top=j*4+"px";
-                        // line.style.right=10*i+10+"%";
-                        // line.style.animationDelay=i*0.3+"s";
-                        lineContainer.appendChild(line);
-                    }
-                }
-                setTimeout(function(){moving_lines()},30000);
-            }          
-            moving_lines();
+            addStarDiv();
+            bioAnimate();
             const skills=[
                 {
                     skillName:"C/C++",
@@ -121,47 +130,6 @@
                 container.appendChild(innerContainer);
             }  
             skills.forEach(addSkill); 
-            const accomplisments=[
-                {
-                    time:2001,
-                    content:"Lorem ipsum dolor sit amet consectetur adipisicing                     elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga                   architecto possimus id at rem beatae consequuntur dolor commodi."
-                },
-                {
-                    time:2001,
-                    content:"Lorem ipsum dolor sit amet consectetur adipisicing                     elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga                   architecto possimus id at rem beatae consequuntur dolor commodi."
-                },
-                {
-                    time:2001,
-                    content:"Lorem ipsum dolor sit amet consectetur adipisicing                     elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga                   architecto possimus id at rem beatae consequuntur dolor commodi."
-                },
-                {
-                    time:2001,
-                    content:"Lorem ipsum dolor sit amet consectetur adipisicing                     elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga                   architecto possimus id at rem beatae consequuntur dolor commodi."
-                },
-                {
-                    time:2001,
-                    content:"Lorem ipsum dolor sit amet consectetur adipisicing                     elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga                   architecto possimus id at rem beatae consequuntur dolor commodi."
-                },
-            ]
-            function timeline()
-            {
-                const container=document.getElementById('timeline');
-                const innerContainer=document.createElement('ul');
-                container.appendChild(innerContainer);
-                accomplisments.forEach(addAccomplishment);
-                function addAccomplishment(element)
-                {
-                    const listitem=document.createElement('li');
-                    const divitem=document.createElement('div');
-                    const timeitem=document.createElement('time');
-                    innerContainer.appendChild(listitem);
-                    listitem.appendChild(divitem);
-                    divitem.appendChild(timeitem);
-                    timeitem.innerText=element.time;
-                    divitem.innerHTML+=element.content;
-                }
-                timelineAnimate();
-            }
             timeline();
             const myLibrary=[
                 {
@@ -219,6 +187,7 @@
             addLibrary();
         });
     </script>
+    <script src="bio.js"></script>
     <script src="project.js"></script>
     <script src="accomplishments.js"></script>
 </body>
