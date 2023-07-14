@@ -61,7 +61,7 @@
 }
 #timeline{
     /* color:white; */
-     z-index:0;
+    z-index:0;
     box-sizing: border-box;
     width:100%;
     padding:0 10vw 10vh 10vw;
@@ -176,16 +176,20 @@
     opacity: 1;
 }
 @media screen and (max-width: 900px) {
+    #timeline ul li{
+        left:-3vw;
+    }
     #timeline ul li div {
-      width: 250px;
+        bottom:3vh;
+        width: 35vw;
    }
 
     #timeline ul li:nth-child(even) div {
         box-shadow: 
             0 0 0 0.3px #FB2576,
             0 0 0 3px black,
-            30px 30px 50px rgba(251, 37, 118,0.5);
-        left: -289px;
+            -30px 30px 50px rgba(251, 37, 118,0.5);
+        left: -43vw;
     }
 }
 @media screen and (max-width: 600px) {
