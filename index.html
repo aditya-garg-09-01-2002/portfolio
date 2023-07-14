@@ -27,7 +27,7 @@
     <div id="overlay2"></div>
     <section id="navbar">
         <nav id="collapse" style="background-color: black;height:70px;width:100%;justify-content:flex-end;margin:0;padding:0;align-items: center;position: absolute;">
-            <button class="overlayButton" onclick="openButton()" style="width:12%;height:40px;top:0;margin:0;right:10px;padding:0;background-color:rgba(251, 37, 118,1);position: relative;border:none;border-radius:20%"></button>
+            <button class="overlayButton" onclick="openButton()" id="menuButton"></button>
         </nav>
         <nav id="overlay">
             <button class="overlayButton"><a href="#bio">Home</a></button>
@@ -115,11 +115,13 @@
             var y=document.getElementById('navbar');
             if(x.style.display==="none")
             {
+                x.style.border=2+"px solid white";
                 y.style.height=350+"px";
                 x.style.display="block";
             }
             else 
             {
+                x.style.border="none";
                 y.style.height=40+"px";
                 x.style.display="none";
             }
