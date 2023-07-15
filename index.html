@@ -26,7 +26,7 @@
 <body>
     <div id="overlay2"></div>
     <section id="navbar">
-        <nav id="collapse" style="background-color: black;height:70px;width:100%;justify-content:flex-end;margin:0;padding:0;align-items: center;position: absolute;">
+        <nav id="collapse" style="background-color: transparent;height:70px;width:100%;justify-content:flex-end;margin:0;padding:0;align-items: center;position: absolute;">
             <button class="overlayButton" onclick="openButton()" id="menuButton"></button>
         </nav>
         <nav id="overlay">
@@ -96,9 +96,18 @@
         </section>
     </section>
     <section id="skills">
-        <div id="skillsLeft">Skills</div>
-        <div id="skillsRight">
-        </div>
+        <div class="sectionTitle" style="margin-bottom: 70px;
+        color:#150050;
+        text-shadow: 
+            -2px 2px 2px black,
+            2px -2px 2px black,
+            -2px -2px 2px black,
+            2px 2px 2px black;
+        border-color:#150050;
+        border-width:7px;
+        box-shadow:-1px 1px 1px white;
+        ">Skills</div>
+        <div id="skillsRight"></div>
     </section>
     <section id="social media">
     </section>
@@ -116,12 +125,14 @@
             var z=document.getElementById('menuButton');
             if(x.style.display==="none")
             {
+                y.style.backgroundColor="black";
                 z.style.border=2+"px solid white";
                 y.style.height=350+"px";
                 x.style.display="block";
             }
             else 
             {
+                y.style.backgroundColor="transparent";
                 z.style.border="none";
                 y.style.height=40+"px";
                 x.style.display="none";
@@ -130,31 +141,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             addStarDiv();
             bioAnimate();
-            const skills=[
-                {
-                    skillName:"C/C++",
-                    progress:60
-                },
-                {
-                    skillName:"Python",
-                    progress:60
-                }
-            ];
-            function addSkill(element)
-            {
-                const container=document.getElementById('skillsRight');
-                const innerContainer=document.createElement('div');
-                const name=document.createElement('label');
-                const bar=document.createElement('progress');
-                bar.value=element.progress;
-                bar.max=100;
-                name.innerText=element.skillName;
-                name.style.color="white";
-                innerContainer.appendChild(name);
-                innerContainer.appendChild(bar);
-                container.appendChild(innerContainer);
-            }  
-            skills.forEach(addSkill); 
+            skill();
             timeline();
             const myLibrary=[
                 {
@@ -215,5 +202,6 @@
     <script src="bio.js"></script>
     <script src="project.js"></script>
     <script src="accomplishments.js"></script>
+    <script src="skills.js"></script>
 </body>
 </html>
