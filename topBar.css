@@ -79,7 +79,7 @@ body{
     }
     #navbar{
         /* height:300px; */
-        background-color: black;
+        background-color: transparent;
     }
     #overlay{
         display:none;
