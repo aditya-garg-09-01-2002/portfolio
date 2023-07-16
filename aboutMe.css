@@ -104,7 +104,7 @@
 @media screen and (max-width:1000px) {
     .cards{
         height:100vh;
-        padding:20px 40px;
+        padding:20px 0;
     }    
     .sm{
         width:200px;
