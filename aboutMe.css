@@ -2,79 +2,107 @@
     background-color:black;
     height:auto;
     width:100%;
-    box-sizing: border-box;
-}
-#scrollBar
-{
-    height:auto;
-    width:100%;
-    box-sizing: border-box;
-}
-.barContainer{
-    width:100%;
-    height:auto;
     display:flex;
-    justify-content: center;
-}
-.bar{
-    width:80%;
-    height:200px;
-    overflow:hidden visible;
+    flex-wrap: wrap;
     box-sizing: border-box;
-    /* white-space: nowrap; */
+    padding:5vh 5vw;
 }
-.placardEntertainment{
-    z-index:0;
-    /* display:inline-block; */
-    float:left;
-    z-index:0;
-    width:150px;
-    margin:10px 10px 10px 0;
-    height:100%;
-    position:relative;
-    background-color:pink;
-    z-index:0;
-    /* (100-30*3)/3 */
-}
-.placardEntertainment img{
+.cards{
+    margin-top: 50px;
     width:100%;
-    position: absolute;
-    height:100%;
-    z-index:0;
-}
-.bar:has(.placardEntertainment:hover)
-{
-    width:calc( 80% + 150px );
-}
-.placardEntertainment:hover{
-    width:310px;
-}
-.placardEntertainment div{
-    visibility:hidden;
-    position:relative;
-    display:flex;
-    width:100%;
-    top:0;
-    left:0;
-    align-items: center;
+    height:50vh;
+    border-radius:20px;
+    box-sizing: border-box;
+    padding:20px 60px;
+    box-shadow: 0 0 10px white;
     color:white;
-    font-size: 24px;
-    text-shadow:-1px 1px 0 #000,
-    1px 1px 0 #000,
-   1px -1px 0 #000,
-  -1px -1px 0 #000;
+}
+#smcontainer{
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-wrap: wrap;
+    padding:20px 40px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    overflow:hidden visible;
+}
+.sm{
+    width:100px;
+    height:150px;
+    margin: 40px;
+    display:flex;
+    padding-top: 20px;
+    justify-content: center;
+    align-items:flex-start;
+    transform-style: preserve-3d;
+    perspective: 3000px;
+    box-sizing: border-box;
+    border:2px solid white;
+    border-radius: 10px;
+}
+.sm:hover{
+    padding-top:0;
+    width:150px;
+    margin:30px;
+    height:200px;
+    align-items: center;
+    box-shadow:
+        1px 1px 20px white,
+        1px -1px 20px white,
+        -1px 1px 20px white,
+        -1px -1px 20px white;
+    background: var(--bg-color);
+    .smicon{
+        border-radius:8px;
+        transform:scale(2) translateZ(100px);
+    }
+}
+.smicon a{
+    text-decoration: none;
+
+}
+.smicon{
+    width:80px;
+    height:80px;
+}
+.fa{
+    display:flex;
+    color:var(--t-color);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     height:100%;
+    text-decoration: none;
+    font-size:60px;
+    border-radius:5px;
+    width:100%;
 }
-.placardEntertainment:hover div{
-    visibility:visible;
-    background-color: rgba(0,0,0,0.4);
-    z-index:2;
+#card1Img{
+    box-shadow:
+        2px 2px 5px white,
+        -2px 2px 5px white,
+        2px -2px 5px white,
+        -2px -2px 5px white;
+    display:absolute;
+    position: relative;
+    height:100%;
+    width:20%;
+    float:right;
+    overflow:hidden;
+    border:10px solid black;
+    border-radius: 10px;
 }
-.bar::-webkit-scrollbar {
-    width:0px;
+#card1Text{
+    float:left;
+    width:70%;
 }
-.placardEntertainment:first-child{
-    margin-left: 0;
+#card1Text div{
+    width:100%;
 }
-/* image mein enter hone pe bar hi bada kardo, also ek do second ka wait karke, kyuki possible hain if user dekhna hi na chah rha ho
-also fir clickable bana sakta hu har item ko dynammic div without scrolling if possible */
+@media screen and (max-width:1000px) {
+    .cards{
+        height:100vh;
+    }    
+}

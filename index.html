@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css">
     <link rel="stylesheet" href="bio.css">
     <link rel="stylesheet" href="skills.css">
     <link rel="stylesheet" href="topBar.css">
     <link rel="stylesheet" href="project.css">
     <link rel="stylesheet" href="accomplishments.css">
     <link rel="stylesheet" href="aboutMe.css">
+    <link rel="stylesheet" href="socialMedia.css">
     <style>
         *{
+            font-weight: 900;
             font-family: "roboto",sans-serif;
             box-sizing: border-box;
         }
@@ -34,7 +38,6 @@
             <button class="overlayButton"><a href="#projects" >Projects</a></button>
             <button class="overlayButton"><a href="#accomplishments" >Accomplishments</a></button>
             <button class="overlayButton"><a href="#skills" >Skills</a></button>
-            <button class="overlayButton"><a href="#" >Social Media</a></button>
             <button class="overlayButton"><a href="#aboutMe" >About Me</a></button>
         </nav>
     </section>
@@ -113,12 +116,54 @@
         ">Skills</div>
         <div id="skillsRight"></div>
     </section>
-    <section id="social media">
-    </section>
     <section id="aboutMe">
-        <div class="sectionTitle">About Me</div>
-        <div id="scrollBar">
+        <div class="sectionTitle" style="
+        color:black;
+        text-shadow:
+            1px 1px 1.5px #FB2576,
+            -1px 1px 1.5px #FB2576,
+            1px -1px 1.5px #FB2576,
+            -1px -1px 1.5px #FB2576;
+        border-color:#FB2576;
+        border-width: 3px;
+        box-shadow:
+            -1px 1px 1.5px #FB2576;
+            /* 1px -1px 1.5px #FB2576; */
+            /* -1px -1px 1.5px #FB2576; */
+        ">About Me</div>
+        <div class="cards">
+            <div id="card1Text">
+                <div id="name">
+                    Aditya Garg
+                </div>
+                <div>
+                    A student and practitioner of multiple technologies and acquirer of knowledge of vast domains of technology.
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div id="card1Img">
+                <img src="https://media.licdn.com/dms/image/C4D03AQFfves6xskhUA/profile-displayphoto-shrink_800_800/0/1658145647661?e=1694649600&v=beta&t=ghANpVP5VgOxkbt3QPMU5joxtIFr3CCd5kryPbQOmjo" style="height:100%;width: 120%;position:relative;left:-20%;border-radius:10px">
+            </div>
         </div>
+        <div class="cards" style="height:auto;">
+            <div style="
+                width:100%;
+                height:auto;
+                text-align: center;
+                font-size: 45px;
+                color:black;
+                text-shadow:
+                    1px 1px 2px white,
+                    1px -1px 2px white, 
+                    -1px 1px 2px white,
+                    -1px -1px 2px white;
+            ">Socials</div>
+            <div id="smcontainer"></div>
+        </div>
+        <!-- <div id="scrollBar">
+        </div> -->
     </section>
     <script type="text/javascript">
         var width=window.innerWidth;
@@ -147,65 +192,20 @@
             bioAnimate();
             skill();
             timeline();
-            const myLibrary=[
-                {
-                    name:"High School DxD",
-                    category:"Anime",
-                    image:"https://wallpapers.com/images/featured-full/highschool-dxd-pictures-pge49ca9u45d8ot5.jpg",
-                    monologue:"Oppai-Dragon"
-                },
-            ]
-            function addLibrary()
-            {
-                var container=document.getElementById('scrollBar');
-                var category_container,placard,image,outer_bar_container
-                myLibrary.forEach(addItems);
-                function addItems(element)
-                {
-                    var category=document.getElementById(element.category);
-                    if(category === null)
-                    {
-                        (function(){
-                            var title=document.createElement('div');
-                            title.classList.add('sectionTitle');
-                            title.innerText=element.category;
-                            container.appendChild(title);
-                        })();
-                        (function(){
-                            outer_bar_container=document.createElement('div');
-                            outer_bar_container.classList.add("barContainer");
-                            container.appendChild(outer_bar_container);
-                        })();
-                        (function(){
-                            category=document.createElement('div');
-                            category.classList.add('bar');
-                            category.id=element.category;
-                            outer_bar_container.appendChild(category);
-                        })();
-                    }   
-                    (function(){
-                        placard=document.createElement('div');
-                        placard.classList.add('placardEntertainment');
-                        category.appendChild(placard);
-                    })();
-                    (function(){
-                        image=document.createElement('img');
-                        image.src=element.image;
-                        placard.appendChild(image);
-                    })();
-                    (function(){
-                        text=document.createElement('div');
-                        placard.appendChild(text);
-                        text.innerText=element.monologue;
-                    })();
-                }                
-            };
-            addLibrary();
+            addSocials();
+            VanillaTilt.init(document.querySelectorAll(".sm"), {
+                max: 25,
+                speed: 400
+            });
+            // addLibrary();
         });
     </script>
     <script src="bio.js"></script>
     <script src="project.js"></script>
     <script src="accomplishments.js"></script>
     <script src="skills.js"></script>
+    <script src="aboutMe.js"></script>
+    <script src="library.js"></script>
+    <script src="tilt.js"></script>
 </body>
 </html>
