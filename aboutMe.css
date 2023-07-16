@@ -105,4 +105,13 @@
     .cards{
         height:100vh;
     }    
+    .sm{
+        width:250px;
+        height:250px;
+        padding-top: 40px;
+        &:hover{
+            width:250px;
+            height:250px;
+        }
+    }
 }
