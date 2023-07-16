@@ -104,14 +104,15 @@
 @media screen and (max-width:1000px) {
     .cards{
         height:100vh;
+        padding:20px 40px;
     }    
     .sm{
-        width:250px;
-        height:250px;
+        width:200px;
+        height:200px;
         padding-top: 40px;
         &:hover{
-            width:250px;
-            height:250px;
+            width:200px;
+            height:200px;
         }
     }
     .smcontainer{
