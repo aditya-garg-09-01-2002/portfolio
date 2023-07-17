@@ -47,16 +47,19 @@ const socials=[
         target:"https://codeforces.com/profile/Exhaustic",
         logoname:"fa-code",
         tcolor:"white",
-        bgcolor:"linear-gradient(to right, #fad261 0%,#188bcb 50%, #bc1d25 100%"
+        link:"code-forces.png",
+        bgcolor:"linear-gradient(to right, #fad261 23%,#188bcb 47%, #bc1d25 82%)"
     },
     {
         target:"https://codeforces.com/profile/aditya_garg_09_01_2002",
         logoname:"fa-code",
         tcolor:"white",
-        bgcolor:"linear-gradient(to right, #fad261 0%,#188bcb 50%, #bc1d25 100%"
+        link:"code-forces.png",
+        bgcolor:"linear-gradient(to right, #fad261 23%,#188bcb 47%, #bc1d25 82%)"
     },
     {
         target:"https://www.codechef.com/users/aditya_garg_11",
+        link:"codechef.png",
         logoname:"fa-code",
         tcolor:"white",
         bgcolor:"#453424"
@@ -77,9 +80,18 @@ function addSocials()
         a.style.setProperty('--bg-color',element.bgcolor);
         a.style.setProperty('--t-color',element.tcolor);
         b.classList.add('smicon');
-        // if(element.logoname[0]==='f'&&element.logoname[1]==='a')
-        d.classList.add("fa");
-        d.classList.add(element.logoname);
+        if(!(element.link===undefined))
+        {
+            b.classList.add('hasImage');
+            d=document.createElement('img');
+            d.src=element.link;
+        }
+        else
+        {
+            d.classList.add("fa");
+            b.classList.add("noImage");
+            d.classList.add(element.logoname);
+        }
         x.appendChild(a);
         a.appendChild(b);
         b.appendChild(c);

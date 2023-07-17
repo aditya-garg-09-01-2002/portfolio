@@ -62,14 +62,25 @@ input{
         -1px 1px 20px white,
         -1px -1px 20px white;
     background: var(--bg-color);
-    .smicon{
+    .hasImage{
         border-radius:8px;
+        height:160px;
+        width:160px;
+        transform:translateZ(100px);
+    }
+    .noImage{
+        border-radius:8px;
+        transform: scale(2);
         transform:scale(2) translateZ(100px);
     }
 }
 .smicon a{
     text-decoration: none;
 
+}
+.smicon a img{
+    height:100%;
+    width:100%;
 }
 .smicon{
     width:80px;
