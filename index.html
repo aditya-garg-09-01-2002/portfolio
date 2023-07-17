@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="project.css">
     <link rel="stylesheet" href="accomplishments.css">
     <link rel="stylesheet" href="aboutMe.css">
-    <link rel="stylesheet" href="socialMedia.css">
     <style>
         *{
             font-weight: 900;
@@ -223,6 +222,51 @@
                     -1px 1px 2px white,
                     -1px -1px 2px white;
             ">Contact Me</div>
+            <div id ="formContainer">
+                <form id="Contact">
+                    <div>
+                        <label for="name" style="margin:0 0 15px 0">Name:</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div>
+                        <label for="senderMailID" style="margin:0 0 15px 0">E-Mail ID:</label>
+                        <input type="text" id="senderMailID" name="senderMailID">
+                    </div>
+                    <div>
+                        <p>Do you have a Project we can collabrate on?</p>
+                        <label for="contactProject" style="width:50px;font-size:20px">Yes</label>
+                        <input type="radio" name="contactProject" id="contactProjectYes" value="yes" style="width:20px;margin-right:90px;height:20px">
+                        <label for="contactProject" style="width:50px;font-size:20px">No</label>
+                        <input type="radio" name="contactProject" id="contactProjectNo" value="no" style="width:20px;margin-right:90px;height:20px">
+                    </div>
+                    <div>
+                        <p>What domain is the Project related to?</p>
+                        <label for="projectDomain" style="width:50%;font-size:20px;
+                        margin:5px 0 5px 0">AI/ML</label>
+                        <input type="checkbox" id="projectDomain" name="am" value="AI/ML" style="width:20px;height:20px;
+                        margin:5px 0 5px 0">
+                        <label for="projectDomain" style="width:50%;font-size:20px;
+                        margin:5px 0 5px 0">Web Development</label>
+                        <input type="checkbox" id="projectDomain" name="wd" value="WebDevelopment" style="width:20px;height:20px;
+                        margin:5px 0 5px 0">
+                        <label for="projectDomain" style="width:50%;font-size:20px;
+                        margin:5px 0 5px 0">Software Development</label>
+                        <input type="checkbox" id="projectDomain" name="sd" value="SoftwareDevelopment" style="width:20px;height:20px;
+                        margin:5px 0 5px 0">
+                        <label for="projectDomain" style="width:50%;font-size:20px;
+                        margin:5px 0 5px 0">Others</label>
+                        <input type="checkbox" id="projectDomain" name="other" value="Others" style="width:20px;height:20px;
+                        margin:5px 0 5px 0">
+                    </div>
+                    <div>
+                        <label for="desc" style="margin:0 0 15px 0">Message:</label>
+                        <textarea id="desc" style="height:40vh;flex-wrap: wrap;font-size:20px"></textarea>
+                    </div>
+                    <div>
+                        <input type="Submit" value="Submit" style="padding:0;font-size:20px;justify-content: center;" onclick="submitClick(event)">
+                    </div>
+                </form>
+            </div>
         </div>
         <!-- <div id="scrollBar">
         </div> -->
@@ -248,6 +292,20 @@
                 y.style.height=40+"px";
                 x.style.display="none";
             }
+        }
+        function submitClick(event){
+            event.preventDefault();
+            var formData = new FormData(document.getElementById('Contact'));
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'send-email.php');
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                console.log('Email sent successfully!');
+                } else {
+                console.log('Failed to send email. Please try again.');
+                }
+            };
+            xhr.send(formData);
         }
         document.addEventListener('DOMContentLoaded', function() {
             addStarDiv();
