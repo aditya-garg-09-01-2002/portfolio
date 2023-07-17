@@ -25,10 +25,56 @@
         body::-webkit-scrollbar{
             width:0px;
         }
+        #pageArrow{
+            z-index:3;
+            background-color: rgba(255, 255, 255, 0.6);
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            width:40px;
+            height:40px;
+            border-radius:20px;
+            border:2px solid black;
+            &::before{
+                content:" ";
+                position:fixed;
+                width:3px;
+                height:15px;
+                transform:rotate(-45deg);
+                top:12.5px;
+                left:12px;
+                border-radius:2px;
+                background-color:black;
+            }
+            &::after{
+                content:" ";
+                position:fixed;
+                width:3px;
+                height:15px;
+                top:12.5px;
+                border-radius:2px;
+                right:12px;
+                transform: rotate(45deg);
+                background-color:black;
+            }
+            animation:arrowSize 1.5s linear infinite;
+        }
+        @keyframes arrowSize {
+            0%{
+                transform:scale(1);
+            }
+            50%{
+                transform:scale(1.1) translateY(-10px);
+            }
+            100%{
+                transform: scale(1) translateY(0px);
+            }
+        }
     </style>
 </head>
 <body>
     <div id="overlay2"></div>
+    <div id="pageArrow"></div>
     <section id="navbar">
         <nav id="collapse" style="background-color: transparent;height:70px;width:100%;justify-content:flex-end;margin:0;padding:0;align-items: center;position: absolute;">
             <button class="overlayButton" onclick="openButton()" id="menuButton"></button>
@@ -164,6 +210,20 @@
             ">Socials</div>
             <div id="smcontainer"></div>
         </div>
+        <div class="cards" style="height: auto;">
+            <div style="
+                width:100%;
+                height:auto;
+                /* text-align: center; */
+                font-size: 45px;
+                color:black;
+                text-shadow:
+                    1px 1px 2px white,
+                    1px -1px 2px white, 
+                    -1px 1px 2px white,
+                    -1px -1px 2px white;
+            ">Contact Me</div>
+        </div>
         <!-- <div id="scrollBar">
         </div> -->
     </section>
@@ -195,6 +255,13 @@
             skill();
             timeline();
             addSocials();
+            var abcheck=document.getElementById('aboutMe');
+            var arrowButton=document.getElementById('pageArrow');
+            window.addEventListener('scroll', () => {
+                if(abcheck.getBoundingClientRect().bottom-100 >= (window.innerHeight || document.documentElement.clientHeight))
+                    arrowButton.style.visibility="visible";
+                else arrowButton.style.visibility="hidden";
+            })
             if(window.innerWidth>800)
             VanillaTilt.init(document.querySelectorAll(".sm"), {
                 max: 25,
