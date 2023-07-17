@@ -3,6 +3,7 @@
     background-color:#3F0071;
     height:auto;
     box-sizing:border-box;
+    position:relative;
     padding:20vh 10vw 20vh 10vw; 
 }
 #skillsRight{

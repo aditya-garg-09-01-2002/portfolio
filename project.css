@@ -1,4 +1,5 @@
 #projects{
+    position: relative;
     box-sizing: border-box;
     padding:10vh 10vw 10vh 10vw;
     height:auto;
