@@ -4,10 +4,13 @@
     width:100%;
     display:flex;
     flex-wrap: wrap;
+    position: relative;
     box-sizing: border-box;
     padding:5vh 5vw;
 }
 .cards{
+    display:flex;
+    flex-wrap: wrap;
     margin-top: 50px;
     width:100%;
     height:50vh;
@@ -15,7 +18,9 @@
     box-sizing: border-box;
     padding:20px 60px;
     box-shadow: 0 0 10px white;
+    justify-content: space-evenly;
     color:white;
+    align-items: center;
 }
 #smcontainer{
     width:100%;
@@ -85,17 +90,17 @@
         -2px 2px 5px white,
         2px -2px 5px white,
         -2px -2px 5px white;
-    display:absolute;
-    position: relative;
     height:100%;
     width:20%;
-    float:right;
     overflow:hidden;
     border:10px solid black;
     border-radius: 10px;
 }
+#card1Img img{
+    height:100%;
+    width:100%;
+}
 #card1Text{
-    float:left;
     width:70%;
 }
 #card1Text div{
@@ -103,9 +108,19 @@
 }
 @media screen and (max-width:1000px) {
     .cards{
-        height:100vh;
-        padding:20px 0;
-    }    
+        align-items: flex-start;
+        height:auto;
+        box-sizing: border-box;
+        padding:40px 0px 30px 0px;
+    }  
+    #card1Img{
+        width:200px;
+        height:200px;
+        margin-bottom: 40px;
+    }  
+    #card1Text{
+        margin-bottom: 60px;;
+    }
     .sm{
         width:200px;
         height:200px;
