@@ -223,7 +223,7 @@
                     -1px -1px 2px white;
             ">Contact Me</div>
             <div id ="formContainer">
-                <form id="Contact">
+                <form id="Contact" netlift method="POST">
                     <div>
                         <label for="name" style="margin:0 0 15px 0">Name:</label>
                         <input type="text" id="name" name="name">
@@ -263,7 +263,7 @@
                         <textarea id="desc" style="height:40vh;flex-wrap: wrap;font-size:20px"></textarea>
                     </div>
                     <div>
-                        <input type="Submit" value="Submit" style="padding:0;font-size:20px;justify-content: center;" onclick="submitClick(event)">
+                        <input type="Submit" value="Submit" style="padding:0;font-size:20px;justify-content: center;">
                     </div>
                 </form>
             </div>
@@ -293,20 +293,20 @@
                 x.style.display="none";
             }
         }
-        function submitClick(event){
-            event.preventDefault();
-            var formData = new FormData(document.getElementById('Contact'));
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'send-email.php');
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                console.log('Email sent successfully!');
-                } else {
-                console.log('Failed to send email. Please try again.');
-                }
-            };
-            xhr.send(formData);
-        }
+        // function submitClick(event){
+        //     event.preventDefault();
+        //     var formData = new FormData(document.getElementById('Contact'));
+        //     var xhr = new XMLHttpRequest();
+        //     xhr.open('POST', 'send-email.php');
+        //     xhr.onload = function() {
+        //         if (xhr.status === 200) {
+        //         console.log('Email sent successfully!');
+        //         } else {
+        //         console.log('Failed to send email. Please try again.');
+        //         }
+        //     };
+        //     xhr.send(formData);
+        // }
         document.addEventListener('DOMContentLoaded', function() {
             addStarDiv();
             bioAnimate();
