@@ -25,56 +25,52 @@
         body::-webkit-scrollbar{
             width:0px;
         }
-        #pageArrow{
-            z-index:3;
+        .pageArrow{
+            /* z-index:3; */
             background-color: rgba(255, 255, 255, 0.6);
             position:fixed;
+            display:none;
             bottom:20px;
             right:20px;
             width:40px;
             height:40px;
-            border-radius:20px;
+            border-radius:100%;
             border:2px solid black;
+            box-shadow: 
+                1px 1px 1px white,
+                -1px 1px 1px white,
+                1px -1px 1px white,
+                -1px -1px 1px white;
+            ;
             &::before{
-                content:" ";
+                content:"";
                 position:fixed;
-                width:3px;
-                height:15px;
-                transform:rotate(-45deg);
-                top:12.5px;
-                left:12px;
-                border-radius:2px;
-                background-color:black;
+                width:12px;
+                height:12px;
+                transform:translate(-50%,-50%) rotate(135deg);
+                top:43%;
+                left:50%;
+                border-right:#000 2px solid;
+                border-top:#000 2px solid;
+                border-top-right-radius: 2px;
             }
-            &::after{
-                content:" ";
-                position:fixed;
-                width:3px;
-                height:15px;
-                top:12.5px;
-                border-radius:2px;
-                right:12px;
-                transform: rotate(45deg);
-                background-color:black;
-            }
-            animation:arrowSize 1.5s linear infinite;
+            animation:arrowSize 1s linear infinite;
         }
         @keyframes arrowSize {
             0%{
-                transform:scale(1);
+                transform:scale(0.9);
             }
             50%{
-                transform:scale(1.1) translateY(-10px);
+                transform:scale(1) translateY(-5px);
             }
             100%{
-                transform: scale(1) translateY(0px);
+                transform: scale(0.9) translateY(0px);
             }
         }
     </style>
 </head>
 <body>
     <div id="overlay2"></div>
-    <div id="pageArrow"></div>
     <section id="navbar">
         <nav id="collapse" style="background-color: transparent;height:70px;width:100%;justify-content:flex-end;margin:0;padding:0;align-items: center;position: absolute;">
             <button class="overlayButton" onclick="openButton()" id="menuButton"></button>
@@ -87,14 +83,16 @@
             <button class="overlayButton"><a href="#aboutMe" >About Me</a></button>
         </nav>
     </section>
-    <section id="bio"> 
+    <section class="allsects" id="bio"> 
         <div id="bioLeft">
             <div id="night">
             </div>
-            <div id='bioContent'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo, illum amet nobis qui dicta dolores vitae rerum corporis quos veniam dolorem, minima eveniet voluptatibus nisi natus. Ratione, at saepe.</div>
+            <div id='bioContent'>
+                <div class="pageArrow" onclick="arrowClick(this.parentNode.parentNode.parentNode.id)"></div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo, illum amet nobis qui dicta dolores vitae rerum corporis quos veniam dolorem, minima eveniet voluptatibus nisi natus. Ratione, at saepe.</div>
         </div>
     </section>
-    <section id="projects">
+    <section class="allsects" id="projects">
+        <div class="pageArrow" onclick="arrowClick(this.parentNode.id)"></div>
         <div class="sectionTitle" style="
             color:#150050;
             text-shadow: 
@@ -126,7 +124,8 @@
             </div>
         </div>
     </section>
-    <section id="accomplishmentsWrapper">
+    <section class="allsects" id="accomplishmentsWrapper">
+        <div class="pageArrow" onclick="arrowClick(this.parentNode.id)" style="z-index: 3;"></div>
         <section id="accomplishments">
             <div style="padding:10vh 10vw 0 10vw;height:auto;width:100%;box-sizing:border-box;z-index:0;position:relative">
                 <div class="sectionTitle" style="
@@ -148,7 +147,8 @@
             <div id="timeline"></div>
         </section>
     </section>
-    <section id="skills">
+    <section class="allsects" id="skills">
+        <div class="pageArrow" onclick="arrowClick(this.parentNode.id)"></div>
         <div class="sectionTitle" style="margin-bottom: 70px;
         color:#150050;
         text-shadow: 
@@ -162,7 +162,7 @@
         ">Skills</div>
         <div id="skillsRight"></div>
     </section>
-    <section id="aboutMe">
+    <section class="allsects" id="aboutMe">
         <div class="sectionTitle" style="
         color:black;
         text-shadow:
@@ -255,13 +255,7 @@
             skill();
             timeline();
             addSocials();
-            var abcheck=document.getElementById('aboutMe');
-            var arrowButton=document.getElementById('pageArrow');
-            window.addEventListener('scroll', () => {
-                if(abcheck.getBoundingClientRect().bottom-100 >= (window.innerHeight || document.documentElement.clientHeight))
-                    arrowButton.style.visibility="visible";
-                else arrowButton.style.visibility="hidden";
-            })
+            pageArrowPopulate();
             if(window.innerWidth>800)
             VanillaTilt.init(document.querySelectorAll(".sm"), {
                 max: 25,
@@ -270,6 +264,7 @@
             // addLibrary();
         });
     </script>
+    <script src="arrow.js"></script>
     <script src="bio.js"></script>
     <script src="project.js"></script>
     <script src="accomplishments.js"></script>
