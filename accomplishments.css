@@ -122,6 +122,11 @@
     font-weight: 800;
     margin-bottom: 7px;
 }   
+#timeline ul li div label{
+    font-size:18px;
+    background:none;
+    border: none;
+}
 #timeline ul li div::before {
     content: "";
     z-index:0; 
