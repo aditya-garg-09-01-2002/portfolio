@@ -106,23 +106,21 @@ function overrideSubmit(event){
 function validateMail(event)
 {
     var x=document.getElementById("mail");
-    if(event.key==" "||event.code==="Space"||event.keyCode==32)x.value=x.value.slice(0,-1);
+    if(event.key==" "||event.code==="Space"||event.keyCode==32)event.preventDefault();
     else{
         const emailRegex=/^[a-z0-9.]+@+[a-z]+(\.[a-z]+)+$/;
-        if(emailRegex.test(x.value))document.getElementById("mail").style.backgroundColor="rgba(0,255,0,0.3)";
+        if(emailRegex.test(x.value+event.key))document.getElementById("mail").style.backgroundColor="rgba(0,255,0,0.3)";
         else document.getElementById("mail").style.backgroundColor="rgba(255,0,0,0.3)";
     }
 }
 function validateName(event,x)
 {
-    //event.preventDefault() was working but i changed to keyPressUp and that made event already completed
     var y;
     if(x==='f')y=document.getElementById("fname");
     else if(x==='l')y=document.getElementById("lname");
-    if(event.key==" "||event.code=="Space"||event.keyCode==32)y.value=y.value.slice(0,-1);
+    if(event.key==" "||event.code=="Space"||event.keyCode==32)event.preventDefault();
     else{
         const nameRegex=/^[a-z0-9A-Z]+$/;
-        if(!nameRegex.test(y.value))y.value=y.value.slice(0,-1);
-        console.log(y.value);
+        if(!nameRegex.test(y.value+event.key))event.preventDefault();
     }
 }

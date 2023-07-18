@@ -265,12 +265,12 @@
                     <div>
                         <label for="fname" style="margin:0 0 15px 0;float:left;width:50%;">First Name:</label>
                         <label for="lname" style="margin:0 0 15px 0;float:left;width:50%;">Last Name:</label>
-                        <input type="text" onkeyup="validateName(event,'f')" id="fname" style="margin:0 10% 15px 0;float:left;width:40%;">
-                        <input type="text" onkeyup="validateName(event,'l')" id="lname" style="margin:0 10% 15px 0;float:left;width:40%;">
+                        <input type="text" onkeydown="validateName(event,'f')" id="fname" style="margin:0 10% 15px 0;float:left;width:40%;">
+                        <input type="text" onkeydown="validateName(event,'l')" id="lname" style="margin:0 10% 15px 0;float:left;width:40%;">
                     </div>
                     <div>
                         <label for="mail" style="margin:0 0 15px 0;width:90%">E-Mail ID:</label>
-                        <input type="text" id="mail" name="mail" style="width:90%" onkeyup="validateMail(event)">
+                        <input type="text" id="mail" name="mail" style="width:90%" onkeydown="validateMail(event)">
                     </div>
                     <div>
                         <p>Do you have a Project we can collabrate on?</p>
