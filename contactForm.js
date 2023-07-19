@@ -49,10 +49,13 @@ function overrideSubmit(event){
     var name=val("fname")+" "+val("lname");
     var mail=val("mail");
     var projectstatus=document.querySelector("input[name='contactProject']:checked").value;
-    var projectdomain;
-    if(projectstatus==="yes")projectdomain=document.querySelectorAll("input[name='projectDomain']:checked");
     var msg=val("desc");
-    saveMessages(name,mail,projectstatus,Array.from(projectdomain, element => element.getAttribute('value')),msg);
+    if(projectstatus==="yes")
+    {
+        var projectdomain=document.querySelectorAll("input[name='projectDomain']:checked");
+        saveMessages(name,mail,projectstatus,Array.from(projectdomain, element => element.getAttribute('value')),JSON.stringify(msg));
+    }
+    else saveMessages(name,mail,projectstatus,"N/A",JSON.stringify(msg));
     alert("Eager to read the message");
     projectNo();
     document.getElementById("contactForm").reset();
