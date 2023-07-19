@@ -1,34 +1,44 @@
-function fun1()
-{
-    if(width>1000)
-    {
-        disable();
-        document.getElementsByClassName('placard')[0].classList.add('placardExpanded');
-        var x=document.getElementById('overlay2');
-        x.classList.add("overlay2");
+import {projectList} from "./data/project.js"; 
+export function projectPopulate(){
+    var container, project, projectLeft,projectRight,projectBottom,projectTitle,projectDesc;
+    projectList.forEach(addingProjects)
+    function addingProjects(element){
+        //this function creates all the tags in the HTML file 
+        (function(){
+            container=document.getElementById("projects");
+            project=document.createElement('div');
+            project.classList.add('project');
+            container.appendChild(project);
+            projectLeft=document.createElement('div');
+            projectRight=document.createElement('div');
+            projectBottom=document.createElement('div');
+            projectLeft.classList.add("projectLeft");
+            projectRight.classList.add("projectRight");
+            projectBottom.classList.add("projectBottom");
+            project.appendChild(projectLeft);
+            project.appendChild(projectRight);
+            project.appendChild(projectBottom);
+            projectTitle=document.createElement('div');
+            projectDesc=document.createElement('div');
+            projectLeft.appendChild(projectTitle);
+            projectLeft.appendChild(projectDesc);
+            projectTitle.style.marginBottom=10+"px";
+            projectRight.setAttribute('onmouseenter',"fun1()");
+        })();
+        //this function adds the data in the above created tags
+        (function(){
+            projectTitle.innerText=element.title;
+            projectDesc.innerText=element.desc;
+            projectRight.innerHTML=element.media;
+            var temp=document.createElement('div');
+            temp.innerHTML=element.skills;
+            projectBottom.appendChild(temp);
+            element.links.forEach(addingLinks);
+            function addingLinks(link){
+                temp=document.createElement('div');
+                temp.innerHTML=link;
+                projectBottom.appendChild(temp);
+            }
+        })();
     }
-}
-function fun2()
-{
-    if(width>1000)
-    {
-        document.getElementsByClassName('placard')[0].classList.remove('placardExpanded');
-        var x=document.getElementById('overlay2');
-        x.classList.remove("overlay2");
-        enable();
-    }
-}
-function disable() {
-    // To get the scroll position of current webpage
-    TopScroll = window.pageYOffset || document.documentElement.scrollTop;
-    LeftScroll = window.pageXOffset || document.documentElement.scrollLeft,
-    
-    // if scroll happens, set it to the previous value
-    window.onscroll = function() {
-    window.scrollTo(LeftScroll, TopScroll);
-            };
-}
-    
-function enable() {
-    window.onscroll = function() {};
 }
