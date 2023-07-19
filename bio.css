@@ -121,13 +121,13 @@
   left:0;
   padding:5vh 5vw;
   box-sizing: border-box;
-  font-size:28px;
+  font-size:24px;
   color:rgba(251, 37, 118,1);
   text-shadow: 
-    2px 2px 2px black,
-    -2px 2px 2px black,
-    2px -2px 2px black,
-    -2px -2px 2px black;
+    1px 1px 2px black,
+    -1px 1px 2px black,
+    1px -1px 2px black,
+    -1px -1px 2px black;
   display:flex;
   position:absolute;
   height:100%;

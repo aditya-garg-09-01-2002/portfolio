@@ -15,12 +15,12 @@
 #skillsRight div label{
     width:25%;
     color:#FB2576;
-    font-size:25px;
+    font-size:24px;
     text-shadow: 
-        2px 2px 2px black,
-        -2px 2px 2px black,
-        2px -2px 2px black,
-        -2px -2px 2px black;
+        1px 1px 0.5px black,
+        -1px 1px 0.5px black,
+        1px -1px 0.5px black,
+        -1px -1px 0.5px black;
     float:left;
     text-align: center;
     transform: translateY(-3px);

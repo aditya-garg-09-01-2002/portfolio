@@ -16,7 +16,7 @@ input{
     flex-wrap: wrap;
     margin-top: 50px;
     width:100%;
-    height:50vh;
+    min-height: 50vh;
     border-radius:20px;
     box-sizing: border-box;
     padding:20px 60px;
@@ -119,16 +119,17 @@ input[type="radio"]{
 #formContainer div p,#formContainer div label,#formContainer div input,#formContainer div textarea{
     height:40px;
     background-color:transparent;
+    font-size:24px;
     color:#FB2576;
-    text-shadow:
-        0.5px 0.5px 0.2px black,
-        -0.5px 0.5px 0.2px black,
-        0.5px -0.5px 0.2px black,
-        -0.5px -0.5px 0.2px black,
-        0.6px 0.6px 0.2px white,
+    /* text-shadow:
+        1px 1px 1px #FB2576,
+        -1px 1px 1px #FB2576,
+        1px -1px 1px #FB2576,
+        -1px -1px 1px #FB2576; */
+        /* 0.6px 0.6px 0.2px white,
         -0.6px 0.6px 0.2px white,
         0.6px -0.6px 0.2px white,
-        -0.6px -0.6px 0.2px white;
+        -0.6px -0.6px 0.2px white; */
     width:100%;
     display:flex;
     align-items: center;
@@ -143,8 +144,8 @@ input[type="radio"]{
         -2px 2px 5px white,
         2px -2px 5px white,
         -2px -2px 5px white;
-    height:100%;
-    width:20%;
+    height:225px;
+    width:225px;
     margin:0px 20px;
     overflow:hidden;
     border:10px solid black;
@@ -156,6 +157,8 @@ input[type="radio"]{
 }
 #card1Text{
     width:70%;
+    height:auto;
+    font-size: 24px;
 }
 #card1Text div{
     width:100%;

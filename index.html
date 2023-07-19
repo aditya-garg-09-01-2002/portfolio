@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="aboutMe.css">
     <style>
         *{
-            font-weight: 900;
             font-family: "roboto",sans-serif;
             box-sizing: border-box;
         }
@@ -133,33 +132,18 @@
         <div class="sectionTitle" style="
             color:#150050;
             text-shadow: 
-                0.5px 0.5px 0.25px white,
+                /* 0.5px 0.5px 0.25px white,
                 -0.5px 0.5px 0.25px white,
                 0.5px -0.5px 0.25px white,
-                -0.5px -0.5px 0.25px white,
-                -2px 2px 2px black,
-                2px -2px 2px black,
-                -2px -2px 2px black,
-                2px 2px 2px black;
+                -0.5px -0.5px 0.25px white, */
+                -1px 1px 1px black,
+                1px -1px 1px black,
+                -1px -1px 1px black,
+                1px 1px 1px black;
             border-color:#150050;
             border-width:7px;
             box-shadow:-1px 1px 1px white;
             ">Projects</div>
-        <div class="project">
-            <div class="projectLeft">
-                <div style="margin-bottom:10px; font-size:25px">Game Automation using Python</div>
-                <div>
-                    Give what project is
-                </div>
-            </div>
-            <div class="projectRight" onmouseenter="fun1()">
-                <iframe src="https://www.youtube.com/embed/gQdrBmnemHY?rel=0" allowfullscreen class="placard"  onmouseleave="fun2()"></iframe>
-            </div>
-            <div class="projectBottom">
-                <div>link to github</div>
-                <div>link to linkedin</div>
-            </div>
-        </div>
     </section>
     <section class="allsects" id="accomplishmentsWrapper">
         <div class="pageArrow" onclick="arrowClick(this.parentNode.id)" style="z-index: 3;"></div>
@@ -168,10 +152,10 @@
                 <div class="sectionTitle" style="
                 color:black;
                 text-shadow:
-                    1px 1px 1.5px #FB2576,
-                    -1px 1px 1.5px #FB2576,
-                    1px -1px 1.5px #FB2576,
-                    -1px -1px 1.5px #FB2576;
+                    1px 1px 1px #FB2576,
+                    -1px 1px 1px #FB2576,
+                    1px -1px 1px #FB2576,
+                    -1px -1px 1px #FB2576;
                 border-color:#FB2576;
                 border-width: 3px;
                 box-shadow:
@@ -189,10 +173,10 @@
         <div class="sectionTitle" style="margin-bottom: 70px;
         color:#150050;
         text-shadow: 
-            -2px 2px 2px black,
-            2px -2px 2px black,
-            -2px -2px 2px black,
-            2px 2px 2px black;
+            -1px 1px 1px black,
+            1px -1px 1px black,
+            -1px -1px 1px black,
+            1px 1px 1px black;
         border-color:#150050;
         border-width:7px;
         box-shadow:-1px 1px 1px white;
@@ -203,10 +187,10 @@
         <div class="sectionTitle" style="
         color:black;
         text-shadow:
-            1px 1px 1.5px #FB2576,
-            -1px 1px 1.5px #FB2576,
-            1px -1px 1.5px #FB2576,
-            -1px -1px 1.5px #FB2576;
+            1px 1px 1px #FB2576,
+            -1px 1px 1px #FB2576,
+            1px -1px 1px #FB2576,
+            -1px -1px 1px #FB2576;
         border-color:#FB2576;
         border-width: 3px;
         box-shadow:
@@ -240,10 +224,10 @@
                 font-size: 45px;
                 color:black;
                 text-shadow:
-                    1px 1px 2px white,
-                    1px -1px 2px white, 
-                    -1px 1px 2px white,
-                    -1px -1px 2px white;
+                    1px 1px 1px white,
+                    1px -1px 1px white, 
+                    -1px 1px 1px white,
+                    -1px -1px 1px white;
             ">Socials</div>
             <div id="smcontainer"></div>
         </div>
@@ -255,10 +239,10 @@
                 font-size: 45px;
                 color:black;
                 text-shadow:
-                    1px 1px 2px white,
-                    1px -1px 2px white, 
-                    -1px 1px 2px white,
-                    -1px -1px 2px white;
+                    1px 1px 1px white,
+                    1px -1px 1px white, 
+                    -1px 1px 1px white,
+                    -1px -1px 1px white;
             ">Contact Me</div>
             <div id ="formContainer">
                 <form id="contactForm" name="contactForm" onSubmit="overrideSubmit(event)">
@@ -334,11 +318,6 @@
             }
         }
         document.addEventListener('DOMContentLoaded', function() {
-            addStarDiv();
-            bioAnimate();
-            skill();
-            timeline();
-            addSocials();
             pageArrowPopulate();
             if(window.innerWidth>800)
             VanillaTilt.init(document.querySelectorAll(".sm"), {
@@ -348,14 +327,29 @@
             // addLibrary();
         });
     </script>
+    <script type="module">
+        import {bioAnimate} from "./bio.js";
+        import {projectPopulate} from "./project.js";
+        import {timeline} from "./accomplishments.js";
+        import {skill} from "./skills.js";
+        import {addSocials} from "./aboutMe.js";
+        document.addEventListener('DOMContentLoaded',function(){
+            bioAnimate();
+            projectPopulate();
+            timeline();
+            skill();
+            addSocials();
+        })
+    </script>
     <script src="arrow.js"></script>
-    <script src="bio.js"></script>
-    <script src="project.js"></script>
-    <script src="accomplishments.js"></script>
-    <script src="skills.js"></script>
+    <script type="module" src="bio.js"></script>
+    <script type ="module" src="project.js"></script>
+    <script type ="module" src="accomplishments.js"></script>
+    <script type="module" src="skills.js"></script>
     <script src="aboutMe.js"></script>
     <script src="library.js"></script>
     <script src="tilt.js"></script>
     <script src="contactForm.js"></script>
+    <script src="functions.js"></script>
 </body>
 </html>

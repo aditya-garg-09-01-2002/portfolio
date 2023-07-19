@@ -90,10 +90,10 @@
     padding: 15px;
     color:#FB2576;
     text-shadow:
-        1px 1px 1px black,
-        -1px 1px 1px black,
-        1px -1px 1px black,
-        -1px -1px 1px black;
+        1px 1px 0.5px black,
+        -1px 1px 0.5px black,
+        1px -1px 0.5px black,
+        -1px -1px 0.5px black;
     /*glassmorphism effect*/
     background: rgba(255,255,255,.2);
     -webkit-backdrop-filter: blur(5px);
@@ -114,12 +114,12 @@
     display: block;
     color:black;
     text-shadow:
-        1px 1px 1.5px #FB2576,
-        -1px 1px 1.5px #FB2576,
-        1px -1px 1.5px #FB2576,
-        -1px -1px 1.5px #FB2576;
-    font-size: 30px;
-    font-weight: 800;
+        1px 1px 1px #FB2576,
+        -1px 1px 1px #FB2576,
+        1px -1px 1px #FB2576,
+        -1px -1px 1px #FB2576;
+    font-size: 28px;
+    font-weight: 200;
     margin-bottom: 7px;
 }   
 #timeline ul li div label{
