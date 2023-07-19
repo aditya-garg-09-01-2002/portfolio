@@ -33,5 +33,10 @@ export function addSocials()
         b.appendChild(c);
         c.appendChild(d);
     }
+    if(window.innerWidth>800)
+    VanillaTilt.init(document.querySelectorAll(".sm"), {
+        max: 25,
+        speed: 400
+    });
 }
 
