@@ -43,9 +43,26 @@ var contactFormDB = firebase.database().ref("contactForm");
 const val = (id) => {
     return document.getElementById(id).value;
 };
-
+var mailcheck=0;
 function overrideSubmit(event){
     event.preventDefault();
+    var flag=0;
+    if(val("fname")==="")
+    {
+        document.getElementById("fname").style.backgroundColor="rgba(255,0,0,0.3)";
+        flag=1;
+    }
+    if(val("lname")==="")
+    {
+        document.getElementById("lname").style.backgroundColor="rgba(255,0,0,0.3)";
+        flag=1;
+    }
+    if(!mailcheck)
+    {
+        document.getElementById("mail").style.backgroundColor="rgba(255,0,0,0.3)";
+        flag=1;
+    }
+    if(flag)return;
     var name=val("fname")+" "+val("lname");
     var mail=val("mail");
     var projectstatus=document.querySelector("input[name='contactProject']:checked").value;
@@ -79,8 +96,8 @@ function validateMail(event)
     if(event.key==" "||event.code==="Space"||event.keyCode==32)event.preventDefault();
     else{
         const emailRegex=/^[a-z0-9.]+@+[a-z]+(\.[a-z]+)+$/;
-        if(emailRegex.test(x.value+event.key))document.getElementById("mail").style.backgroundColor="rgba(0,255,0,0.3)";
-        else document.getElementById("mail").style.backgroundColor="rgba(255,0,0,0.3)";
+        if(emailRegex.test(x.value+event.key)){document.getElementById("mail").style.backgroundColor="rgba(0,255,0,0.3)";mailcheck=1;}
+        else {document.getElementById("mail").style.backgroundColor="rgba(255,0,0,0.3)";mailcheck=0;};
     }
 }
 function validateName(event,x)
@@ -92,5 +109,6 @@ function validateName(event,x)
     else{
         const nameRegex=/^[a-z0-9A-Z]+$/;
         if(!nameRegex.test(y.value+event.key))event.preventDefault();
+        else if(event.code!="Tab")y.style.backgroundColor="transparent";
     }
 }
