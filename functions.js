@@ -21,6 +21,7 @@ function fun2()
     }
 }
 
+
 function disableScroll() {
     // To get the scroll position of current webpage
     TopScroll = window.pageYOffset || document.documentElement.scrollTop;
