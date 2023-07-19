@@ -1,15 +1,17 @@
-const sections=[];
+const sectionList=[];
 var allsections=document.querySelectorAll('.allsects');
 var allArrows=document.querySelectorAll('.pageArrow');
 allsections.forEach((element)=> {
-    sections.push(element.id);
+    sectionList.push(element.id);
 })
+
 function arrowClick(id){
-    for(var i=0;i<sections.length-1;i++)
+    //this function handles clicks on scroll down to next section arrow click
+    for(var i=0;i<sectionList.length-1;i++)
     {
-        if(sections[i]===id)
+        if(sectionList[i]===id)
         {
-            var toBeScrolled=document.getElementById(sections[i+1]);
+            var toBeScrolled=document.getElementById(sectionList[i+1]);
             toBeScrolled.scrollIntoView({behavior:"smooth"});
             break;
         }
