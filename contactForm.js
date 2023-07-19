@@ -23,10 +23,53 @@ function projectNo(){
     document.getElementById('projectDomain').style.animationName="bringOutProjectDomain";
     document.getElementById('submitButton').style.animationName="shiftMessageUp";
 }
+
+const firebaseConfig = {
+    apiKey: "AIzaSyB-oNacJ1gm1Gk5psE1n8FzfJBCOdBZBNc",
+    authDomain: "personal-portfolio-ag1.firebaseapp.com",
+    databaseURL: "https://personal-portfolio-ag1-default-rtdb.firebaseio.com",
+    projectId: "personal-portfolio-ag1",
+    storageBucket: "personal-portfolio-ag1.appspot.com",
+    messagingSenderId: "656333526471",
+    appId: "1:656333526471:web:419a9373a222082e54b5e2",
+    measurementId: "G-R0MEVWSEMP"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+var contactFormDB = firebase.database().ref("contactForm");
+
+
+const val = (id) => {
+    return document.getElementById(id).value;
+};
+
 function overrideSubmit(event){
     event.preventDefault();
-    alert("roboya says, this form is not working due to backend issues");
+    var name=val("fname")+" "+val("lname");
+    var mail=val("mail");
+    var projectstatus=document.querySelector("input[name='contactProject']:checked").value;
+    var projectdomain;
+    if(projectstatus==="yes")projectdomain=document.querySelectorAll("input[name='projectDomain']:checked");
+    var msg=val("desc");
+    saveMessages(name,mail,projectstatus,Array.from(projectdomain, element => element.getAttribute('value')),msg);
+    alert("Eager to read the message");
+    projectNo();
+    document.getElementById("contactForm").reset();
 }
+
+const saveMessages = (name,mail,projectstatus,projectdomain,msg) => {
+  var newContactForm = contactFormDB.push();
+
+  newContactForm.set({
+    name: name,
+    mail: mail,
+    project: projectstatus,
+    domains:projectdomain,
+    message:msg
+  });
+};
+
 function validateMail(event)
 {
     var x=document.getElementById("mail");
