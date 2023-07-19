@@ -22,7 +22,8 @@ function removeStars(){
     document.getElementById("night").querySelectorAll("*").forEach((element)=>{element.classList.remove('shooting_star');}
     )
 }
-function bioAnimate(){
+export function bioAnimate(){
+    addStarDiv();
     var animateState=0;
     function isElementInViewport(el) {
         let rect = el.getBoundingClientRect();
