@@ -1,3 +1,5 @@
+import {accomplishmentList} from "./data/accomplishment.js";
+
 function timelineAnimate(){
     const items=document.querySelectorAll("#timeline ul li");
     function isElementInViewport(el) {
@@ -20,35 +22,13 @@ function timelineAnimate(){
     window.addEventListener("scroll", slideIn);
     window.addEventListener("resize", slideIn);
 };
-const accomplisments=[
-  {
-      time:2001,
-      content:"Lorem ipsum dolor sit amet consectetur adipisicing                     elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga                   architecto possimus id at rem beatae consequuntur dolor commodi."
-  },
-  {
-      time:2001,
-      content:"Lorem ipsum dolor sit amet consectetur adipisicing                     elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga                   architecto possimus id at rem beatae consequuntur dolor commodi."
-  },
-  {
-      time:2001,
-      content:"Lorem ipsum dolor sit amet consectetur adipisicing                     elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga                   architecto possimus id at rem beatae consequuntur dolor commodi."
-  },
-  {
-      time:2001,
-      content:"Lorem ipsum dolor sit amet consectetur adipisicing                     elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga                   architecto possimus id at rem beatae consequuntur dolor commodi."
-  },
-  {
-      time:2001,
-      content:"Lorem ipsum dolor sit amet consectetur adipisicing                     elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga                   architecto possimus id at rem beatae consequuntur dolor commodi."
-  },
-]
 
-function timeline()
+export function timeline()
 {
     const container=document.getElementById('timeline');
     const innerContainer=document.createElement('ul');
     container.appendChild(innerContainer);
-    accomplisments.forEach(addAccomplishment);
+    accomplishmentList.forEach(addAccomplishment);
     function addAccomplishment(element)
     {
         const listitem=document.createElement('li');
