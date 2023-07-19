@@ -1,29 +1,8 @@
-const skills=[
-    {
-        skillName:"C/C++",
-        progress:60
-    },
-    {
-        skillName:"Python",
-        progress:30
-    },
-    {
-        skillName:"Python",
-        progress:30
-    },
-    {
-        skillName:"Python",
-        progress:30
-    },
-    {
-        skillName:"Python",
-        progress:30
-    }
-];
+import {skillList} from "./data/skill.js";
 
-function skill()
+export function skill()
 {
-    skills.forEach(addSkill);
+    skillList.forEach(addSkill);
     skillsAnimate();
 }
 function addSkill(element)

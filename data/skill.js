@@ -1,0 +1,22 @@
+export const skillList=[
+    {
+        skillName:"C/C++",
+        progress:60
+    },
+    {
+        skillName:"Python",
+        progress:30
+    },
+    {
+        skillName:"Python",
+        progress:30
+    },
+    {
+        skillName:"Python",
+        progress:30
+    },
+    {
+        skillName:"Python",
+        progress:30
+    }
+];
