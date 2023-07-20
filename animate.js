@@ -58,6 +58,7 @@ export function sectionCheck(){
                 }
                 else if(allsections[i].id==="skills")
                 {
+                    console.log(1);
                     for (let i = 0; i < progressBar.length; i++) {
                         if (isElementInViewport(progressBar[i],navbarHeight,-1,height,-1,false)) 
                         {
