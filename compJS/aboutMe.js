@@ -1,4 +1,4 @@
-import {socialList} from "./data/social.js";
+import {socialList} from "../data/social.js";
 export function addSocials()
 {
     var z=document.getElementsByClassName('cards');

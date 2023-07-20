@@ -6,12 +6,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
     <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css">
-    <link rel="stylesheet" href="bio.css">
-    <link rel="stylesheet" href="skills.css">
-    <link rel="stylesheet" href="topBar.css">
-    <link rel="stylesheet" href="project.css">
-    <link rel="stylesheet" href="accomplishments.css">
-    <link rel="stylesheet" href="aboutMe.css">
+    <link rel="stylesheet" href="./style/bio.css">
+    <link rel="stylesheet" href="./style/skills.css">
+    <link rel="stylesheet" href="./style/topBar.css">
+    <link rel="stylesheet" href="./style/project.css">
+    <link rel="stylesheet" href="./style/accomplishments.css">
+    <link rel="stylesheet" href="./style/aboutMe.css">
     <style>
         *{
             font-family: "roboto",sans-serif;
@@ -319,11 +319,11 @@
         }  
     </script>
     <script type="module">
-        import {addStarDiv} from "./bio.js";
-        import {projectPopulate} from "./project.js";
-        import {timeline} from "./accomplishments.js";
-        import {skill} from "./skills.js";
-        import {addSocials} from "./aboutMe.js";
+        import {addStarDiv} from "./compJS/bio.js";
+        import {projectPopulate} from "./compJS/project.js";
+        import {timeline} from "./compJS/accomplishments.js";
+        import {skill} from "./compJS/skills.js";
+        import {addSocials} from "./compJS/aboutMe.js";
         import {sectionCheck} from "./animate.js";
         document.addEventListener('DOMContentLoaded',function(){
             addStarDiv();
@@ -341,16 +341,16 @@
         });
     </script> -->
     <script src="arrow.js"></script>
-    <script type="module" src="bio.js"></script>
-    <script type ="module" src="project.js"></script>
-    <script type ="module" src="accomplishments.js"></script>
-    <script type="module" src="skills.js"></script>
-    <script type="module" src="aboutMe.js"></script>
-    <script src="library.js"></script>
+    <script type="module" src="./compJS/bio.js"></script>
+    <script type ="module" src="./compJS/project.js"></script>
+    <script type ="module" src="./compJS/accomplishments.js"></script>
+    <script type="module" src="./compJS/skills.js"></script>
+    <script type="module" src="./compJS/aboutMe.js"></script>
+    <script src="./compJS/library.js"></script>
     <script src="tilt.js"></script>
     <script src="functions.js"></script>
     <script type="module" src="animate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-    <script src="contactForm.js"></script>
+    <script src="./compJS/contactForm.js"></script>
 </body>
 </html>

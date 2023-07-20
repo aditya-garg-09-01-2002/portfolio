@@ -1,4 +1,4 @@
-import {skillList} from "./data/skill.js";
+import {skillList} from "../data/skill.js";
 
 export function skill()
 {

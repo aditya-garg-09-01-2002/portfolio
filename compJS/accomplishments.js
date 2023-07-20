@@ -1,4 +1,4 @@
-import {accomplishmentList} from "./data/accomplishment.js";
+import {accomplishmentList} from "../data/accomplishment.js";
 
 export function timeline()
 {

@@ -1,4 +1,4 @@
-import {projectList} from "./data/project.js"; 
+import {projectList} from "../data/project.js"; 
 export function projectPopulate(){
     var container, project, projectLeft,projectRight,projectBottom,projectTitle,projectDesc;
     projectList.forEach(addingProjects)
