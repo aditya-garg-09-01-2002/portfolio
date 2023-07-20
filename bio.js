@@ -1,11 +1,11 @@
-function addStarDiv(){
+export function addStarDiv(){
     var x=document.getElementById('night');
     for(var i=0;i<20;i++)
     {
         (function(){x.appendChild(document.createElement('div'));})();
     }
 }
-function addStars(){
+export function addStars(){
     var x=document.getElementById('night').querySelectorAll("*");
     x.forEach((element) => 
         {
@@ -18,37 +18,7 @@ function addStars(){
         }
     )
 }
-function removeStars(){
+export function removeStars(){
     document.getElementById("night").querySelectorAll("*").forEach((element)=>{element.classList.remove('shooting_star');}
     )
 }
-export function bioAnimate(){
-    addStarDiv();
-    var animateState=0;
-    function isElementInViewport(el) {
-        let rect = el.getBoundingClientRect();
-        // alert(rect.bottom>=window.innerHeight/2);
-        return (rect.bottom>= (window.innerHeight/3) );
-    }
-    function slideIn() {
-        if(isElementInViewport(document.getElementById('bio')))
-        {
-            if(!animateState)
-            {
-                animateState=1;
-                addStars();
-            }
-        }
-        else 
-        {
-            if(animateState)
-            {
-                animateState=0;
-                removeStars();
-            }
-        }
-    }
-    window.addEventListener("load", slideIn);
-    window.addEventListener("scroll", slideIn);
-    window.addEventListener("resize", slideIn);
-};
