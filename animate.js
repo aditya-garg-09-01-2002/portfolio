@@ -71,10 +71,13 @@ export function sectionCheck(){
                         }
                       }
                 }
-                if(isElementInViewport(allsections[i],height/2,-1,height,-1,true))
-                    allArrows[i].style.display="block";
-                else
-                    allArrows[i].style.display="none";
+                if(i!=allsections.length-1)
+                {
+                    if(isElementInViewport(allsections[i],height/2,-1,height,-1,true))
+                        allArrows[i].style.display="block";
+                    else
+                        allArrows[i].style.display="none";
+                }
             }
         }
     }
