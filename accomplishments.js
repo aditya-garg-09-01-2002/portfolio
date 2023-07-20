@@ -19,7 +19,6 @@ export function timeline()
     } 
     (function(){
         var x =document.getElementById('accomplishments');
-        // console.log(x.offsetHeight/window.innerHeight*100);
         x.style.setProperty('--before-height',x.offsetHeight+"px");
     })();
 }
