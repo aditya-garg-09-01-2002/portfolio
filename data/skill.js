@@ -40,6 +40,10 @@ export const skillList=[
         progress:70
     },
     {
+        skillName:"GitHub",
+        progress:100
+    },
+    {
         skillName:"OmnetPP",
         progress:50
     },
