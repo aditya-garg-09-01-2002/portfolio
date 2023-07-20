@@ -7,12 +7,14 @@
     padding:20vh 10vw 20vh 10vw; 
 }
 #skillsRight{
+    z-index:0;
     background-color:transparent;
     width:100%;
     height:auto;
     display:block;
 }
 #skillsRight div label{
+    z-index:0;
     width:25%;
     color:#FB2576;
     font-size:24px;
@@ -26,6 +28,7 @@
     transform: translateY(-3px);
 }
 .lowLayer{
+    z-index:0;
     width:65%;
     float:left;
     background-color: rgba(0,0,0,0.6);
@@ -34,6 +37,7 @@
     border-radius: 10px;
 }
 .aboveLayer{
+    z-index:0;
     /* background-color:; */
     border:0.5px solid white;
     height:100%;
@@ -64,6 +68,7 @@
     border-radius: 10px;
     visibility:hidden;
     opacity:0;
+    z-index:0;
     transform: translateY(50%);
     transition: all 0.5s ease-in-out;
     box-shadow:
