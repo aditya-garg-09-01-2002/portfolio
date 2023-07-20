@@ -316,26 +316,30 @@
                 y.style.height=40+"px";
                 x.style.display="none";
             }
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-            pageArrowPopulate();
-            // addLibrary();
-        });
+        }  
     </script>
     <script type="module">
-        import {bioAnimate} from "./bio.js";
+        import {addStarDiv} from "./bio.js";
         import {projectPopulate} from "./project.js";
         import {timeline} from "./accomplishments.js";
         import {skill} from "./skills.js";
         import {addSocials} from "./aboutMe.js";
+        import {sectionCheck} from "./animate.js";
         document.addEventListener('DOMContentLoaded',function(){
-            bioAnimate();
+            addStarDiv();
             projectPopulate();
             timeline();
             skill();
             addSocials();
+            sectionCheck();
         })
     </script>
+    <!-- <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            // pageArrowPopulate();
+            // addLibrary();
+        });
+    </script> -->
     <script src="arrow.js"></script>
     <script type="module" src="bio.js"></script>
     <script type ="module" src="project.js"></script>
@@ -345,6 +349,7 @@
     <script src="library.js"></script>
     <script src="tilt.js"></script>
     <script src="functions.js"></script>
+    <script type="module" src="animate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="contactForm.js"></script>
 </body>
