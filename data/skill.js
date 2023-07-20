@@ -1,22 +1,54 @@
 export const skillList=[
     {
         skillName:"C/C++",
+        progress:100
+    },
+    {
+        skillName:"Data Structures and Algorithms",
+        progress:100
+    },
+    {
+        skillName:"Python",
+        progress:80
+    },
+    {
+        skillName:"React",
+        progress:80
+    },
+    {
+        skillName:"HTML",
+        progress:100
+    },
+    {
+        skillName:"CSS",
+        progress:100
+    },
+    {
+        skillName:"Java Script",
+        progress:90
+    },
+    {
+        skillName:"FireBase",
         progress:60
     },
     {
-        skillName:"Python",
-        progress:30
+        skillName:"Java",
+        progress:60
     },
     {
-        skillName:"Python",
-        progress:30
+        skillName:"MySQL",
+        progress:70
     },
     {
-        skillName:"Python",
-        progress:30
+        skillName:"OmnetPP",
+        progress:50
     },
     {
-        skillName:"Python",
+        skillName:"Linux",
+        progress:50
+    },
+    {
+        skillName:"Google APIs",
         progress:30
     }
 ];
