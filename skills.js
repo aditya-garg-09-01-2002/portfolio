@@ -20,29 +20,4 @@ function addSkill(element)
     innerContainer.appendChild(name);
     innerContainer.appendChild(bottom);
     container.appendChild(innerContainer);
-}   
-function skillsAnimate(){
-    const items2=document.querySelectorAll(".progressbar");
-    const items=document.querySelectorAll(".lowLayer div");
-    const navbarHeight=document.getElementById('navbar').offsetHeight;
-    function isElementInViewport(el) {
-        let rect = el.getBoundingClientRect();
-        return (
-            rect.top >= navbarHeight && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-        );
-    }
-    function slideIn() {
-        for (let i = 0; i < items.length; i++) {
-          if (isElementInViewport(items[i])) {
-            items[i].classList.add("aboveLayer");
-            items2[i].classList.add("barPop");
-          } else {
-            items[i].classList.remove("aboveLayer");
-            items2[i].classList.remove("barPop");
-          }
-        }
-    }
-    window.addEventListener("load", slideIn);
-    window.addEventListener("scroll", slideIn);
-    window.addEventListener("resize", slideIn);
-};
+}  
