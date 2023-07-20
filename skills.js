@@ -3,7 +3,6 @@ import {skillList} from "./data/skill.js";
 export function skill()
 {
     skillList.forEach(addSkill);
-    skillsAnimate();
 }
 function addSkill(element)
 {
