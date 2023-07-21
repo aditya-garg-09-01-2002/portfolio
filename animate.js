@@ -60,11 +60,14 @@ export function sectionCheck(){
                 {
                     curSectionIndex=i;
                     buttonUpdate(curSectionIndex);
-                    if(allsections[i].getBoundingClientRect().top<-200)
+                    if(window.innerWidth>1000)
                     {
-                        if(navbarStatus==0)introduceNavbar();    
-                    }
-                    else if(navbarStatus)removeNavbar();
+                        if(allsections[i].getBoundingClientRect().top<-200)
+                        {
+                            if(navbarStatus==0)introduceNavbar();    
+                        }
+                        else if(navbarStatus)removeNavbar();
+                    }   
                     if(isElementInViewport(allsections[i],height,-1,height/3,-1,true))
                     {    
                         if(!bioAnimateState)
