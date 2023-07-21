@@ -136,8 +136,9 @@ pointer-events: none; /* Allow interaction with underlying elements */
     .projectLeft{
         float:none;
         width:100%;
-        height:400px;
+        height:auto;
         padding-right: 10px;
+        padding-bottom:20px;
     }
     .projectRight{
         margin-top:30px;
