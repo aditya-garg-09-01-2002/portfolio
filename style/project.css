@@ -136,11 +136,13 @@ pointer-events: none; /* Allow interaction with underlying elements */
     .projectLeft{
         float:none;
         width:100%;
+        height:400px;
+        padding-right: 10px;
     }
     .projectRight{
         margin-top:30px;
         float:none;
-        height:50vh;
+        height:250px;
         width:100%;
         margin-bottom: 30px;
     }
@@ -154,6 +156,7 @@ pointer-events: none; /* Allow interaction with underlying elements */
     .project{
         height:auto;
         width:100%;
+        border-radius: 2%;
     }
     .projectBottom{
         height:60vh;
