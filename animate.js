@@ -19,7 +19,6 @@ export function sectionCheck(){
         if(flag)
             return (
                 rect.top<top&&rect.bottom>=bottom
-                // && rect.top< (window.innerHeight || document.documentElement.clientHeight)/2
             );
         else
             return (
