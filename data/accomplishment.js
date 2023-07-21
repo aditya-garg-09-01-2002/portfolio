@@ -12,10 +12,6 @@ export const accomplishmentList=[
         content:"Completed my Senior Secondary schooling with 95+ percentage."
     },
     {
-        time:"December, 2021",
-        content:"Joined LNMIIT, Jaipur pursuing B.Tech in CSE."
-    },
-    {
         time:"June, 2022",
         content:"Became Pupil on Code Forces."
     },
@@ -33,7 +29,7 @@ export const accomplishmentList=[
     },
     {
         time:"November, 2022",
-        content:"Had a successfull run throughout Google KickStart 2022<br>Secured Global rank 373."
+        content:"Had a successful run throughout Google KickStart 2022<br>Secured Global rank 373."
     },
     {
         time:"November, 2022",
@@ -42,10 +38,6 @@ export const accomplishmentList=[
     {
         time:"March, 2023",
         content:"Conducted a 3-day Flagship Event \"Code Rush\" with Algo University & GDSC LNMIIT."
-    },
-    {
-        time:"April 2023",
-        content:"Learnt a great deal on:<br>Computer Networking <br><label>(First-hand experience on Omnetpp)</label><br>Operating Systems <br><label>(learnt about multi-threading)</label><br>from LNMIIT."
     },
     {
         time:"May, 2023",
@@ -65,6 +57,6 @@ export const accomplishmentList=[
     },
     {
         time:"July, 2023",
-        content:"Advanced my HTML,CSS, JS and React knowledge and completed my portfolio website.<br>P.S. You're already experiencing it."
+        content:"Advanced my React, HTML,CSS, and JS knowledge and completed my portfolio website.<br>P.S. You're already experiencing it."
     }
 ]
