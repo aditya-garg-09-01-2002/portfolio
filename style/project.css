@@ -161,3 +161,9 @@ pointer-events: none; /* Allow interaction with underlying elements */
         margin-bottom:30px;
     }
 }
+@media screen and (max-height:1000px)
+{
+    .projectRight{
+        height:300px;
+    }
+}
