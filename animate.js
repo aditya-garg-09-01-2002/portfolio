@@ -4,6 +4,9 @@ export function sectionCheck(){
     var buttonList=document.querySelectorAll('.overlayButton a');
     var height=(window.innerHeight || document.documentElement.clientHeight);
     const navbarHeight=document.getElementById('navbar').offsetHeight;
+    var nav=document.getElementById("overlay");
+
+    var navbarStatus=0;
 
     var curSectionIndex=0;
 
@@ -13,6 +16,18 @@ export function sectionCheck(){
     
     const progressBar=document.querySelectorAll(".progressbar");
     const progress=document.querySelectorAll(".lowLayer div");
+
+    function introduceNavbar()
+    {
+        navbarStatus =1;
+        nav.style.backgroundColor="rgba(0,0,0,0.7)";
+    }
+
+    function removeNavbar()
+    {
+        navbarStatus=0;
+        nav.style.backgroundColor="transparent";
+    }
 
     function isElementInViewport(el,top,right,bottom,left,flag) {
         let rect = el.getBoundingClientRect();
@@ -29,17 +44,14 @@ export function sectionCheck(){
     {
             buttonList[i].addEventListener("mouseenter", function () {
             this.style.color = "white";
-            this.style.fontSize = "23px";
             this.style.textDecoration = "underline";
         });
         buttonList[i].addEventListener("mouseleave", function () {
             this.style.color = "black";
-            this.style.fontSize = "20px";
             this.style.textDecoration = "none";
             buttonUpdate(curSectionIndex);
         }); 
     }
-
     function curSection() {
         for (let i = 0; i < allsections.length; i++) {
             if(isElementInViewport(allsections[i],height,-1,0,-1,true))
@@ -48,6 +60,11 @@ export function sectionCheck(){
                 {
                     curSectionIndex=i;
                     buttonUpdate(curSectionIndex);
+                    if(allsections[i].getBoundingClientRect().top<-200)
+                    {
+                        if(navbarStatus==0)introduceNavbar();    
+                    }
+                    else if(navbarStatus)removeNavbar();
                     if(isElementInViewport(allsections[i],height,-1,height/3,-1,true))
                     {    
                         if(!bioAnimateState)
@@ -121,13 +138,11 @@ export function sectionCheck(){
         {
             if(i===j)
             {
-                buttonList[j].style.fontSize="23px";
                 buttonList[j].style.color="white";
                 buttonList[j].style.textDecoration = "underline";
             }
             else 
             {
-                buttonList[j].style.fontSize="20px";
                 buttonList[j].style.color="black";
                 buttonList[j].style.textDecoration = "none";
             }
