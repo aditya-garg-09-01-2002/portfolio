@@ -38,28 +38,28 @@
     background: none;
     width:auto;
     border:none;
-    font-size: 26px;
+    font-size: 20px;
     margin-right:1%;
 }
 .overlayButton a{
     color:black;
-    font-weight:bold;
+    /* font-weight:bold; */
     text-decoration: none;
     text-shadow:
-    1px 1px 1px rgba(251, 37, 118,1),
-    -1px 1px 1px rgba(251, 37, 118,1),
-    1px -1px 1px rgba(251, 37, 118,1),
-    -1px -1px 1px rgba(251, 37, 118,1);
+    0.5px 0.5px 0.5px rgba(251, 37, 118,1),
+    -0.5px 0.5px 0.5px rgba(251, 37, 118,1),
+    0.5px -0.5px 0.5px rgba(251, 37, 118,1),
+    -0.5px -0.5px 0.5px rgba(251, 37, 118,1);
 }
 .overlayButton a:visited{
     color:black;
-    font-weight:bold;
+    /* font-weight:bold; */
     text-decoration: none;
     text-shadow:
-    1px 1px 1px rgba(251, 37, 118,1),
-    -1px 1px 1px rgba(251, 37, 118,1),
-    1px -1px 1px rgba(251, 37, 118,1),
-    -1px -1px 1px rgba(251, 37, 118,1);
+    0.5px 0.5px 0.5px rgba(251, 37, 118,1),
+    -0.5px 0.5px 0.5px rgba(251, 37, 118,1),
+    0.5px -0.5px 0.5px rgba(251, 37, 118,1),
+    -0.5px -0.5px 0.5px rgba(251, 37, 118,1);
 }
 body{
     padding : 0px;

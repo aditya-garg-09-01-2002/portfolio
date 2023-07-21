@@ -99,12 +99,12 @@ export function sectionCheck(){
         for( var j=0;j<buttonList.length;j++)
         {
             if(i===j){
-                buttonList[j].style.fontSize="30px";
+                buttonList[j].style.fontSize="25px";
                 buttonList[j].style.color="white";
             }
             else 
             {
-                buttonList[j].style.fontSize="26px";
+                buttonList[j].style.fontSize="20px";
                 buttonList[j].style.color="black";
             }
         }
