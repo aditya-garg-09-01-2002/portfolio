@@ -147,6 +147,8 @@ input[type="radio"]{
     height:225px;
     width:225px;
     margin:20px 20px;
+    position:sticky;
+    top:40px;
     overflow:hidden;
     border:10px solid black;
     border-radius: 10px;
@@ -171,6 +173,7 @@ input[type="radio"]{
         padding:40px 0px 30px 0px;
     }  
     #card1Img{
+        position:relative;
         width:200px;
         height:200px;
         margin-bottom: 40px;
