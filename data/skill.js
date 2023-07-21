@@ -8,6 +8,10 @@ export const skillList=[
         progress:100
     },
     {
+        skillName:"Problem Solving",
+        prgress:90
+    },
+    {
         skillName:"Python",
         progress:80
     },
