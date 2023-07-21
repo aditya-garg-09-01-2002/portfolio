@@ -113,11 +113,12 @@
 #timeline ul li div time {
     display: block;
     color:black;
-    text-shadow:
+    /* text-shadow:
         1px 1px 1px #FB2576,
         -1px 1px 1px #FB2576,
         1px -1px 1px #FB2576,
-        -1px -1px 1px #FB2576;
+        -1px -1px 1px #FB2576; */
+    text-shadow: none;
     font-size: 28px;
     font-weight: 200;
     margin-bottom: 7px;

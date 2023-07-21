@@ -18,11 +18,11 @@
     width:25%;
     color:#FB2576;
     font-size:24px;
-    text-shadow: 
+    /* text-shadow: 
         1px 1px 0.5px black,
         -1px 1px 0.5px black,
         1px -1px 0.5px black,
-        -1px -1px 0.5px black;
+        -1px -1px 0.5px black; */
     float:left;
     text-align: center;
     transform: translateY(-3px);
