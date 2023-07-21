@@ -104,7 +104,7 @@ export function sectionCheck(){
             }
             else 
             {
-                buttonList[j].style.fontSize="24px";
+                buttonList[j].style.fontSize="26px";
                 buttonList[j].style.color="black";
             }
         }
