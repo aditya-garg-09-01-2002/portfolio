@@ -5,6 +5,8 @@ export function sectionCheck(){
     var height=(window.innerHeight || document.documentElement.clientHeight);
     const navbarHeight=document.getElementById('navbar').offsetHeight;
 
+    var curSectionIndex=0;
+
     var bioAnimateState=0;
 
     const accomplishmentDiv=document.querySelectorAll("#timeline ul li");
@@ -24,13 +26,29 @@ export function sectionCheck(){
                 rect.top>=top&&rect.bottom<=bottom
             );    
     }
+    for(var i=0;i<buttonList.length;i++)
+    {
+            buttonList[i].addEventListener("mouseenter", function () {
+            this.style.color = "white";
+            this.style.fontSize = "23px";
+            this.style.textDecoration = "underline";
+        });
+        buttonList[i].addEventListener("mouseleave", function () {
+            this.style.color = "black";
+            this.style.fontSize = "20px";
+            this.style.textDecoration = "none";
+            buttonUpdate(curSectionIndex);
+        }); 
+    }
+
     function curSection() {
         for (let i = 0; i < allsections.length; i++) {
             if(isElementInViewport(allsections[i],height,-1,0,-1,true))
             {
                 if(allsections[i].id==="bio")
                 {
-                    buttonUpdate(i);
+                    curSectionIndex=i;
+                    buttonUpdate(curSectionIndex);
                     if(isElementInViewport(allsections[i],height,-1,height/3,-1,true))
                     {    
                         if(!bioAnimateState)
@@ -50,11 +68,13 @@ export function sectionCheck(){
                 }
                 else if(allsections[i].id==="projects")
                 {       
-                    buttonUpdate(i);
+                    curSectionIndex=i;
+                    buttonUpdate(curSectionIndex);
                 }
                 else if(allsections[i].id==="accomplishmentsWrapper")
                 {
-                    buttonUpdate(i);
+                    curSectionIndex=i;
+                    buttonUpdate(curSectionIndex);
                     for (let i = 0; i < accomplishmentDiv.length; i++) 
                     {
                         if (isElementInViewport(accomplishmentDiv[i],navbarHeight,-1,height,-1,false)) 
@@ -65,7 +85,8 @@ export function sectionCheck(){
                 }
                 else if(allsections[i].id==="skills")
                 {
-                    buttonUpdate(i);
+                    curSectionIndex=i;
+                    buttonUpdate(curSectionIndex);
                     for (let i = 0; i < progressBar.length; i++) {
                         if (isElementInViewport(progressBar[i],navbarHeight,-1,height,-1,false)) 
                         {
@@ -81,7 +102,8 @@ export function sectionCheck(){
                 }
                 else if(allsections[i].id==="aboutMe")
                 {
-                    buttonUpdate(i);
+                    curSectionIndex=i;
+                    buttonUpdate(curSectionIndex);
                 }
                 if(i!=allsections.length-1)
                 {
@@ -98,7 +120,8 @@ export function sectionCheck(){
         //this function updates button of section you are on"
         for( var j=0;j<buttonList.length;j++)
         {
-            if(i===j){
+            if(i===j)
+            {
                 buttonList[j].style.fontSize="23px";
                 buttonList[j].style.color="white";
                 buttonList[j].style.textDecoration = "underline";
@@ -109,20 +132,6 @@ export function sectionCheck(){
                 buttonList[j].style.color="black";
                 buttonList[j].style.textDecoration = "none";
             }
-
-            buttonList[j].addEventListener("mouseenter", function () {
-                this.style.color = "white";
-                this.style.fontSize = "20px";
-                this.style.textDecoration = "underline";
-            });
-    
-            buttonList[j].addEventListener("mouseleave", function () {
-                if (i !== j) {
-                    this.style.color = "black";
-                    this.style.fontSize = "20px";
-                    this.style.textDecoration = "none";
-                }
-            });
         }
     }
     window.addEventListener("load", curSection);
