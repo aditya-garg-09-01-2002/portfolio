@@ -102,7 +102,7 @@
     box-shadow: 
         0 0 0 0.3px #FB2576,
         0 0 0 3px black,
-        30px 30px 50px rgba(251, 37, 118,0.5);
+        20px 20px 30px rgba(251, 37, 118,0.5);
     border-radius: 10px;
     border: 3px solid black;
     /* box-shadow: 0 0 0 1px black; */
@@ -153,7 +153,7 @@
     box-shadow: 
         0 0 0 0.3px #FB2576,
         0 0 0 3px black,
-        -30px 30px 50px rgba(251, 37, 118,0.5);
+        -20px 20px 30px rgba(251, 37, 118,0.5);
     transform: translateX(-200px);
 }
 #timeline ul li:nth-child(even) div::before {
@@ -186,7 +186,7 @@
         box-shadow: 
             0 0 0 0.3px #FB2576,
             0 0 0 3px black,
-            -30px 30px 50px rgba(251, 37, 118,0.5);
+            -20px 20px 30px rgba(251, 37, 118,0.5);
         left: -43vw;
     }
 }
@@ -206,7 +206,7 @@
       box-shadow: 
         0 0 0 0.3px #FB2576,
         0 0 0 3px black,
-        30px 30px 50px rgba(251, 37, 118,0.5);
+        20px 20px 30px rgba(251, 37, 118,0.5);
     }
   
     #timeline ul li:nth-child(even) div::before {
