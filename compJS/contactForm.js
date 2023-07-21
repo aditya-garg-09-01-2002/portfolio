@@ -19,7 +19,7 @@ function projectNo(){
     setTimeout(()=>{
         document.getElementById('projectDomain').style.display="none";
     },300);
-    document.getElementById('desc').style.animationName="shiftMessageUp";
+    document.getElementById('descCont').style.animationName="shiftMessageUp";
     document.getElementById('projectDomain').style.animationName="bringOutProjectDomain";
     document.getElementById('submitButton').style.animationName="shiftMessageUp";
 }
