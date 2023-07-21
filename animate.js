@@ -112,7 +112,7 @@ export function sectionCheck(){
 
             buttonList[j].addEventListener("mouseenter", function () {
                 this.style.color = "white";
-                this.style.fontSize = "25px";
+                this.style.fontSize = "20px";
                 this.style.textDecoration = "underline";
             });
     
