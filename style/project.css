@@ -17,12 +17,16 @@
         background-size: 200% 200%;
     }
 }
+@font-face{
+    font-family:"Zero";
+    src:url(./AlmendraSC-Regular.ttf) format("truetype");
+}
 .sectionTitle{
     /* z-index: 1; */
     display:flex;
     width:100%;
     color:white;
-    font-family: 'Tiro Devanagari Marathi', serif;
+    font-family: "Zero";
     padding:0px;
     font-size: 60px;
     padding-left: 10px;
