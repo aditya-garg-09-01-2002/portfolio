@@ -23,7 +23,7 @@ export function projectPopulate(){
             projectDesc=document.createElement('div');
             projectLeft.appendChild(projectTitle);
             projectLeft.appendChild(projectDesc);
-            projectTitle.style.marginBottom=10+"px";
+            // projectTitle.style.marginBottom=10+"px";
             if(element.placardExpand)projectRight.setAttribute('onmouseenter',"fun1()");
         })();
         //this function adds the data in the above created tags
