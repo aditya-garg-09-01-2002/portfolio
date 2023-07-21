@@ -19,6 +19,7 @@ export function projectPopulate(){
             project.appendChild(projectRight);
             project.appendChild(projectBottom);
             projectTitle=document.createElement('div');
+            projectTitle.classList.add('titleDiv');
             projectTitle.style.fontSize=24+"px";
             projectDesc=document.createElement('div');
             projectLeft.appendChild(projectTitle);

@@ -145,6 +145,9 @@ pointer-events: none; /* Allow interaction with underlying elements */
         margin-bottom:20px;
         text-align: left;
     }
+    .titleDiv{
+        text-align:center;
+    }
     .placard{
         height:90%;
         width:100%;
