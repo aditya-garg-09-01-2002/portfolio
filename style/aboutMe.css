@@ -166,6 +166,9 @@ input[type="radio"]{
     width:100%;
 }
 @media screen and (max-width:1000px) {
+    .fa{
+        font-size: 100px;
+    }
     .cards{
         align-items: flex-start;
         height:auto;
