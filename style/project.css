@@ -149,7 +149,7 @@ pointer-events: none; /* Allow interaction with underlying elements */
         margin-bottom:20px;
     }
     .placard{
-        height:80%;
+        height:90%;
         width:100%;
     }
     .project{
