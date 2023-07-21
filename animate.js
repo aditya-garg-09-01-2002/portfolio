@@ -99,14 +99,30 @@ export function sectionCheck(){
         for( var j=0;j<buttonList.length;j++)
         {
             if(i===j){
-                buttonList[j].style.fontSize="25px";
+                buttonList[j].style.fontSize="23px";
                 buttonList[j].style.color="white";
+                buttonList[j].style.textDecoration = "underline";
             }
             else 
             {
                 buttonList[j].style.fontSize="20px";
                 buttonList[j].style.color="black";
+                buttonList[j].style.textDecoration = "none";
             }
+
+            buttonList[j].addEventListener("mouseenter", function () {
+                this.style.color = "white";
+                this.style.fontSize = "25px";
+                this.style.textDecoration = "underline";
+            });
+    
+            buttonList[j].addEventListener("mouseleave", function () {
+                if (i !== j) {
+                    this.style.color = "black";
+                    this.style.fontSize = "20px";
+                    this.style.textDecoration = "none";
+                }
+            });
         }
     }
     window.addEventListener("load", curSection);
