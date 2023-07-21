@@ -143,7 +143,7 @@ pointer-events: none; /* Allow interaction with underlying elements */
     }
     .projectLeft div{
         margin-bottom:20px;
-        text-align: center;
+        text-align: left;
     }
     .placard{
         height:90%;
@@ -166,5 +166,9 @@ pointer-events: none; /* Allow interaction with underlying elements */
     }
     .placard{
         width:90%;
+    }
+    .projectBottom{
+        height:auto;
+        margin-bottom:30px;
     }
 }
