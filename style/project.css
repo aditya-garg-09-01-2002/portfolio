@@ -56,12 +56,6 @@
     flex-wrap: wrap;
     color:white;
     font-size:22px;
-    /* text-shadow:
-        0.5px 0.5px 0.1px rgba(251, 37, 118,1),
-        -0.5px 0.5px 0.1px rgba(251, 37, 118,1),
-        0.5px -0.5px 0.1px rgba(251, 37, 118,1),
-        -0.5px -0.5px 0.1px rgba(251, 37, 118,1);
-    ; */
     height:300px;
     float:left;
 }
@@ -149,6 +143,7 @@ pointer-events: none; /* Allow interaction with underlying elements */
     }
     .projectLeft div{
         margin-bottom:20px;
+        text-align: center;
     }
     .placard{
         height:90%;
@@ -160,7 +155,7 @@ pointer-events: none; /* Allow interaction with underlying elements */
         border-radius: 2%;
     }
     .projectBottom{
-        height:60vh;
+        height:auto;
         margin-bottom:30px;
     }
 }
