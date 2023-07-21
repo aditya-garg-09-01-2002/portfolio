@@ -47,14 +47,9 @@ var mailcheck=0;
 function overrideSubmit(event){
     event.preventDefault();
     var flag=0;
-    if(val("fname")==="")
+    if(val("name")==="")
     {
-        document.getElementById("fname").style.backgroundColor="rgba(255,0,0,0.3)";
-        flag=1;
-    }
-    if(val("lname")==="")
-    {
-        document.getElementById("lname").style.backgroundColor="rgba(255,0,0,0.3)";
+        document.getElementById("name").style.backgroundColor="rgba(255,0,0,0.3)";
         flag=1;
     }
     if(!mailcheck)
@@ -63,7 +58,7 @@ function overrideSubmit(event){
         flag=1;
     }
     if(flag)return;
-    var name=val("fname")+" "+val("lname");
+    var name=val("fname");
     var mail=val("mail");
     var projectstatus=document.querySelector("input[name='contactProject']:checked").value;
     var msg=val("desc");
@@ -100,11 +95,9 @@ function validateMail(event)
         else {document.getElementById("mail").style.backgroundColor="rgba(255,0,0,0.3)";mailcheck=0;};
     }
 }
-function validateName(event,x)
+function validateName(event)
 {
-    var y;
-    if(x==='f')y=document.getElementById("fname");
-    else if(x==='l')y=document.getElementById("lname");
+    var y=document.getElementById("name");
     if(event.key==" "||event.code=="Space"||event.keyCode==32)event.preventDefault();
     else{
         const nameRegex=/^[a-z0-9A-Z]+$/;
