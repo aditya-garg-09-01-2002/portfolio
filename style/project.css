@@ -19,7 +19,7 @@
 }
 @font-face{
     font-family:"Zero";
-    src:url(./AlmendraSC-Regular.ttf) format("truetype");
+    src:url(../AlmendraSC-Regular.ttf) format("truetype");
 }
 .sectionTitle{
     /* z-index: 1; */
