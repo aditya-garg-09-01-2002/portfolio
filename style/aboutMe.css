@@ -146,7 +146,7 @@ input[type="radio"]{
         -2px -2px 5px white;
     height:225px;
     width:225px;
-    margin:20px 20px;
+    margin:20px 20px 65vh;
     position:sticky;
     top:40px;
     overflow:hidden;
