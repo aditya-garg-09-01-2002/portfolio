@@ -16,13 +16,13 @@
 #bioQoute pre{
   margin:0;
   font-weight:700;
-  font-size:40px;
+  font-size:35px;
   font-family: "qoutes1";
   color:#ffd6e5;
   -webkit-text-stroke: 0.5px #e91e63;
   text-stroke:0.5px #e91e63;
   text-shadow: 0px 0px 7px #e91e63;
-  line-height: 50px;
+  line-height: 40px;
 }
 #bioContentText{
   width:70%;
