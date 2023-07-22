@@ -14,8 +14,10 @@ export function addCertifications()
         image.src=element.image;
         var placardText=document.createElement('div');
         placard.appendChild(placardText);
-        placardText.style.width="calc(100% - 200px)";
+        placardText.style.width="calc(100% - 220px)";
         placardText.style.height="100%";
-        placardText.style.backgroundColor='white';
+        placardText.innerHTML="lorem";
+        placard.addEventListener('mouseenter',()=>{placard.style.animationName="hover-border-in";});
+        placard.addEventListener('mouseleave',()=>{placard.style.animationName="hover-border-out";});
     });
 }
