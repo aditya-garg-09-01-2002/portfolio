@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./style/project.css">
     <link rel="stylesheet" href="./style/accomplishments.css">
     <link rel="stylesheet" href="./style/aboutMe.css">
+    <link rel="stylesheet" href="./style/certifications.css">
     <style>
         *{
             font-family: "Poppins";
@@ -225,6 +226,21 @@ With my time at LNMIIT, Jaipur I understood and excelled at
 Individually I love working on technological developments and if there's anything we can do together, tell me below in the <a href="#contactForm">Contact Form</a>.
             </div>
         </div>
+        <div class ="cards" id="educationCard" style="height:auto;justify-content: center; align-items: flex-start;">
+            <div style="
+                width:100%;
+                font-family:'Zero';
+                height:auto;
+                text-align: center;
+                font-size: 60px;
+                color:black;
+                text-shadow:
+                    1px 1px 1px white,
+                    1px -1px 1px white, 
+                    -1px 1px 1px white,
+                    -1px -1px 1px white;" 
+                    >Educations And Certifications</div>
+        </div>
         <div class="cards" style="height:auto;">
             <div style="
                 width:100%;
@@ -342,12 +358,14 @@ Individually I love working on technological developments and if there's anythin
         import {skill} from "./compJS/skills.js";
         import {addSocials} from "./compJS/aboutMe.js";
         import {sectionCheck} from "./animate.js";
+        import {addCertifications} from "./compJS/certifications.js"
         document.addEventListener('DOMContentLoaded',function(){
             if(window.innerWidth>=1000)addQoute();
             addStarDiv();
             projectPopulate();
             timeline();
             skill();
+            addCertifications();
             addSocials();
             sectionCheck();
         })
@@ -358,6 +376,7 @@ Individually I love working on technological developments and if there's anythin
     <script type ="module" src="./compJS/accomplishments.js"></script>
     <script type="module" src="./compJS/skills.js"></script>
     <script type="module" src="./compJS/aboutMe.js"></script>
+    <script type="module" src="./compJS/certifications.js"></script>
     <script src="./compJS/library.js"></script>
     <script src="tilt.js"></script>
     <script src="functions.js"></script>
