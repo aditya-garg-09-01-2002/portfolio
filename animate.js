@@ -44,11 +44,13 @@ export function sectionCheck(){
     {
             buttonList[i].addEventListener("mouseenter", function () {
             this.style.color = "white";
+            this.style.webkitTextStroke="0.5px rgba(251,37,118,1)";
             this.style.textDecoration = "underline";
         });
         buttonList[i].addEventListener("mouseleave", function () {
-            this.style.color = "black";
+            this.style.color = "rgba(251,37,118,1)";
             this.style.textDecoration = "none";
+            this.style.webkitTextStroke="none";
             buttonUpdate(curSectionIndex);
         }); 
     }
@@ -142,13 +144,15 @@ export function sectionCheck(){
             if(i===j)
             {
                 buttonList[j].style.color="white";
-                buttonList[j].style.fontSize = "25px";
+                buttonList[j].style.fontSize = "20px";
+                buttonList[j].style.webkitTextStroke="0.5px rgba(251,37,118,1)";
                 buttonList[j].style.textDecoration = "underline";
             }
             else 
             {
-                buttonList[j].style.color="black";
+                buttonList[j].style.color="rgba(251,37,118,1)";
                 buttonList[j].style.fontSize = "20px";
+                buttonList[j].style.webkitTextStroke="none";
                 buttonList[j].style.textDecoration = "none";
             }
         }
