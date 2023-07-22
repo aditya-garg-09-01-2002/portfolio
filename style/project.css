@@ -5,8 +5,6 @@
     height:auto;
     width:100%;
     background-image: repeating-radial-gradient(circle,#1f0039,#3F0071 70px);
-    /* animation: illusion 10s linear infinite; */
-    /* background-color: ; */
 }
 @keyframes illusion{
     0%{
@@ -35,13 +33,9 @@
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 20px;
     border-bottom: 5px solid white;
-    /* border-left: 1px solid white;
-    border-right: 1px solid white; */
-    /* padding: 10px; */
 }
 .project{
     width:100%;
-    /* height:min-content; */
     margin-top:50px;
     background-color: rgba(0,0,0,0.3);
     border-radius: 20px;
