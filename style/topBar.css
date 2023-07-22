@@ -45,21 +45,18 @@
     color:black;
     font-weight:bold;
     text-decoration: none;
-    text-shadow:
+    color:rgba(251, 37, 118,1);
+    /* text-shadow:
     0.5px 0.5px 0.5px rgba(251, 37, 118,1),
     -0.5px 0.5px 0.5px rgba(251, 37, 118,1),
     0.5px -0.5px 0.5px rgba(251, 37, 118,1),
-    -0.5px -0.5px 0.5px rgba(251, 37, 118,1);
+    -0.5px -0.5px 0.5px rgba(251, 37, 118,1); */
 }
 .overlayButton a:visited{
     color:black;
     font-weight:bold;
     text-decoration: none;
-    text-shadow:
-    0.5px 0.5px 0.5px rgba(251, 37, 118,1),
-    -0.5px 0.5px 0.5px rgba(251, 37, 118,1),
-    0.5px -0.5px 0.5px rgba(251, 37, 118,1),
-    -0.5px -0.5px 0.5px rgba(251, 37, 118,1);
+    color:rgba(251, 37, 118,1);
 }
 
 
