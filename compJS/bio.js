@@ -1,3 +1,5 @@
+import {qoutes} from "../data/qoutes.js"
+
 export function addStarDiv(){
     var x=document.getElementById('night');
     for(var i=0;i<20;i++)
@@ -21,4 +23,14 @@ export function addStars(){
 export function removeStars(){
     document.getElementById("night").querySelectorAll("*").forEach((element)=>{element.classList.remove('shooting_star');}
     )
+}
+
+export function addQoute(){
+    document.getElementById('bioContent').style.alignItems="flex-end";
+    var qouteContainer=document.createElement('div');
+    qouteContainer.id="bioQoute";
+    var qouteText=document.createElement('pre');
+    qouteText.innerHTML=qoutes[0];
+    qouteContainer.appendChild(qouteText);
+    document.getElementById("bioContentText").appendChild(qouteContainer);
 }
