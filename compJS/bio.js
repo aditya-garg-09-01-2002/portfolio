@@ -30,7 +30,8 @@ export function addQoute(){
     var qouteContainer=document.createElement('div');
     qouteContainer.id="bioQoute";
     var qouteText=document.createElement('pre');
-    qouteText.innerHTML=qoutes[0];
+    var qoute=qoutes[Math.floor(Math.random()*qoutes.length)];
+    qouteText.innerHTML=qoute;
     qouteContainer.appendChild(qouteText);
     document.getElementById("bioContentText").appendChild(qouteContainer);
 }
