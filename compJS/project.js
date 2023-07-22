@@ -47,7 +47,7 @@ export function projectPopulate(){
                 temp.style.width="100%";
                 innerTemp=document.createElement('span');
                 innerTemp.innerText="Project Domain(s) :";
-                innerTemp.style.marginBottom="10px";
+                innerTemp.style.marginBottom="15px";
                 innerTemp.style.marginLeft="10px";
                 innerTemp.style.marginRight="10px";
                 temp.appendChild(innerTemp);
@@ -57,7 +57,7 @@ export function projectPopulate(){
                     innerTemp.style.fontSize="18px";
                     innerTemp.innerText=e;
                     innerTemp.style.textShadow="none";
-                    innerTemp.style.marginBottom="10px";
+                    innerTemp.style.marginBottom="15px";
                     innerTemp.style.marginLeft="10px";
                     innerTemp.style.marginRight="10px";
                     innerTemp.style.padding="10px 10px";
@@ -78,7 +78,7 @@ export function projectPopulate(){
                 temp.style.width="100%";
                 innerTemp=document.createElement('span');
                 innerTemp.innerText="Skills :";
-                innerTemp.style.marginBottom="10px";
+                innerTemp.style.marginBottom="15px";
                 innerTemp.style.marginLeft="10px";
                 innerTemp.style.marginRight="10px";
                 temp.appendChild(innerTemp);
@@ -88,7 +88,7 @@ export function projectPopulate(){
                     innerTemp.style.fontSize="18px";
                     innerTemp.style.textShadow="none";
                     innerTemp.innerText=e;
-                    innerTemp.style.marginBottom="10px";
+                    innerTemp.style.marginBottom="15px";
                     innerTemp.style.marginLeft="10px";
                     innerTemp.style.marginRight="10px";
                     innerTemp.style.padding="10px 10px";
