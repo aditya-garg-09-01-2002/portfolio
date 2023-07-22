@@ -130,7 +130,16 @@
             <div id="night">
             </div>
             <div id='bioContent'>
-                <div class="pageArrow" onclick="arrowClick(this.parentNode.parentNode.parentNode.id)"></div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo, illum amet nobis qui dicta dolores vitae rerum corporis quos veniam dolorem, minima eveniet voluptatibus nisi natus. Ratione, at saepe.</div>
+                <div class="pageArrow" onclick="arrowClick(this.parentNode.parentNode.parentNode.id)"></div>
+                <div id="bioContentText">
+                    <pre>
+<span style="font-size: 28px;white-space: pre-wrap;">Aditya Garg</span>
+<span style="white-space: pre-wrap;">A student of Computer Science and Engineering</span>
+<span style="white-space: pre-wrap;">A learner and practitioner of various fields of technology</span>
+<span style="white-space: pre-wrap;">Happy to have you here!!!</span>
+                    </pre>
+                </div>
+            </div>
         </div>
     </section>
     <section class="allsects" id="projects">
@@ -203,9 +212,7 @@
             </div>
             <div id="card1Text">
                 <pre style="white-space: pre-wrap;">
-Hi! Well I expect by now you already know about me, but I think I didn't mention my name to you. So here it is 
-
-    <span style="font-size: 24px;font-weight: 200;">"I go by the name Aditya Garg"</span>
+Hi! Well I expect by now you already a lot of know about me.
 
 I am a 3rd year B.Tech student pursuing Computer Science and Engineering and inherently try to find different ways to apply my knowledge of technology while expanding it simultaneously.
 
@@ -329,13 +336,14 @@ Individually I love working on technological developments and if there's anythin
         }  
     </script>
     <script type="module">
-        import {addStarDiv} from "./compJS/bio.js";
+        import {addStarDiv,addQoute} from "./compJS/bio.js";
         import {projectPopulate} from "./compJS/project.js";
         import {timeline} from "./compJS/accomplishments.js";
         import {skill} from "./compJS/skills.js";
         import {addSocials} from "./compJS/aboutMe.js";
         import {sectionCheck} from "./animate.js";
         document.addEventListener('DOMContentLoaded',function(){
+            if(window.innerWidth>=700)addQoute();
             addStarDiv();
             projectPopulate();
             timeline();
