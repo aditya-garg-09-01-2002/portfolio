@@ -142,11 +142,13 @@ export function sectionCheck(){
             if(i===j)
             {
                 buttonList[j].style.color="white";
+                buttonList[j].style.fontSize = "25px";
                 buttonList[j].style.textDecoration = "underline";
             }
             else 
             {
                 buttonList[j].style.color="black";
+                buttonList[j].style.fontSize = "20px";
                 buttonList[j].style.textDecoration = "none";
             }
         }
