@@ -41,10 +41,11 @@
 }
 .project{
     width:100%;
-    height:auto;
+    /* height:min-content; */
     margin-top:50px;
     background-color: rgba(0,0,0,0.3);
-    border-radius: 15%;
+    border-radius: 20px;
+    padding: 40px;
 }
 .projectLeft{
     background-color:none;
@@ -55,8 +56,7 @@
     align-items: center;
     flex-wrap: wrap;
     color:white;
-    font-size:22px;
-    height:300px;
+    font-size:18px;
     float:left;
 }
 .projectBottom{
@@ -78,6 +78,7 @@
     box-sizing: border-box;
     padding-left: 10px;
     text-align:justify;
+    /* font-size: 10px; */
 }
 .projectRight{
     display: flex;
