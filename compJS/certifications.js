@@ -14,8 +14,17 @@ export function addCertifications()
         image.src=element.image;
         var placardText=document.createElement('div');
         placard.appendChild(placardText);
-        placardText.style.width="calc(100% - 220px)";
-        placardText.style.height="100%";
+        if(window.innerWidth>1000)
+        {
+            placardText.style.width="calc(100% - 220px)";
+            placardText.style.height="100%";
+        }
+        else{
+            image.style.display="block";
+            placardText.style.display="block";
+            placardText.style.width="100%";
+            placardText.style.height="auto";   
+        }
         placardText.innerHTML=element.data;
         placard.addEventListener('mouseenter',()=>{placard.style.animationName="hover-border-in";});
         placard.addEventListener('mouseleave',()=>{placard.style.animationName="hover-border-out";});

@@ -22,6 +22,17 @@
     font-family: "Zero";
     font-size:21px;
 }
+@media screen and (max-width:1000px) {
+    .educationPlacard{
+        font-size:18px;
+        line-height:18px;
+        margin:20px;
+        justify-content: center;
+    }
+    .sub-heading{
+        font-size:19px;
+    }
+}
 @keyframes hover-border-in {
     25%{
         box-shadow: 
