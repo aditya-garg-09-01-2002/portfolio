@@ -124,6 +124,10 @@ pointer-events: none; /* Allow interaction with underlying elements */
 @media screen and (max-width: 1000px) {
     .sectionTitle{
         font-size:45px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom: 3px solid white;
+
     }
     .projectLeft{
         float:none;
