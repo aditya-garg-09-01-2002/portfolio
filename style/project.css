@@ -125,8 +125,7 @@ pointer-events: none; /* Allow interaction with underlying elements */
     .sectionTitle{
         font-size:45px;
         border-bottom-right-radius: 20px;
-        border-bottom-left-radius: 20px;
-        border-bottom: 3px solid white;
+        border-bottom-left-radius: 0;
 
     }
     .projectLeft{
