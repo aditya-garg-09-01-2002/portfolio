@@ -15,8 +15,12 @@
     animation-duration:0.5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
-    font-size:18px;
-    line-height:18px;
+    font-size:20px;
+    line-height:20px;
+}
+.subheading{
+    font-family: "Zero";
+    font-size:21px;
 }
 @keyframes hover-border-in {
     25%{
