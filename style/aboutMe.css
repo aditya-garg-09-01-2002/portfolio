@@ -180,9 +180,11 @@ input[type="radio"]{
         width:200px;
         height:200px;
         margin-bottom: 40px;
+        top:0;
     }  
     #card1Text{
-        margin-bottom: 60px;;
+        margin-bottom: 60px;
+        font-size: 18px;
     }
     .sm{
         width:200px;
