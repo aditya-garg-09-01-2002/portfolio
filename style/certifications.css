@@ -15,6 +15,8 @@
     animation-duration:0.5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
+    font-size:18px;
+    line-height:18px;
 }
 @keyframes hover-border-in {
     25%{
