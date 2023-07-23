@@ -237,7 +237,8 @@ Individually I love working on technological developments and if there's anythin
                     1px 1px 1px white,
                     1px -1px 1px white, 
                     -1px 1px 1px white,
-                    -1px -1px 1px white;" 
+                    -1px -1px 1px white;"
+                    class="aboutMeSubHeading" 
                     >Educations And Certifications</div>
         </div>
         <div class="cards" style="height:auto;">
@@ -253,7 +254,8 @@ Individually I love working on technological developments and if there's anythin
                     1px -1px 1px white, 
                     -1px 1px 1px white,
                     -1px -1px 1px white;
-            ">Socials</div>
+            "
+                    class="aboutMeSubHeading" >Socials</div>
             <div id="smcontainer"></div>
         </div>
         <div class="cards" style="height: auto;justify-content: center;">
@@ -328,8 +330,7 @@ Individually I love working on technological developments and if there's anythin
         </div> -->
     </section>
     <script type="text/javascript">
-        var width=window.innerWidth;
-        var height=window.innerHeight; 
+        if(window.innerWidth<1000)document.querySelectorAll('.aboutMeSubHeading').forEach(function(e){e.style.fontSize="45px";});
     </script>
     <script type="module">
         import {addStarDiv,addQoute} from "./compJS/bio.js";
