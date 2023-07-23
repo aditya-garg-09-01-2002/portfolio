@@ -12,9 +12,9 @@
     border-radius: 15px;
     box-sizing: border-box;
     padding:20px;
-    animation-duration:0.7s;
+    animation-duration:0.5s;
     animation-fill-mode: forwards;
-    animation-timing-function: ease
+    animation-timing-function: ease;
 }
 @keyframes hover-border-in {
     25%{
@@ -111,6 +111,41 @@
     }
 }
 @keyframes hover-border-out {
+    0%{
+        box-shadow: 
+        2px 2px 1px black,
+        2px -2px 1px black,
+        -2px -2px 1px black,
+        -2px 2px 1px black,
+        4px 4px 1px white,
+        -4px 4px 1px white,
+        4px -4px 1px white,
+        -4px -4px 1px white,
+        6px 6px 1px black,
+        6px -6px 1px black,
+        -6px -6px 1px black,
+        -6px 6px 1px black,
+        8px 8px 1px white,
+        -8px 8px 1px white,
+        8px -8px 1px white,
+        -8px -8px 1px white,
+        10px 10px 1px black,
+        10px -10px 1px black,
+        -10px -10px 1px black,
+        -10px 10px 1px black,
+        12px 12px 1px white,
+        -12px 12px 1px white,
+        12px -12px 1px white,
+        -12px -12px 1px white,
+        14px 14px 1px black,
+        14px -14px 1px black,
+        -14px -14px 1px black,
+        -14px 14px 1px black,
+        16px 16px 1px white,
+        -16px 16px 1px white,
+        16px -16px 1px white,
+        -16px -16px 1px white;
+    }
     25%{
         box-shadow:
             2px 2px 1px black,
