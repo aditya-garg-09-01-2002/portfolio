@@ -20,3 +20,23 @@ function fun2()
         document.body.style.overflow="hidden auto";
     }
 }
+function openButton(){
+    var x=document.getElementById('overlay');
+    var y=document.getElementById('navbar');
+    var z=document.getElementById('menuButton');
+    if(x.style.display==="none")
+    {
+        y.style.backgroundColor="black";
+        z.style.border=2+"px solid white";
+        y.style.height="auto";
+        x.style.display="block";
+        y.style.paddingBottom="30px";
+    }
+    else 
+    {
+        y.style.backgroundColor="transparent";
+        z.style.border="none";
+        y.style.height=40+"px";
+        x.style.display="none";
+    }
+} 
