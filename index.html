@@ -135,8 +135,8 @@
                 <div id="bioContentText">
                     <pre>
 <span style="font-size: 40px;font-family:'Zero';white-space: pre-wrap;">Aditya Garg</span>
-<span style="white-space: pre-wrap;">A student of Computer Science and Engineering</span>
-<span style="white-space: pre-wrap;">A learner and practitioner of various fields of technology</span>
+<span style="white-space: pre-wrap;">A student of Computer Science and Engineering.</span>
+<span style="white-space: pre-wrap;">A learner and practitioner of various fields of technology.</span>
 <span style="white-space: pre-wrap;">Happy to have you here!!!</span>
                     </pre>
                 </div>
@@ -335,7 +335,9 @@ Individually I love working on technological developments and if there's anythin
                 e.style.fontSize="45px";});
             document.querySelectorAll('.sectionTitle').forEach(function(e){
                 e.style.boxShadow="none";
-                e.style.borderWidth="2px";});}
+                e.style.borderWidth="2px";});
+            document.querySelectorAll('#bioContentText pre span')[0].style.fontSize="30px";
+            }
     </script>
     <script type="module">
         import {addStarDiv,addQoute} from "./compJS/bio.js";
