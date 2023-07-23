@@ -200,6 +200,10 @@
   
     #timeline ul li div {
       width: calc(70vw);
+      font-size: 20px;
+    }
+    #timeline ul li div time{
+        font-size: 24px;
     }
     #timeline ul li:nth-child(even) div {
       left: 45px;

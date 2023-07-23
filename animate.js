@@ -98,7 +98,9 @@ export function sectionCheck(){
                     buttonUpdate(curSectionIndex);
                     for (let i = 0; i < accomplishmentDiv.length; i++) 
                     {
-                        if (isElementInViewport(accomplishmentDiv[i],navbarHeight,-1,height,-1,false)) 
+                        var x=navbarHeight;
+                        if(window.innerHeight<1000)x=0;
+                        if (isElementInViewport(accomplishmentDiv[i],x,-1,height,-1,false)) 
                             accomplishmentDiv[i].classList.add("slide-in");
                         else
                             accomplishmentDiv[i].classList.remove("slide-in");
