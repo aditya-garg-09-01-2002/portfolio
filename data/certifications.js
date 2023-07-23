@@ -6,11 +6,11 @@ export const certificateList=[
         image:"./data/pictures/lnmiit.png"
     },
     {
-        data:"<pre style=\"white-space:pre-wrap\">Institute name : Sir Padamapat Singhania Education Centre, Kanpur\nCompleted my Senior Secondary schooling i.e. Class XII with 95+ percentage.</pre>",
+        data:"<pre style=\"white-space:pre-wrap\"><span class=\"subheading\">Institute name </span>: Sir Padamapat Singhania Education Centre, Kanpur\nCompleted my Senior Secondary schooling i.e. Class XII with 95+ percentage.</pre>",
         image:"./data/pictures/spsec.png"
     },
     {
-        data:"<pre style=\"white-space:pre-wrap\">Institute name : Sir Padampat Singhania Education Centre, Kanpur\nCompleted my Secondary School i.e. class X with 97+ percentage.</pre>",
+        data:"<pre style=\"white-space:pre-wrap\"><span class=\"subheading\">Institute name </span>: Sir Padampat Singhania Education Centre, Kanpur\nCompleted my Secondary School i.e. class X with 97+ percentage.</pre>",
         image:"./data/pictures/spsec.png"
     }
 ]
