@@ -30,7 +30,8 @@ function openButton(){
         z.style.border=2+"px solid white";
         y.style.height="auto";
         x.style.display="block";
-        y.style.paddingBottom="30px";
+        y.style.paddingTop="10px";
+        y.style.paddingBottom="10px";
     }
     else 
     {
