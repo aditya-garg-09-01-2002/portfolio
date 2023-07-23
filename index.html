@@ -116,7 +116,7 @@
     <div id="overlay2"></div>
     <section id="navbar">
         <nav id="collapse" style="background-color: transparent;height:70px;width:100%;justify-content:flex-end;margin:0;padding:0;align-items: center;position: absolute;">
-            <button class="overlayButton" onclick="openButton()" id="menuButton"></button>
+            <button class="overlayButton" onclick="openButton()" style="width:40px;z-index:999;" id="menuButton"></button>
         </nav>
         <nav id="overlay" style="transition: background-color 1s ease-in-out;">
             <button class="overlayButton"><a href="#bio">Home</a></button>
@@ -329,26 +329,7 @@ Individually I love working on technological developments and if there's anythin
     </section>
     <script type="text/javascript">
         var width=window.innerWidth;
-        var height=window.innerHeight;
-        function openButton(){
-            var x=document.getElementById('overlay');
-            var y=document.getElementById('navbar');
-            var z=document.getElementById('menuButton');
-            if(x.style.display==="none")
-            {
-                y.style.backgroundColor="black";
-                z.style.border=2+"px solid white";
-                y.style.height=350+"px";
-                x.style.display="block";
-            }
-            else 
-            {
-                y.style.backgroundColor="transparent";
-                z.style.border="none";
-                y.style.height=40+"px";
-                x.style.display="none";
-            }
-        }  
+        var height=window.innerHeight; 
     </script>
     <script type="module">
         import {addStarDiv,addQoute} from "./compJS/bio.js";

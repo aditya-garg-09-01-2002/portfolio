@@ -24,14 +24,15 @@ function openButton(){
     var x=document.getElementById('overlay');
     var y=document.getElementById('navbar');
     var z=document.getElementById('menuButton');
+    alert(x.style.display);
     if(x.style.display==="none")
     {
         y.style.backgroundColor="black";
         z.style.border=2+"px solid white";
         y.style.height="auto";
+        x.style.height="auto";
+        x.style.paddingBottom=0;
         x.style.display="block";
-        y.style.paddingTop="10px";
-        y.style.paddingBottom="10px";
     }
     else 
     {

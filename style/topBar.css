@@ -80,10 +80,8 @@ body{
     }
     #overlay{
         display:none;
-        /* display:block; */
         top:10%;
         position: relative;
-        padding:0 0 5vh 0;
     }
     .overlayButton{
         margin: 2% 2% 2% 2%;
