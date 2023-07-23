@@ -24,7 +24,6 @@ function openButton(){
     var x=document.getElementById('overlay');
     var y=document.getElementById('navbar');
     var z=document.getElementById('menuButton');
-    alert(x.style.display);
     if(x.style.display==="none")
     {
         y.style.backgroundColor="black";
