@@ -122,6 +122,9 @@ pointer-events: none; /* Allow interaction with underlying elements */
 }
 
 @media screen and (max-width: 1000px) {
+    .sectionTitle{
+        font-size:45px;
+    }
     .projectLeft{
         float:none;
         width:100%;
