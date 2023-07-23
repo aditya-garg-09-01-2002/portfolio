@@ -180,8 +180,11 @@
     #timeline ul li div {
         bottom:3vh;
         width: 35vw;
+        font-size: 20px;
    }
-
+   #timeline ul li div time{
+       font-size: 24px;
+   }
     #timeline ul li:nth-child(even) div {
         box-shadow: 
             0 0 0 0.3px #FB2576,
