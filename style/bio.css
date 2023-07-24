@@ -115,7 +115,7 @@
 }
 #resumeLink div,#mailLink div,#resumeLink:visited div,#mailLink:visited div{
   transform:skew(10deg);
-  font-family:"Zero";
+  /* font-family:"Zero"; */
 }
 .shooting_star:after{
   z-index:0;
