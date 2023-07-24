@@ -111,11 +111,12 @@ export function sectionCheck(){
                     curSectionIndex=i;
                     buttonUpdate(curSectionIndex);
                     var x=navbarHeight;
-                    if(window.innerHeight<1000)x=20;    
-                    else x+=20;
+                    if(window.innerWidth<1000)x=65;    
+                    else x+=65;
                     for (let i = 0; i < progressBar.length; i++) {
                         if (isElementInViewport(progressBar[i],x,-1,height,-1,false)) 
                         {
+                            console.log(progressBar[i].getBoundingClientRect().top);
                             progress[i].classList.add("aboveLayer");
                             progressBar[i].classList.add("barPop");
                         } 
