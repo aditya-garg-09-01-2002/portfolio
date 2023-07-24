@@ -67,12 +67,29 @@ input{
         height:160px;
         width:160px;
         transform:translateZ(100px);
+        -moz-transform:translateZ(100px);
     }
     .noImage{
         border-radius:8px;
         transform: scale(2);
         transform:scale(2) translateZ(100px);
+        -moz-transform: scale(2);
+        -moz-transform:scale(2) translateZ(100px);
     }
+}
+.sm:hover > .hasImage{
+    border-radius:8px;
+    height:160px;
+    width:160px;
+    transform:translateZ(100px);
+    -moz-transform:translateZ(100px);
+}
+.sm:hover > .noImage{
+    border-radius:8px;
+    transform: scale(2);
+    transform:scale(2) translateZ(100px);
+    -moz-transform: scale(2);
+    -moz-transform:scale(2) translateZ(100px);
 }
 .smicon a{
     text-decoration: none;
