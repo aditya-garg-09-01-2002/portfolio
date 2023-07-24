@@ -90,11 +90,13 @@ export function sectionCheck(){
                 else if(allsections[i].id==="projects")
                 {       
                     curSectionIndex=i;
+                    if(navbarStatus==0)introduceNavbar();
                     buttonUpdate(curSectionIndex);
                 }
                 else if(allsections[i].id==="accomplishmentsWrapper")
                 {
                     curSectionIndex=i;
+                    if(navbarStatus==0)introduceNavbar();
                     buttonUpdate(curSectionIndex);
                     for (let i = 0; i < accomplishmentDiv.length; i++) 
                     {
@@ -111,6 +113,7 @@ export function sectionCheck(){
                 else if(allsections[i].id==="skills")
                 {
                     curSectionIndex=i;
+                    if(navbarStatus==0)introduceNavbar();
                     buttonUpdate(curSectionIndex);
                     var x=navbarHeight;
                     if(window.innerWidth<1000)x=65;    
@@ -132,6 +135,7 @@ export function sectionCheck(){
                 else if(allsections[i].id==="aboutMe")
                 {
                     curSectionIndex=i;
+                    if(navbarStatus==0)introduceNavbar();
                     buttonUpdate(curSectionIndex);
                 }
                 if(i!=allsections.length-1)
