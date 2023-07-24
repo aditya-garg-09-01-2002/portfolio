@@ -32,7 +32,7 @@ export const skillList=[
         progress:90
     },
     {
-        skillName:"FireBase",
+        skillName:"Firebase",
         progress:60
     },
     {
