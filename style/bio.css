@@ -165,4 +165,7 @@
   #bioContent{
     font-size: 20px;
   }
+  #bioContentText{
+    width:100%;
+  }
 }
