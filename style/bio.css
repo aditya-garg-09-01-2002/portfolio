@@ -19,6 +19,7 @@
   font-size:35px;
   font-family: "qoutes1";
   color:#ffd6e5;
+  -moz-text-stroke:0.5px #e91e63;
   -webkit-text-stroke: 0.5px #e91e63;
   text-stroke:0.5px #e91e63;
   text-shadow: 0px 0px 7px #e91e63;
@@ -111,8 +112,6 @@
 #resumeLink:hover,#mailLink:hover{
   background-color: rgba(0,0,0,0.5);
   box-shadow:1px 1px 2px white,-1px 1px 2px white,-1px -1px 2px white,1px -1px 2px white;
-  /* text-stroke:0.3px #e91e63;
-  -webkit-text-stroke:0.3px  #e91e63; */
 }
 #resumeLink div,#mailLink div,#resumeLink:visited div,#mailLink:visited div{
   transform:skew(10deg);
