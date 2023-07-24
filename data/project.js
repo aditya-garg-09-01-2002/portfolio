@@ -34,7 +34,7 @@ export const projectList=[
                 url:"https://github.com/aditya-garg-09-01-2002/portfolio"
             }
         ],
-        skills:["HTML","CSS", "JavaScript","Fire Base","GitHub"],
+        skills:["HTML","CSS", "JavaScript","Front-End","Back-End","Fire Base","GitHub"],
         projectCategory:["Web Development"],
     },
 ];
