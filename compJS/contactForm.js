@@ -98,10 +98,7 @@ function validateMail(event)
 function validateName(event)
 {
     var y=document.getElementById("name");
-    if(event.key==" "||event.code=="Space"||event.keyCode==32)event.preventDefault();
-    else{
-        const nameRegex=/^[a-z0-9A-Z]+$/;
-        if(!nameRegex.test(y.value+event.key))event.preventDefault();
-        else if(event.code!="Tab")y.style.backgroundColor="transparent";
-    }
+    const nameRegex=/^[a-z0-9A-Z ]+$/;
+    if(!nameRegex.test(y.value+event.key))event.preventDefault();
+    else if(event.code!="Tab")y.style.backgroundColor="transparent";
 }
