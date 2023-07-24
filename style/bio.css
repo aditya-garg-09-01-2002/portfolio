@@ -100,10 +100,11 @@
   font-weight: 300;
 }
 #mailLink,#mailLink:visited,#mail:hover{
-  margin-top:10px;
+  margin-top:3%;
+  margin-right:10px;
 }
 #resumeLink,#resumeLink:visited,#resume:hover{
-  margin-bottom:10px;
+  margin-bottom:3%;
 }
 #resumeLink:hover,#mailLink:hover{
   background-color: rgba(0,0,0,0.5);
@@ -202,5 +203,11 @@
   }
   #bioContentText{
     width:100%;
+  }
+  #mailLink,#mailLink:visited,#mail:hover{
+    margin-right:100%;
+  }
+  #resumeLink,#resumeLink:visited,#resume:hover{
+    margin-right:100%;
   }
 }
