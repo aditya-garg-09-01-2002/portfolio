@@ -99,12 +99,12 @@
   box-sizing: border-box;
   font-weight: 300;
 }
-#mailLink,#mailLink:visited,#mail:hover{
+#mailLink,#mailLink:visited,#mailLink:hover{
   margin-top:3%;
   margin-right:10px;
   margin-bottom:3%;
 }
-#resumeLink,#resumeLink:visited,#resume:hover{
+#resumeLink,#resumeLink:visited,#resumeLink:hover{
   margin-bottom:3%;
   margin-top:3%;
 }
@@ -206,12 +206,12 @@
   #bioContentText{
     width:100%;
   }
-  #mailLink,#mailLink:visited,#mail:hover{
+  #mailLink,#mailLink:visited,#mailLink:hover{
     margin-right:0;
     display:block;
     text-align:center;
   }
-  #resumeLink,#resumeLink:visited,#resume:hover{
+  #resumeLink,#resumeLink:visited,#resumeLink:hover{
     margin-right:0;
     display:block;
     text-align:center;
