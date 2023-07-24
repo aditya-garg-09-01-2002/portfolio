@@ -102,9 +102,11 @@
 #mailLink,#mailLink:visited,#mail:hover{
   margin-top:3%;
   margin-right:10px;
+  margin-bottom:1.5%;
 }
 #resumeLink,#resumeLink:visited,#resume:hover{
   margin-bottom:3%;
+  margin-top:1.5%;
 }
 #resumeLink:hover,#mailLink:hover{
   background-color: rgba(0,0,0,0.5);
