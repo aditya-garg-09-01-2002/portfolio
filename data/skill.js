@@ -16,7 +16,7 @@ export const skillList=[
         progress:80
     },
     {
-        skillName:"React",
+        skillName:"React JS",
         progress:80
     },
     {
@@ -28,7 +28,7 @@ export const skillList=[
         progress:100
     },
     {
-        skillName:"Java Script",
+        skillName:"Vanilla JS (JavaScript)",
         progress:90
     },
     {
