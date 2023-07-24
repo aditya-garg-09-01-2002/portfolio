@@ -173,6 +173,11 @@ input[type="radio"]{
 #card1Text div{
     width:100%;
 }
+#card1Text pre span{
+    font-family:'Zero';
+    font-size:28px;
+    font-weight:300;
+}
 @media screen and (max-width:1000px) {
     .fa{
         font-size: 80px;
@@ -196,6 +201,9 @@ input[type="radio"]{
         box-sizing: border-box;
         margin-bottom: 60px;
         font-size: 18px;
+    }
+    #card1Text pre span{
+        font-size:24px;
     }
     .sm{
         width:200px;
