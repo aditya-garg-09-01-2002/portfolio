@@ -138,15 +138,6 @@ input[type="radio"]{
     background-color:transparent;
     font-size:24px;
     color:#FB2576;
-    /* text-shadow:
-        1px 1px 1px #FB2576,
-        -1px 1px 1px #FB2576,
-        1px -1px 1px #FB2576,
-        -1px -1px 1px #FB2576; */
-        /* 0.6px 0.6px 0.2px white,
-        -0.6px 0.6px 0.2px white,
-        0.6px -0.6px 0.2px white,
-        -0.6px -0.6px 0.2px white; */
     width:100%;
     display:flex;
     align-items: center;
@@ -175,7 +166,7 @@ input[type="radio"]{
     width:100%;
 }
 #card1Text{
-    width:calc(100% - 345px - 40px);
+    width:calc(100% - 205px - 60px);
     height:auto;
     font-size: 22px;
 }
@@ -200,6 +191,9 @@ input[type="radio"]{
         top:0;
     }  
     #card1Text{
+        width:auto;
+        padding:0 1%;
+        box-sizing: border-box;
         margin-bottom: 60px;
         font-size: 18px;
     }
