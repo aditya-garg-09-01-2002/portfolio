@@ -1,7 +1,6 @@
 import { addStars,removeStars } from "./compJS/bio.js";
 
 export function sectionCheck(){
-    if(window.innerHeight<500)alert("try");
     var buttonList=document.querySelectorAll('.overlayButton a');
     var height=(window.innerHeight || document.documentElement.clientHeight);
     const navbarHeight=document.getElementById('navbar').offsetHeight;
@@ -102,7 +101,7 @@ export function sectionCheck(){
                         var x=navbarHeight+30;
                         var y= height;
                         if(window.innerWidth<900)x=0;
-                        if(window.innerHeight<500){x-=20;y+=20;}
+                        if(window.innerHeight<500){x-=50;y+=50;}
                         if (isElementInViewport(accomplishmentDiv[i],x,-1,height,-1,false)) 
                             accomplishmentDiv[i].classList.add("slide-in");
                         else
