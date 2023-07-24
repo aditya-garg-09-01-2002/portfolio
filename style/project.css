@@ -166,7 +166,7 @@ pointer-events: none; /* Allow interaction with underlying elements */
         margin-bottom:30px;
     }
 }
-@media screen and (max-height:600px)
+@media screen and (max-width:1000px) and (orientation:landscape)
 {
     .projectRight{
         height:400px;
