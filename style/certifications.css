@@ -20,7 +20,7 @@
 }
 .subheading{
     font-family: "Zero";
-    font-size:21px;
+    font-size:25px;
 }
 @media screen and (max-width:1000px) {
     .educationPlacard{
@@ -30,7 +30,7 @@
         justify-content: center;
     }
     .sub-heading{
-        font-size:19px;
+        font-size:13px;
     }
 }
 @keyframes hover-border-in {
