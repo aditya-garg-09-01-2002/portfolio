@@ -205,9 +205,13 @@
     width:100%;
   }
   #mailLink,#mailLink:visited,#mail:hover{
-    margin-right:100%;
+    margin-right:0;
+    display:block;
+    text-align:center;
   }
   #resumeLink,#resumeLink:visited,#resume:hover{
-    margin-right:100%;
+    margin-right:0;
+    display:block;
+    text-align:center;
   }
 }
