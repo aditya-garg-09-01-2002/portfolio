@@ -99,8 +99,7 @@ export function sectionCheck(){
                     for (let i = 0; i < accomplishmentDiv.length; i++) 
                     {
                         var x=navbarHeight+30;
-                        if(window.innerWidth<900)x=20;
-                        if(window.innerWidth<900&&window.innerWidth>window.innerHeight)x=0;
+                        if(window.innerWidth<900)x=10;
                         if (isElementInViewport(accomplishmentDiv[i],x,-1,height,-1,false)) 
                             accomplishmentDiv[i].classList.add("slide-in");
                         else
