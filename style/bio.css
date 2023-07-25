@@ -87,7 +87,7 @@
   width:auto;
   display: inline-block;
   height:auto;
-  font-size:24px;
+  font-size:20px;
   background: none;
   border-radius:0;
   color:white;
@@ -96,7 +96,7 @@
   border-radius: 2%;
   background:none ;
   border:1px solid #e91e63;
-  padding:5px 10px;
+  padding:5px 20px;
   box-sizing: border-box;
   font-weight: 300;
 }
@@ -200,7 +200,7 @@
   }
   
   #bioContent{
-    font-size: 20px;
+    font-size: 18px;
   }
   #bioContentText{
     width:100%;
