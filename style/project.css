@@ -1,0 +1,181 @@
+#projects{
+    position: relative;
+    box-sizing: border-box;
+    padding:10vh 10vw 10vh 10vw;
+    height:auto;
+    width:100%;
+    background-image: repeating-radial-gradient(circle,#1f0039,#3F0071 70px);
+}
+@keyframes illusion{
+    0%{
+        background-size:100% 100%;
+    }
+    100%{
+        background-position: -200% -200%;
+        background-size: 200% 200%;
+    }
+}
+@font-face{
+    font-family:"Zero";
+    src:url(../AlmendraSC-Regular.ttf) format("truetype");
+}
+.sectionTitle{
+    /* z-index: 1; */
+    display:flex;
+    width:100%;
+    color:white;
+    font-family: "Zero";
+    padding:0px;
+    font-size: 60px;
+    padding-left: 20px;
+    height:auto;
+    box-sizing: border-box;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 20px;
+    border-bottom: 5px solid white;
+}
+.project{
+    width:100%;
+    margin-top:50px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 40px;
+}
+.projectLeft{
+    background-color:none;
+    width:50%;
+    display: flex;
+    justify-content:center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color:white;
+    font-size:18px;
+    float:left;
+}
+.projectBottom{
+    background-color:none;
+    width:100%;
+    display: flex;
+    justify-content:center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-left: 20px;
+    color:white;
+    font-size:22px;
+    height:200px;
+}
+.projectLeft div{
+    margin-bottom:10px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    text-align:justify;
+    /* font-size: 10px; */
+}
+.projectRight{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: transparent;
+    float:left;
+    width:50%;
+    height:300px;
+}
+.placard{
+    box-sizing: border-box;
+    border:2px solid #150050;
+    box-shadow:
+        0.5px 0.5px 0.5px white,
+        -0.5px 0.5px 0.5px white,
+        0.5px -0.5px 0.5px white,
+        -0.5px -0.5px 0.5px white;
+    width:80%;
+    height:80%;
+    border-radius: 5%;  
+    transition: transform 0.3s;
+}
+.placardExpanded {
+transform: scale(1.2);
+z-index: 2;
+position: fixed;
+top: 50%;
+left: 50%;
+border:5px;
+border-radius: 10%;
+transition:transform 0.3s;
+transform: translate(-50%, -50%);
+width: 60vw;
+height: 60vh;
+overflow: auto;
+}
+.overlay2 {
+position: fixed;
+top: 0;
+left: 0;
+z-index:2;
+width: 100vw;
+height: 100vh;
+background-color: rgba(0, 0, 0,0.85); /* Semi-transparent overlay color */
+pointer-events: none; /* Allow interaction with underlying elements */
+}
+
+@media screen and (max-width: 1000px) {
+    .sectionTitle{
+        font-size:45px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 0;
+
+    }
+    .projectLeft{
+        float:none;
+        width:100%;
+        height:auto;
+        padding-right: 10px;
+        padding-bottom:20px;
+    }
+    .projectRight{
+        margin-top:30px;
+        float:none;
+        height:250px;
+        width:100%;
+        margin-bottom: 30px;
+    }
+    .projectLeft div{
+        margin-bottom:20px;
+        text-align: left;
+    }
+    .titleDiv{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height:auto;
+    }
+    .placard{
+        height:90%;
+        width:100%;
+    }
+    .project{
+        height:auto;
+        width:100%;
+        border-radius: 2%;
+    }
+    .projectBottom{
+        height:auto;
+        margin-bottom:30px;
+    }
+}
+@media screen and (max-width:1000px) and (orientation:landscape)
+{
+    .projectRight{
+        height:400px;
+    }
+    .placard{
+        width:90%;
+    }
+    .projectBottom{
+        height:auto;
+        margin-bottom:30px;
+    }
+}

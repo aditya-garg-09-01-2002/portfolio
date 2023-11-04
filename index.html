@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css">
+    <link rel="stylesheet" href="./style/bio.css">
+    <link rel="stylesheet" href="./style/skills.css">
+    <link rel="stylesheet" href="./style/topBar.css">
+    <link rel="stylesheet" href="./style/project.css">
+    <link rel="stylesheet" href="./style/accomplishments.css">
+    <link rel="stylesheet" href="./style/aboutMe.css">
+    <link rel="stylesheet" href="./style/certifications.css">
+    <style>
+        *{
+            font-family: "Poppins";
+            box-sizing: border-box;
+            &:visited{
+                color:white;
+            }
+        }
+        body{
+            overflow-x: hidden;
+        }
+        body::-webkit-scrollbar{
+            width:0px;
+        }
+        .pageArrow{
+            z-index:3;
+            background-color: rgba(255, 255, 255, 0.6);
+            position:fixed;
+            display:none;
+            bottom:20px;
+            right:20px;
+            width:40px;
+            height:40px;
+            border-radius:100%;
+            border:2px solid black;
+            box-shadow: 
+                1px 1px 1px white,
+                -1px 1px 1px white,
+                1px -1px 1px white,
+                -1px -1px 1px white;
+            ;
+            &::before{
+                content:"";
+                position:fixed;
+                width:12px;
+                height:12px;
+                transform:translate(-50%,-50%) rotate(135deg);
+                top:43%;
+                left:50%;
+                border-right:#000 2px solid;
+                border-top:#000 2px solid;
+                border-top-right-radius: 2px;
+            }
+            animation:arrowSize 1s linear infinite;
+        }
+        @font-face{
+            font-family:"Zero";
+            src:url(../AlmendraSC-Regular.ttf) format("truetype");
+        }
+        @keyframes arrowSize {
+            0%{
+                transform:scale(0.9);
+            }
+            50%{
+                transform:scale(1) translateY(-5px);
+            }
+            100%{
+                transform: scale(0.9) translateY(0px);
+            }
+        }
+        @keyframes bringInProjectDomain {
+            0%{
+                opacity:0%;
+                transform: scale(0) translateX(100%);
+            }
+            100%{
+                opacity:100%;
+                transform: scale(1) translateX(0%);
+            }
+        }
+        @keyframes bringOutProjectDomain{
+            0%{
+                display:flex;
+                opacity:100%;
+                transform: scale(1) translateX(0%);
+            }
+            100%{
+                display:none;
+                opacity:0%;
+                transform: scale(0) translateX(100%);
+            }
+        }
+        @keyframes shiftMessageDown {
+            0%{
+                transform:translateY(var(--height-translate));
+            }            
+            100%{
+                transform:translateY(0);
+            }
+        }
+        @keyframes shiftMessageUp {
+            0%{
+                transform: translateY(0);
+            }
+            100%{
+                transform: translateY(var(--height-translate));
+            }
+        }
+    </style>
+    <title>Aditya Garg</title>
+</head>
+<body>
+    <div id="overlay2"></div>
+    <section id="navbar">
+        <nav id="collapse" style="background-color: transparent;height:70px;width:100%;justify-content:flex-end;margin:0;padding:0;align-items: center;position: absolute;">
+            <button class="overlayButton" onclick="openButton()" style="width:40px;z-index:999;" id="menuButton"></button>
+        </nav>
+        <nav id="overlay" style="transition: background-color 1s ease-in-out;">
+            <button class="overlayButton"><a href="#bio">Home</a></button>
+            <button class="overlayButton"><a href="#projects" >Projects</a></button>
+            <button class="overlayButton"><a href="#accomplishments" >Accomplishments</a></button>
+            <button class="overlayButton"><a href="#skills" >Skills</a></button>
+            <button class="overlayButton"><a href="#aboutMe" >About Me</a></button>
+        </nav>
+    </section>
+    <section class="allsects" id="bio"> 
+        <div id="bioLeft">
+            <div id="night">
+            </div>
+            <div id='bioContent'>
+                <div class="pageArrow" onclick="arrowClick(this.parentNode.parentNode.parentNode.id)"></div>
+                <div id="bioContentText">
+                    <pre>
+<span style="font-size: 40px;font-family:'Zero';white-space: pre-wrap;">Aditya Garg</span>
+<span style="white-space: pre-wrap;">A student of Computer Science and Engineering.</span>
+<span style="white-space: pre-wrap;">A learner and practitioner of various fields of technology.</span>
+<span style="white-space: pre-wrap;">Happy to have you here!!!</span></pre>
+                    <a href="mailto:mynameisaditya824@gmail.com" id ="mailLink">
+                        <div>
+                            Mail Me
+                        </div>
+                    </a>
+                    <a href="./data/resume.pdf" target="_blank" id ="resumeLink">
+                        <div>
+                            My resume
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="allsects" id="projects">
+        <div class="pageArrow" onclick="arrowClick(this.parentNode.id)"></div>
+        <div class="sectionTitle" style="
+            color:#150050;
+                -webkit-text-stroke: 0.8px white;
+                -moz-text-stroke: 0.8px white;
+                text-stroke: 0.8px white;
+                border-color:white;
+                border-width: 3px;
+                box-shadow:
+                    -1px 1px 1.5px white;
+                    /* 1px -1px 1.5px #FB2576; */
+                    /* -1px -1px 1.5px #FB2576; */
+            ">Projects</div>
+    </section>
+    <section class="allsects" id="accomplishmentsWrapper">
+        <div class="pageArrow" onclick="arrowClick(this.parentNode.id)" style="z-index: 3;"></div>
+        <section id="accomplishments">
+            <div style="padding:10vh 10vw 0 10vw;height:auto;width:100%;box-sizing:border-box;z-index:0;position:relative">
+                <div class="sectionTitle" style="
+                color:black;
+                text-shadow:
+                    1px 1px 1px #FB2576,
+                    -1px 1px 1px #FB2576,
+                    1px -1px 1px #FB2576,
+                    -1px -1px 1px #FB2576;
+                border-color:#FB2576;
+                border-width: 3px;
+                box-shadow:
+                    -1px 1px 1.5px #FB2576;
+                    /* 1px -1px 1.5px #FB2576; */
+                    /* -1px -1px 1.5px #FB2576; */
+                "
+                >Experiences and Achievements</div>
+            </div>
+            <div id="timeline"></div>
+        </section>
+    </section>
+    <section class="allsects" id="skills">
+        <div class="pageArrow" onclick="arrowClick(this.parentNode.id)"></div>
+        <div class="sectionTitle" style="margin-bottom: 70px;
+        color:#FB2576;
+                -webkit-text-stroke: 1px #000;
+                -moz-text-stroke: 1px #000;
+                text-stroke: 1px #FB2576;
+        border-color:#FB2576;
+        border-width:3px;
+        box-shadow:-1px 1px 1px #000;
+        ">Skills</div>
+        <div id="skillsRight"></div>
+    </section>
+    <section class="allsects" id="aboutMe">
+        <div class="sectionTitle" style="
+        color:black;
+        text-shadow:
+            1px 1px 1px #FB2576,
+            -1px 1px 1px #FB2576,
+            1px -1px 1px #FB2576,
+            -1px -1px 1px #FB2576;
+        border-color:#FB2576;
+        border-width: 3px;
+        box-shadow:
+            -1px 1px 1.5px #FB2576;
+            /* 1px -1px 1.5px #FB2576; */
+            /* -1px -1px 1.5px #FB2576; */
+        ">About Me</div>
+        <div class="cards" style="align-items: flex-start;">
+                <div id="card1Img" >
+                    <img src="./data/pictures/portfolioPic.png" style="height:100%;width: 100%;position:relative;;border-radius:10px">
+                </div>
+            <div id="card1Text">
+                <pre style="white-space: pre-wrap;">
+Hi! Well I expect by now you already a lot of know about me.
+
+I am a 3rd year B.Tech student pursuing Computer Science and Engineering and inherently try to find different ways to apply my knowledge of technology while expanding it simultaneously.
+
+I have experiences in
+<ul><li>Data Structures and Algorithms, using them for my Competitive Programming ventures. (Highest Rating on CodeForces stands tall at <span>1509</span>.)</li><li>Learnt Python and utilised its image detection facilitating libraries to create my first-ever project.</li><li>Went on a my own Web-Development path to learn React, HTML, CSS and JS and produced this portfolio website as its first result.</li></ul>
+As GDSC Competitive Domain Lead I have had my own chances to organise various events, conduct Competitive Programming Contests for entire college, and bring in sessions to introduce new concepts of technology to my peers.
+
+
+Individually I love working on technological developments and if there's anything we can do together, tell me below in the <a href="#contactForm">Contact Form</a>.
+            </div>
+        </div>
+        <div class ="cards" id="educationCard" style="height:auto;justify-content: center; align-items: flex-start;">
+            <div style="
+                width:100%;
+                font-family:'Zero';
+                height:auto;
+                text-align: center;
+                font-size: 60px;
+                color:black;
+                text-shadow:
+                    1px 1px 1px white,
+                    1px -1px 1px white, 
+                    -1px 1px 1px white,
+                    -1px -1px 1px white;"
+                    class="aboutMeSubHeading" 
+                    >Educations And Certifications</div>
+        </div>
+        <div class="cards" style="height:auto;">
+            <div style="
+                width:100%;
+                font-family:'Zero';
+                height:auto;
+                text-align: center;
+                font-size: 60px;
+                color:black;
+                text-shadow:
+                    1px 1px 1px white,
+                    1px -1px 1px white, 
+                    -1px 1px 1px white,
+                    -1px -1px 1px white;
+            "
+                    class="aboutMeSubHeading" >Socials</div>
+            <div id="smcontainer"></div>
+        </div>
+        <div class="cards" style="height: auto;justify-content: center;">
+            <div style="
+                width:90%;
+                height:auto;
+                /* text-align: center; */
+                font-size: 60px;
+                color:black;
+                font-family:'Zero';
+                text-shadow:
+                    1px 1px 1px white,
+                    1px -1px 1px white, 
+                    -1px 1px 1px white,
+                    -1px -1px 1px white;
+            ">Contact Me</div>
+            <div id ="formContainer">
+                <form id="contactForm" name="contactForm" onSubmit="overrideSubmit(event)">
+                    <div style="justify-content: center;">
+                        <label for="name" style="margin:0 0 15px 0;float:left;width:90%;">Name:</label>
+                        <input type="text" onkeydown="validateName(event)" id="name" style="margin:0 0 15px 0;float:left;width:90%;">
+                    </div>
+                    <div style="justify-content: center;">
+                        <label for="mail" style="margin:0 0 15px 0;width:90%">E-Mail ID:</label>
+                        <input type="text" id="mail" name="mail" style="width:90%" onkeydown="validateMail(event)">
+                    </div>
+                    <div style="justify-content:center;padding-bottom:0">
+                        <label style="width:90%;">Do you have a Project we can collabrate on?</label>
+                    </div>
+                    <div style="width:100%;display:flex;justify-content: center;padding-top:0">
+                        <div style="align-items: flex-start;width:90%">
+                            <span style="width:200px;height:40px;">
+                                <label for="contactProjectYes" style="width:100px;display:inline;font-size:20px">Yes</label>
+                                <input type="radio" name="contactProject" id="contactProjectYes" value="yes" style="width:22px;height:22px;display:inline-block" onclick="projectYes()">
+                            </span>
+                            <span>
+                                <label for="contactProjectNo" style="width:100px;display:inline;font-size:20px">No</label>
+                                <input type="radio" name="contactProject" id="contactProjectNo" value="no" style="width:22px;height:22px;display:inline-block"  checked onclick="projectNo()">
+                            </span>
+                        </div>
+                        </div>
+                    <div id="projectDomain" style="justify-content:center;display:None;animation-duration:0.3s; animation-timing-function :ease-in-out;animation-fill-mode: forwards;">
+                        <label style="width:90%">What domain is the Project related to?</label>
+                        <label for="am" style="width:45%;font-size:20px;
+                        margin:5px 0 5px 0">AI/ML</label>
+                        <input type="checkbox" id="am" name="projectDomain" value="AI/ML" style="width:45%;height:20px;
+                        margin:5px 0 5px 0">
+                        <label for="wd" style="width:45%;font-size:20px;
+                        margin:5px 0 5px 0">Web Development</label>
+                        <input type="checkbox" id="wd" name="projectDomain" value="WebDevelopment" style="width:45%;height:20px;
+                        margin:5px 0 5px 0">
+                        <label for="sd" style="width:45%;font-size:20px;
+                        margin:5px 0 5px 0">Software Development</label>
+                        <input type="checkbox" id="sd" name="projectDomain" value="SoftwareDevelopment" style="width:45%;height:20px;
+                        margin:5px 0 5px 0">
+                        <label for="other" style="width:45%;font-size:20px;
+                        margin:5px 0 5px 0">Others</label>
+                        <input type="checkbox" id="other" name="projectDomain" value="Others" style="width:45%;height:20px;
+                        margin:5px 0 5px 0">
+                    </div>
+                    <div id="descCont" style="animation-duration: 0.29s;justify-content: center; animation-timing-function: ease-in-out;">
+                        <label for="desc" style="margin:0 0 15px 0;width:90%">Message:</label>
+                        <textarea id="desc" name ="desc" style="width:90%;height:40vh;flex-wrap: wrap;font-size:20px"></textarea>
+                    </div >
+                    <div id="submitButton" style="animation-duration:0.29s;justify-content:center;animation-timing-function: ease-in-out;">
+                        <input type="Submit" value="Submit" name="submitButton" style="width:90%;padding:0;font-size:20px;justify-content: center;">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- <div id="scrollBar">
+        </div> -->
+    </section>
+    <script type="text/javascript">
+        var width=window.innerWidth;
+        if(width<1000){
+            document.querySelectorAll('.aboutMeSubHeading').forEach(function(e){
+                e.style.fontSize="45px";});
+            document.querySelectorAll('.sectionTitle').forEach(function(e){
+                e.style.boxShadow="none";
+                e.style.borderWidth="2px";});
+            document.querySelectorAll('#bioContentText pre span')[0].style.fontSize="30px";
+            }
+    </script>
+    <script type="module">
+        import {addStarDiv,addQoute} from "./compJS/bio.js";
+        import {projectPopulate} from "./compJS/project.js";
+        import {timeline} from "./compJS/accomplishments.js";
+        import {skill} from "./compJS/skills.js";
+        import {addSocials} from "./compJS/aboutMe.js";
+        import {sectionCheck} from "./animate.js";
+        import {addCertifications} from "./compJS/certifications.js"
+        document.addEventListener('DOMContentLoaded',function(){
+            if(window.innerWidth>=1000)addQoute();
+            addStarDiv();
+            projectPopulate();
+            timeline();
+            skill();
+            addCertifications();
+            addSocials();
+            sectionCheck();
+        })
+    </script>
+    <script src="arrow.js"></script>
+    <script type="module" src="./compJS/bio.js"></script>
+    <script type ="module" src="./compJS/project.js"></script>
+    <script type ="module" src="./compJS/accomplishments.js"></script>
+    <script type="module" src="./compJS/skills.js"></script>
+    <script type="module" src="./compJS/aboutMe.js"></script>
+    <script type="module" src="./compJS/certifications.js"></script>
+    <script src="./compJS/library.js"></script>
+    <script src="tilt.js"></script>
+    <script src="functions.js"></script>
+    <script type="module" src="animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./compJS/contactForm.js"></script>
+</body>
+</html>

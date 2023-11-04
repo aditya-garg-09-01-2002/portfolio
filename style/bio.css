@@ -1,0 +1,221 @@
+@font-face{
+  font-family: "qoutes1";
+  src:url(../PlayfairDisplay-BlackItalic.ttf) format("truetype");
+}
+#bio{
+  width:100%;
+  height:100vh;
+  margin:0px;
+  overflow:hidden;
+  padding:0px;
+}
+#bioQoute{
+  width:450px;
+  height:200px;
+}
+#bioQoute pre{
+  margin:0;
+  font-weight:700;
+  font-size:35px;
+  font-family: "qoutes1";
+  color:#ffd6e5;
+  -moz-text-stroke:0.5px #e91e63;
+  -webkit-text-stroke: 0.5px #e91e63;
+  text-stroke:0.5px #e91e63;
+  text-shadow: 0px 0px 7px #e91e63;
+  line-height: 40px;
+}
+#bioContentText{
+  width:70%;
+  background:none;
+  margin: 0;
+  line-height: 40px;
+}
+#bioContentText pre{
+  margin:0;
+}
+
+#bioLeft{
+  width:100%;
+  z-index:0;
+  z-index:0;
+  height:100%;
+  margin:0px;
+  border:0px;
+  float:left;
+  background: radial-gradient(ellipse at bottom, #150050 0%, black 100%);
+  overflow: hidden;
+}
+#night {
+  z-index:0;
+  /* visibility:hidden; */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left:-10%;
+  transform: rotateZ(45deg);
+  animation: sky 200000ms linear infinite;
+}
+.shooting_star {
+  z-index:0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 2px;
+  background: linear-gradient(-45deg, white, rgba(0, 0, 255, 0));
+  border-radius: 999px;
+  filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+  animation:
+    tail 3s ease-in-out infinite,
+    shooting 3s ease-in-out infinite;    
+  animation-delay: var(--delay) var(--delay);
+}
+.shooting_star:before{
+  z-index:0;
+  content: '';
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 0;
+  height: 2px;
+  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), white, rgba(0, 0, 255, 0));
+  transform: translateX(50%) rotateZ(45deg);
+  border-radius: 100%;
+  animation: shining 3s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+#resumeLink,#mailLink,#resumeLink:visited,#mailLink:visited{
+  width:auto;
+  display: inline-block;
+  height:auto;
+  font-size:20px;
+  background: none;
+  border-radius:0;
+  color:white;
+  text-decoration: none;
+  transform:skew(-10deg);
+  border-radius: 2%;
+  background:none ;
+  border:1px solid #e91e63;
+  padding:5px 20px;
+  box-sizing: border-box;
+  font-weight: 300;
+}
+#mailLink,#mailLink:visited,#mailLink:hover{
+  margin-top:3%;
+  margin-right:10px;
+  margin-bottom:3%;
+}
+#resumeLink,#resumeLink:visited,#resumeLink:hover{
+  margin-bottom:3%;
+  margin-top:3%;
+}
+#resumeLink:hover,#mailLink:hover{
+  background-color: rgba(0,0,0,0.5);
+  box-shadow:1px 1px 2px white,-1px 1px 2px white,-1px -1px 2px white,1px -1px 2px white;
+}
+#resumeLink div,#mailLink div,#resumeLink:visited div,#mailLink:visited div{
+  transform:skew(10deg);
+  /* font-family:"Zero"; */
+}
+.shooting_star:after{
+  z-index:0;
+  content: '';
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 0;
+  height: 2px;
+  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), white, rgba(0, 0, 255, 0));
+  transform: translateX(50%) rotateZ(45deg);
+  border-radius: 100%;
+  animation: shining 3s ease-in-out infinite;
+  animation-delay: var(--delay);
+  transform: translateX(50%) rotateZ(-45deg);
+}
+  
+@keyframes tail {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 100px;
+  }
+  100% {
+    width: 0;
+  }
+}
+  
+@keyframes shining {
+  0% {
+      width: 0;
+  }   
+  50% {
+    width: 30px;
+  }
+  100% {
+    width: 0;
+  }
+}
+  
+@keyframes shooting {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(300px);
+  }
+}
+  
+@keyframes sky {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(45 + 360deg);
+  }
+}  
+#bioContent{
+  background:none;
+  z-index:0;
+  top:0;
+  left:0;
+  padding:5vh 5vw;
+  box-sizing: border-box;
+  font-size:24px;
+  color:rgba(251, 37, 118,1);
+  text-shadow: 
+    1px 1px 2px black,
+    -1px 1px 2px black,
+    1px -1px 2px black,
+    -1px -1px 2px black;
+  display:flex;
+  position:absolute;
+  height:100%;
+  width:100%;
+  align-items: center;
+}
+@media screen and (max-width:1000px)
+{
+  #bioLeft{
+      width:100%;
+  }
+  
+  #bioContent{
+    font-size: 18px;
+  }
+  #bioContentText{
+    width:100%;
+  }
+  #mailLink,#mailLink:visited,#mailLink:hover{
+    margin-right:0;
+    display:block;
+    text-align:center;
+  }
+  #resumeLink,#resumeLink:visited,#resumeLink:hover{
+    margin-right:0;
+    display:block;
+    text-align:center;
+  }
+  #resumeLink,#mailLink,#resumeLink:visited,#mailLink:visited{
+    border-radius:0;
+  }
+}
