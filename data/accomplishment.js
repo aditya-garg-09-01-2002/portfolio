@@ -57,6 +57,6 @@ export const accomplishmentList=[
     },
     {
         time:"July, 2023",
-        content:"Advanced my React, HTML,CSS, and JS knowledge and completed my portfolio website.<br>P.S. You're already experiencing it."
+        content:"Advanced my React, HTML,CSS, and JS knowledge and completed my portfolio website."
     }
 ]

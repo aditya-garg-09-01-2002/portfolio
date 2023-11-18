@@ -19,11 +19,17 @@ export function projectPopulate(){
             project.appendChild(projectRight);
             project.appendChild(projectBottom);
             projectTitle=document.createElement('div');
-            projectTitle.style.fontSize=24+"px";
+            projectTitle.classList.add('titleDiv');
+            projectTitle.style.fontFamily="Zero";
+            projectTitle.style.textAlign="center";
+            projectTitle.style.textDecoration="Underline";
+            projectTitle.style.wordSpacing="10px";
+            projectTitle.style.marginBottom="10px";
+            projectTitle.style.fontSize=30+"px";
             projectDesc=document.createElement('div');
             projectLeft.appendChild(projectTitle);
             projectLeft.appendChild(projectDesc);
-            projectTitle.style.marginBottom=10+"px";
+            // projectTitle.style.marginBottom=10+"px";
             if(element.placardExpand)projectRight.setAttribute('onmouseenter',"fun1()");
         })();
         //this function adds the data in the above created tags
@@ -40,23 +46,24 @@ export function projectPopulate(){
                 temp.style.alignItems="Center";
                 temp.style.width="100%";
                 innerTemp=document.createElement('span');
-                innerTemp.innerText="Project Domain(s)";
-                innerTemp.style.marginBottom="10px";
+                innerTemp.innerText="Project Domain(s) :";
+                innerTemp.style.marginBottom="15px";
                 innerTemp.style.marginLeft="10px";
                 innerTemp.style.marginRight="10px";
                 temp.appendChild(innerTemp);
                 element.projectCategory.forEach(function(e){
                     innerTemp=document.createElement('span');
                     innerTemp.style.width="auto";
+                    innerTemp.style.fontSize="18px";
                     innerTemp.innerText=e;
                     innerTemp.style.textShadow="none";
-                    innerTemp.style.marginBottom="10px";
+                    innerTemp.style.marginBottom="15px";
                     innerTemp.style.marginLeft="10px";
                     innerTemp.style.marginRight="10px";
-                    innerTemp.style.padding="5px 5px";
+                    innerTemp.style.padding="10px 10px";
                     innerTemp.style.boxSizing="border-box";
                     innerTemp.style.boxShadow="1px 1px 5px black,1px -1px 5px black,-1px 1px 5px black, -1px -1px 5px black "
-                    innerTemp.style.borderRadius="10%";
+                    innerTemp.style.borderRadius="10px";
                     innerTemp.style.backgroundColor="rgba(0,0,0,0.5)"
                     temp.appendChild(innerTemp);
                 });
@@ -70,23 +77,24 @@ export function projectPopulate(){
                 temp.style.alignItems="Center";
                 temp.style.width="100%";
                 innerTemp=document.createElement('span');
-                innerTemp.innerText="Skills";
-                innerTemp.style.marginBottom="10px";
+                innerTemp.innerText="Skills :";
+                innerTemp.style.marginBottom="15px";
                 innerTemp.style.marginLeft="10px";
                 innerTemp.style.marginRight="10px";
                 temp.appendChild(innerTemp);
                 element.skills.forEach(function(e){
                     innerTemp=document.createElement('span');
                     innerTemp.style.width="auto";
+                    innerTemp.style.fontSize="18px";
                     innerTemp.style.textShadow="none";
                     innerTemp.innerText=e;
-                    innerTemp.style.marginBottom="10px";
+                    innerTemp.style.marginBottom="15px";
                     innerTemp.style.marginLeft="10px";
                     innerTemp.style.marginRight="10px";
-                    innerTemp.style.padding="5px 5px";
+                    innerTemp.style.padding="10px 10px";
                     innerTemp.style.boxSizing="border-box";
                     innerTemp.style.boxShadow="1px 1px 5px black,1px -1px 5px black,-1px 1px 5px black, -1px -1px 5px black "
-                    innerTemp.style.borderRadius="10%";
+                    innerTemp.style.borderRadius="10px";
                     innerTemp.style.backgroundColor="rgba(0,0,0,0.5)"
                     temp.appendChild(innerTemp);
                 });
@@ -101,7 +109,7 @@ export function projectPopulate(){
                 temp.style.alignItems="Center";
                 temp.style.width="100%";
                 innerTemp=document.createElement('span');
-                innerTemp.innerText="Links";
+                innerTemp.innerText="Links :";
                 innerTemp.style.marginBottom="10px";
                 innerTemp.style.marginLeft="10px";
                 innerTemp.style.marginRight="10px";
@@ -113,10 +121,10 @@ export function projectPopulate(){
                     innerTemp.style.marginLeft="10px";
                     innerTemp.style.textShadow="none";
                     innerTemp.style.marginRight="10px";
-                    innerTemp.style.padding="5px 5px";
+                    innerTemp.style.padding="10px 10px";
                     innerTemp.style.boxSizing="border-box";
                     innerTemp.style.boxShadow="1px 1px 5px black,1px -1px 5px black,-1px 1px 5px black, -1px -1px 5px black "
-                    innerTemp.style.borderRadius="10%";
+                    innerTemp.style.borderRadius="10px";
                     innerTemp.style.backgroundColor="rgba(0,0,0,0.5)"
                     var anchor=document.createElement('a');
                     anchor.href=e.url;
@@ -128,7 +136,7 @@ export function projectPopulate(){
                     temp.appendChild(innerTemp);
                     icon.style.setProperty("--t-color","white");
                     anchor.style.textDecoration="none";
-                    icon.style.fontSize="30px";
+                    icon.style.fontSize="25px";
                 });
                 projectBottom.appendChild(temp);
             })();

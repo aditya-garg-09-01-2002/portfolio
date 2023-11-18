@@ -21,7 +21,7 @@ export const projectList=[
     {
         placardExpand:0,
         title:"Personal Portfolio Web Development Project",
-        desc:"A personal portfolio website wherein I have used HTML, CSS & JavaScript to create this website with mobile responsiveness also curated.<br>This website has also Fire Base as back-end to receive responses you can give me at the <a href=\"#contactForm\">form</a> below.<br>Be sure to drop a response so I can know how you experiences the website.",
+        desc:"A personal portfolio website wherein I have used HTML, CSS & JavaScript to create this website with mobile responsiveness also curated.<br>This website also has Fire Base as back-end to receive responses you can give me at the <a href=\"#contactForm\">form</a> below.<br>Be sure to drop a response so I can know what you thought about website.",
         media:"<img src=\"portfolioRepo.png\" class=\"placard\"></iframe>",
         links:
         [
@@ -34,7 +34,7 @@ export const projectList=[
                 url:"https://github.com/aditya-garg-09-01-2002/portfolio"
             }
         ],
-        skills:["HTML","CSS", "JavaScript","Fire Base","GitHub"],
+        skills:["HTML","CSS", "JavaScript","Front-End","Back-End","Fire Base","GitHub"],
         projectCategory:["Web Development"],
-    }
+    },
 ];

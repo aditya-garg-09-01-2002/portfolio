@@ -16,7 +16,7 @@
 #skillsRight div label{
     z-index:0;
     width:25%;
-    color:#FB2576;
+    color:white;
     font-size:24px;
     /* text-shadow: 
         1px 1px 0.5px black,
@@ -41,7 +41,7 @@
     /* background-color:; */
     border:0.5px solid white;
     height:100%;
-    animation:fillBar 3s forwards;
+    animation:fillBar 2s forwards;
     border-radius: 10px;
 }
 @keyframes fillBar {

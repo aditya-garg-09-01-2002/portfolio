@@ -2,24 +2,24 @@ var check=0;
 function projectYes(){
     if(!check){
         var height;
-        height=document.getElementById('desc').getBoundingClientRect().top;
+        height=document.getElementById('descCont').getBoundingClientRect().top;
     }
     document.getElementById('projectDomain').style.display="flex";
     if(!check){
-        height=document.getElementById('desc').getBoundingClientRect().top-height;
-        document.getElementById('desc').style.setProperty('--height-translate',-height+"px");
+        height=document.getElementById('descCont').getBoundingClientRect().top-height;
+        document.getElementById('descCont').style.setProperty('--height-translate',-height+"px");
         document.getElementById('submitButton').style.setProperty('--height-translate',-height+"px");
         check=1;
     }
     document.getElementById('projectDomain').style.animationName="bringInProjectDomain";
-    document.getElementById('desc').style.animationName="shiftMessageDown";
+    document.getElementById('descCont').style.animationName="shiftMessageDown";
     document.getElementById('submitButton').style.animationName="shiftMessageDown";
 }
 function projectNo(){
     setTimeout(()=>{
         document.getElementById('projectDomain').style.display="none";
     },300);
-    document.getElementById('desc').style.animationName="shiftMessageUp";
+    document.getElementById('descCont').style.animationName="shiftMessageUp";
     document.getElementById('projectDomain').style.animationName="bringOutProjectDomain";
     document.getElementById('submitButton').style.animationName="shiftMessageUp";
 }
@@ -43,28 +43,28 @@ var contactFormDB = firebase.database().ref("contactForm");
 const val = (id) => {
     return document.getElementById(id).value;
 };
-var mailcheck=0;
 function overrideSubmit(event){
     event.preventDefault();
     var flag=0;
-    if(val("fname")==="")
+    var name=val("name");
+    var mail=val("mail");
+    if(name==="")
     {
-        document.getElementById("fname").style.backgroundColor="rgba(255,0,0,0.3)";
+        document.getElementById("name").style.backgroundColor="rgba(255,0,0,0.3)";
         flag=1;
     }
-    if(val("lname")==="")
+    else if(!validateNameSubmit(name))
     {
-        document.getElementById("lname").style.backgroundColor="rgba(255,0,0,0.3)";
+        document.getElementById("name").style.backgroundColor="rgba(255,0,0,0.3)";
         flag=1;
     }
-    if(!mailcheck)
+    if(!validateMailSubmit(mail))
     {
         document.getElementById("mail").style.backgroundColor="rgba(255,0,0,0.3)";
         flag=1;
     }
+    // console.log(val("name")+" "+val("mail")+" "+flag);
     if(flag)return;
-    var name=val("fname")+" "+val("lname");
-    var mail=val("mail");
     var projectstatus=document.querySelector("input[name='contactProject']:checked").value;
     var msg=val("desc");
     if(projectstatus==="yes")
@@ -73,12 +73,9 @@ function overrideSubmit(event){
         saveMessages(name,mail,projectstatus,Array.from(projectdomain, element => element.getAttribute('value')),JSON.stringify(msg));
     }
     else saveMessages(name,mail,projectstatus,"N/A",JSON.stringify(msg));
-    alert("Eager to read the message");
-    projectNo();
-    document.getElementById("contactForm").reset();
 }
 
-const saveMessages = (name,mail,projectstatus,projectdomain,msg) => {
+function saveMessages(name,mail,projectstatus,projectdomain,msg){
   var newContactForm = contactFormDB.push();
 
   newContactForm.set({
@@ -87,6 +84,15 @@ const saveMessages = (name,mail,projectstatus,projectdomain,msg) => {
     project: projectstatus,
     domains:projectdomain,
     message:msg
+  })
+  .then(()=>{
+    alert("Your message has been Well received.\nEager to read it!!!");
+    projectNo();
+    document.getElementById("contactForm").reset();
+    document.getElementById("mail").style.backgroundColor="transparent";
+  })
+  .catch(()=>{
+    alert("Currently experiencing some issues on back-end.\nPlease try again.");
   });
 };
 
@@ -96,19 +102,26 @@ function validateMail(event)
     if(event.key==" "||event.code==="Space"||event.keyCode==32)event.preventDefault();
     else{
         const emailRegex=/^[a-z0-9.]+@+[a-z]+(\.[a-z]+)+$/;
-        if(emailRegex.test(x.value+event.key)){document.getElementById("mail").style.backgroundColor="rgba(0,255,0,0.3)";mailcheck=1;}
-        else {document.getElementById("mail").style.backgroundColor="rgba(255,0,0,0.3)";mailcheck=0;};
+        if(emailRegex.test(x.value+event.key))document.getElementById("mail").style.backgroundColor="rgba(0,255,0,0.3)";
+        else document.getElementById("mail").style.backgroundColor="rgba(255,0,0,0.3)";
     }
 }
-function validateName(event,x)
+function validateName(event)
 {
-    var y;
-    if(x==='f')y=document.getElementById("fname");
-    else if(x==='l')y=document.getElementById("lname");
-    if(event.key==" "||event.code=="Space"||event.keyCode==32)event.preventDefault();
-    else{
-        const nameRegex=/^[a-z0-9A-Z]+$/;
-        if(!nameRegex.test(y.value+event.key))event.preventDefault();
-        else if(event.code!="Tab")y.style.backgroundColor="transparent";
-    }
+    var y=document.getElementById("name");
+    const nameRegex=/^[a-z0-9A-Z ]+$/;
+    if(!nameRegex.test(y.value+event.key))event.preventDefault();
+    else if(event.code!="Tab")y.style.backgroundColor="transparent";
+}
+function validateNameSubmit(e)
+{
+    const nameRegex=/^[a-z0-9A-Z ]+$/;
+    if(nameRegex.test(e))return 1;
+    return 0;
+}
+function validateMailSubmit(e)
+{
+    const emailRegex=/^[a-z0-9.]+@+[a-z]+(\.[a-z]+)+$/;
+    if(emailRegex.test(e))return 1;
+    return 0;
 }

@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
     <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css">
     <link rel="stylesheet" href="./style/bio.css">
@@ -14,10 +11,14 @@
     <link rel="stylesheet" href="./style/project.css">
     <link rel="stylesheet" href="./style/accomplishments.css">
     <link rel="stylesheet" href="./style/aboutMe.css">
+    <link rel="stylesheet" href="./style/certifications.css">
     <style>
         *{
             font-family: "Poppins";
             box-sizing: border-box;
+            &:visited{
+                color:white;
+            }
         }
         body{
             overflow-x: hidden;
@@ -55,6 +56,10 @@
                 border-top-right-radius: 2px;
             }
             animation:arrowSize 1s linear infinite;
+        }
+        @font-face{
+            font-family:"Zero";
+            src:url(../AlmendraSC-Regular.ttf) format("truetype");
         }
         @keyframes arrowSize {
             0%{
@@ -106,14 +111,15 @@
             }
         }
     </style>
+    <title>Aditya Garg</title>
 </head>
 <body>
     <div id="overlay2"></div>
     <section id="navbar">
         <nav id="collapse" style="background-color: transparent;height:70px;width:100%;justify-content:flex-end;margin:0;padding:0;align-items: center;position: absolute;">
-            <button class="overlayButton" onclick="openButton()" id="menuButton"></button>
+            <button class="overlayButton" onclick="openButton()" style="width:40px;z-index:999;" id="menuButton"></button>
         </nav>
-        <nav id="overlay">
+        <nav id="overlay" style="transition: background-color 1s ease-in-out;">
             <button class="overlayButton"><a href="#bio">Home</a></button>
             <button class="overlayButton"><a href="#projects" >Projects</a></button>
             <button class="overlayButton"><a href="#accomplishments" >Accomplishments</a></button>
@@ -126,25 +132,40 @@
             <div id="night">
             </div>
             <div id='bioContent'>
-                <div class="pageArrow" onclick="arrowClick(this.parentNode.parentNode.parentNode.id)"></div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex illo, illum amet nobis qui dicta dolores vitae rerum corporis quos veniam dolorem, minima eveniet voluptatibus nisi natus. Ratione, at saepe.</div>
+                <div class="pageArrow" onclick="arrowClick(this.parentNode.parentNode.parentNode.id)"></div>
+                <div id="bioContentText">
+                    <pre>
+<span style="font-size: 40px;font-family:'Zero';white-space: pre-wrap;">Aditya Garg</span>
+<span style="white-space: pre-wrap;">A student of Computer Science and Engineering.</span>
+<span style="white-space: pre-wrap;">A learner and practitioner of various fields of technology.</span>
+<span style="white-space: pre-wrap;">Happy to have you here!!!</span></pre>
+                    <a href="mailto:mynameisaditya824@gmail.com" id ="mailLink">
+                        <div>
+                            Mail Me
+                        </div>
+                    </a>
+                    <a href="./data/resume.pdf" target="_blank" id ="resumeLink">
+                        <div>
+                            My resume
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
     <section class="allsects" id="projects">
         <div class="pageArrow" onclick="arrowClick(this.parentNode.id)"></div>
         <div class="sectionTitle" style="
             color:#150050;
-            text-shadow: 
-                /* 0.5px 0.5px 0.25px white,
-                -0.5px 0.5px 0.25px white,
-                0.5px -0.5px 0.25px white,
-                -0.5px -0.5px 0.25px white, */
-                -1px 1px 1px black,
-                1px -1px 1px black,
-                -1px -1px 1px black,
-                1px 1px 1px black;
-            border-color:#150050;
-            border-width:7px;
-            box-shadow:-1px 1px 1px white;
+                -webkit-text-stroke: 0.8px white;
+                -moz-text-stroke: 0.8px white;
+                text-stroke: 0.8px white;
+                border-color:white;
+                border-width: 3px;
+                box-shadow:
+                    -1px 1px 1.5px white;
+                    /* 1px -1px 1.5px #FB2576; */
+                    /* -1px -1px 1.5px #FB2576; */
             ">Projects</div>
     </section>
     <section class="allsects" id="accomplishmentsWrapper">
@@ -173,15 +194,13 @@
     <section class="allsects" id="skills">
         <div class="pageArrow" onclick="arrowClick(this.parentNode.id)"></div>
         <div class="sectionTitle" style="margin-bottom: 70px;
-        color:#150050;
-        text-shadow: 
-            -1px 1px 1px black,
-            1px -1px 1px black,
-            -1px -1px 1px black,
-            1px 1px 1px black;
-        border-color:#150050;
-        border-width:7px;
-        box-shadow:-1px 1px 1px white;
+        color:#FB2576;
+                -webkit-text-stroke: 1px #000;
+                -moz-text-stroke: 1px #000;
+                text-stroke: 1px #FB2576;
+        border-color:#FB2576;
+        border-width:3px;
+        box-shadow:-1px 1px 1px #000;
         ">Skills</div>
         <div id="skillsRight"></div>
     </section>
@@ -201,47 +220,64 @@
             /* -1px -1px 1.5px #FB2576; */
         ">About Me</div>
         <div class="cards" style="align-items: flex-start;">
-            <div id="card1Img" >
-                <img src="https://media.licdn.com/dms/image/C4D03AQFfves6xskhUA/profile-displayphoto-shrink_800_800/0/1658145647661?e=1694649600&v=beta&t=ghANpVP5VgOxkbt3QPMU5joxtIFr3CCd5kryPbQOmjo" style="height:100%;width: 120%;position:relative;left:-20%;border-radius:10px">
-            </div>
+                <div id="card1Img" >
+                    <img src="./data/pictures/portfolioPic.png" style="height:100%;width: 100%;position:relative;;border-radius:10px">
+                </div>
             <div id="card1Text">
                 <pre style="white-space: pre-wrap;">
-Hi! Well I expect by now you already know about me, but I think I didn't mention my name to you. So here it is 
-    "I go by the name Aditya Garg"
+Hi! Well I expect by now you already a lot of know about me.
 
 I am a 3rd year B.Tech student pursuing Computer Science and Engineering and inherently try to find different ways to apply my knowledge of technology while expanding it simultaneously.
 
 I have experiences in
-<ul><li>Data Structures and Algorithms, using them for my Competitive Programming ventures.</li><li>Learnt Python and utilised its image detection facilitating libraries to create my first-ever project.</li><li>Went on a my own Web-Development path to learn React, HTML, CSS and JS and produced this portfolio website as its first result.</li></ul>
+<ul><li>Data Structures and Algorithms, using them for my Competitive Programming ventures. (Highest Rating on CodeForces stands tall at <span>1509</span>.)</li><li>Learnt Python and utilised its image detection facilitating libraries to create my first-ever project.</li><li>Went on a my own Web-Development path to learn React, HTML, CSS and JS and produced this portfolio website as its first result.</li></ul>
 As GDSC Competitive Domain Lead I have had my own chances to organise various events, conduct Competitive Programming Contests for entire college, and bring in sessions to introduce new concepts of technology to my peers.
 
-With my time at LNMIIT, Jaipur I understood and excelled at
-<ul><li>Data Structures and Algorithms</li><li>DataBase Management</li><li>Advanced Programming</li><li>Computer Networks</li><li>Computer Organisation and Architecture</li><li>Operating System</li></ul>
+
 Individually I love working on technological developments and if there's anything we can do together, tell me below in the <a href="#contactForm">Contact Form</a>.
             </div>
+        </div>
+        <div class ="cards" id="educationCard" style="height:auto;justify-content: center; align-items: flex-start;">
+            <div style="
+                width:100%;
+                font-family:'Zero';
+                height:auto;
+                text-align: center;
+                font-size: 60px;
+                color:black;
+                text-shadow:
+                    1px 1px 1px white,
+                    1px -1px 1px white, 
+                    -1px 1px 1px white,
+                    -1px -1px 1px white;"
+                    class="aboutMeSubHeading" 
+                    >Educations And Certifications</div>
         </div>
         <div class="cards" style="height:auto;">
             <div style="
                 width:100%;
+                font-family:'Zero';
                 height:auto;
                 text-align: center;
-                font-size: 45px;
+                font-size: 60px;
                 color:black;
                 text-shadow:
                     1px 1px 1px white,
                     1px -1px 1px white, 
                     -1px 1px 1px white,
                     -1px -1px 1px white;
-            ">Socials</div>
+            "
+                    class="aboutMeSubHeading" >Socials</div>
             <div id="smcontainer"></div>
         </div>
-        <div class="cards" style="height: auto;">
+        <div class="cards" style="height: auto;justify-content: center;">
             <div style="
-                width:100%;
+                width:90%;
                 height:auto;
                 /* text-align: center; */
-                font-size: 45px;
+                font-size: 60px;
                 color:black;
+                font-family:'Zero';
                 text-shadow:
                     1px 1px 1px white,
                     1px -1px 1px white, 
@@ -250,47 +286,53 @@ Individually I love working on technological developments and if there's anythin
             ">Contact Me</div>
             <div id ="formContainer">
                 <form id="contactForm" name="contactForm" onSubmit="overrideSubmit(event)">
-                    <div>
-                        <label for="fname" style="margin:0 0 15px 0;float:left;width:50%;">First Name:</label>
-                        <label for="lname" style="margin:0 0 15px 0;float:left;width:50%;">Last Name:</label>
-                        <input type="text" onkeydown="validateName(event,'f')" id="fname" style="margin:0 10% 15px 0;float:left;width:40%;">
-                        <input type="text" onkeydown="validateName(event,'l')" id="lname" style="margin:0 10% 15px 0;float:left;width:40%;">
+                    <div style="justify-content: center;">
+                        <label for="name" style="margin:0 0 15px 0;float:left;width:90%;">Name:</label>
+                        <input type="text" onkeydown="validateName(event)" id="name" style="margin:0 0 15px 0;float:left;width:90%;">
                     </div>
-                    <div>
+                    <div style="justify-content: center;">
                         <label for="mail" style="margin:0 0 15px 0;width:90%">E-Mail ID:</label>
                         <input type="text" id="mail" name="mail" style="width:90%" onkeydown="validateMail(event)">
                     </div>
-                    <div>
-                        <p>Do you have a Project we can collabrate on?</p>
-                        <label for="contactProjectYes" style="width:50px;font-size:20px">Yes</label>
-                        <input type="radio" name="contactProject" id="contactProjectYes" value="yes" style="width:20px;margin-right:90px;height:20px" onclick="projectYes()">
-                        <label for="contactProjectNo" style="width:50px;font-size:20px">No</label>
-                        <input type="radio" name="contactProject" id="contactProjectNo" value="no" style="width:20px;margin-right:90px;height:20px" checked onclick="projectNo()">
+                    <div style="justify-content:center;padding-bottom:0">
+                        <label style="width:90%;">Do you have a Project we can collabrate on?</label>
                     </div>
-                    <div id="projectDomain" style="display:None;animation-duration:0.3s; animation-timing-function :ease-in-out;animation-fill-mode: forwards;">
-                        <p>What domain is the Project related to?</p>
-                        <label for="am" style="width:50%;font-size:20px;
+                    <div style="width:100%;display:flex;justify-content: center;padding-top:0">
+                        <div style="align-items: flex-start;width:90%">
+                            <span style="width:200px;height:40px;">
+                                <label for="contactProjectYes" style="width:100px;display:inline;font-size:20px">Yes</label>
+                                <input type="radio" name="contactProject" id="contactProjectYes" value="yes" style="width:22px;height:22px;display:inline-block" onclick="projectYes()">
+                            </span>
+                            <span>
+                                <label for="contactProjectNo" style="width:100px;display:inline;font-size:20px">No</label>
+                                <input type="radio" name="contactProject" id="contactProjectNo" value="no" style="width:22px;height:22px;display:inline-block"  checked onclick="projectNo()">
+                            </span>
+                        </div>
+                        </div>
+                    <div id="projectDomain" style="justify-content:center;display:None;animation-duration:0.3s; animation-timing-function :ease-in-out;animation-fill-mode: forwards;">
+                        <label style="width:90%">What domain is the Project related to?</label>
+                        <label for="am" style="width:45%;font-size:20px;
                         margin:5px 0 5px 0">AI/ML</label>
-                        <input type="checkbox" id="am" name="projectDomain" value="AI/ML" style="width:20px;height:20px;
+                        <input type="checkbox" id="am" name="projectDomain" value="AI/ML" style="width:45%;height:20px;
                         margin:5px 0 5px 0">
-                        <label for="wd" style="width:50%;font-size:20px;
+                        <label for="wd" style="width:45%;font-size:20px;
                         margin:5px 0 5px 0">Web Development</label>
-                        <input type="checkbox" id="wd" name="projectDomain" value="WebDevelopment" style="width:20px;height:20px;
+                        <input type="checkbox" id="wd" name="projectDomain" value="WebDevelopment" style="width:45%;height:20px;
                         margin:5px 0 5px 0">
-                        <label for="sd" style="width:50%;font-size:20px;
+                        <label for="sd" style="width:45%;font-size:20px;
                         margin:5px 0 5px 0">Software Development</label>
-                        <input type="checkbox" id="sd" name="projectDomain" value="SoftwareDevelopment" style="width:20px;height:20px;
+                        <input type="checkbox" id="sd" name="projectDomain" value="SoftwareDevelopment" style="width:45%;height:20px;
                         margin:5px 0 5px 0">
-                        <label for="other" style="width:50%;font-size:20px;
+                        <label for="other" style="width:45%;font-size:20px;
                         margin:5px 0 5px 0">Others</label>
-                        <input type="checkbox" id="other" name="projectDomain" value="Others" style="width:20px;height:20px;
+                        <input type="checkbox" id="other" name="projectDomain" value="Others" style="width:45%;height:20px;
                         margin:5px 0 5px 0">
                     </div>
-                    <div style="animation-duration: 0.29s; animation-timing-function: ease-in-out;">
-                        <label for="desc" style="margin:0 0 15px 0">Message:</label>
+                    <div id="descCont" style="animation-duration: 0.29s;justify-content: center; animation-timing-function: ease-in-out;">
+                        <label for="desc" style="margin:0 0 15px 0;width:90%">Message:</label>
                         <textarea id="desc" name ="desc" style="width:90%;height:40vh;flex-wrap: wrap;font-size:20px"></textarea>
                     </div >
-                    <div id="submitButton" style="animation-duration:0.29s;animation-timing-function: ease-in-out;;">
+                    <div id="submitButton" style="animation-duration:0.29s;justify-content:center;animation-timing-function: ease-in-out;">
                         <input type="Submit" value="Submit" name="submitButton" style="width:90%;padding:0;font-size:20px;justify-content: center;">
                     </div>
                 </form>
@@ -301,55 +343,41 @@ Individually I love working on technological developments and if there's anythin
     </section>
     <script type="text/javascript">
         var width=window.innerWidth;
-        var height=window.innerHeight;
-        function openButton(){
-            var x=document.getElementById('overlay');
-            var y=document.getElementById('navbar');
-            var z=document.getElementById('menuButton');
-            if(x.style.display==="none")
-            {
-                y.style.backgroundColor="black";
-                z.style.border=2+"px solid white";
-                y.style.height=350+"px";
-                x.style.display="block";
+        if(width<1000){
+            document.querySelectorAll('.aboutMeSubHeading').forEach(function(e){
+                e.style.fontSize="45px";});
+            document.querySelectorAll('.sectionTitle').forEach(function(e){
+                e.style.boxShadow="none";
+                e.style.borderWidth="2px";});
+            document.querySelectorAll('#bioContentText pre span')[0].style.fontSize="30px";
             }
-            else 
-            {
-                y.style.backgroundColor="transparent";
-                z.style.border="none";
-                y.style.height=40+"px";
-                x.style.display="none";
-            }
-        }  
     </script>
     <script type="module">
-        import {addStarDiv} from "./compJS/bio.js";
+        import {addStarDiv,addQoute} from "./compJS/bio.js";
         import {projectPopulate} from "./compJS/project.js";
         import {timeline} from "./compJS/accomplishments.js";
         import {skill} from "./compJS/skills.js";
         import {addSocials} from "./compJS/aboutMe.js";
         import {sectionCheck} from "./animate.js";
+        import {addCertifications} from "./compJS/certifications.js"
         document.addEventListener('DOMContentLoaded',function(){
+            if(window.innerWidth>=1000)addQoute();
             addStarDiv();
             projectPopulate();
             timeline();
             skill();
+            addCertifications();
             addSocials();
             sectionCheck();
         })
     </script>
-    <!-- <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            // pageArrowPopulate();
-            // addLibrary();
-        });
-    </script> -->
     <script src="arrow.js"></script>
     <script type="module" src="./compJS/bio.js"></script>
     <script type ="module" src="./compJS/project.js"></script>
     <script type ="module" src="./compJS/accomplishments.js"></script>
     <script type="module" src="./compJS/skills.js"></script>
     <script type="module" src="./compJS/aboutMe.js"></script>
+    <script type="module" src="./compJS/certifications.js"></script>
     <script src="./compJS/library.js"></script>
     <script src="tilt.js"></script>
     <script src="functions.js"></script>

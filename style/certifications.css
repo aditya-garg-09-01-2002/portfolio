@@ -1,0 +1,228 @@
+.educationPlacard{
+    border-radius:5%;
+    width:100%;
+    height:auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin:20px 0;
+    color:white;
+    border:2px solid white;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding:20px;
+    animation-duration:0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    font-size:20px;
+    line-height:20px;
+}
+.subheading{
+    font-family: "Zero";
+    font-size:25px;
+}
+@media screen and (max-width:1000px) {
+    .educationPlacard{
+        font-size:18px;
+        line-height:18px;
+        margin:20px;
+        justify-content: center;
+    }
+    .sub-heading{
+        font-size:13px;
+    }
+}
+@keyframes hover-border-in {
+    25%{
+        box-shadow: 
+        2px 2px 1px black,
+        2px -2px 1px black,
+        -2px -2px 1px black,
+        -2px 2px 1px black,
+        4px 4px 1px white,
+        -4px 4px 1px white,
+        4px -4px 1px white,
+        -4px -4px 1px white;
+    }
+    50%{
+        box-shadow: 
+        2px 2px 1px black,
+        2px -2px 1px black,
+        -2px -2px 1px black,
+        -2px 2px 1px black,
+        4px 4px 1px white,
+        -4px 4px 1px white,
+        4px -4px 1px white,
+        -4px -4px 1px white,
+        6px 6px 1px black,
+        6px -6px 1px black,
+        -6px -6px 1px black,
+        -6px 6px 1px black,
+        8px 8px 1px white,
+        -8px 8px 1px white,
+        8px -8px 1px white,
+        -8px -8px 1px white;
+    }
+    75%{
+        box-shadow: 
+        2px 2px 1px black,
+        2px -2px 1px black,
+        -2px -2px 1px black,
+        -2px 2px 1px black,
+        4px 4px 1px white,
+        -4px 4px 1px white,
+        4px -4px 1px white,
+        -4px -4px 1px white,
+        6px 6px 1px black,
+        6px -6px 1px black,
+        -6px -6px 1px black,
+        -6px 6px 1px black,
+        8px 8px 1px white,
+        -8px 8px 1px white,
+        8px -8px 1px white,
+        -8px -8px 1px white,
+        10px 10px 1px black,
+        10px -10px 1px black,
+        -10px -10px 1px black,
+        -10px 10px 1px black,
+        12px 12px 1px white,
+        -12px 12px 1px white,
+        12px -12px 1px white,
+        -12px -12px 1px white;
+    }
+    100%{
+        box-shadow: 
+        2px 2px 1px black,
+        2px -2px 1px black,
+        -2px -2px 1px black,
+        -2px 2px 1px black,
+        4px 4px 1px white,
+        -4px 4px 1px white,
+        4px -4px 1px white,
+        -4px -4px 1px white,
+        6px 6px 1px black,
+        6px -6px 1px black,
+        -6px -6px 1px black,
+        -6px 6px 1px black,
+        8px 8px 1px white,
+        -8px 8px 1px white,
+        8px -8px 1px white,
+        -8px -8px 1px white,
+        10px 10px 1px black,
+        10px -10px 1px black,
+        -10px -10px 1px black,
+        -10px 10px 1px black,
+        12px 12px 1px white,
+        -12px 12px 1px white,
+        12px -12px 1px white,
+        -12px -12px 1px white,
+        14px 14px 1px black,
+        14px -14px 1px black,
+        -14px -14px 1px black,
+        -14px 14px 1px black,
+        16px 16px 1px white,
+        -16px 16px 1px white,
+        16px -16px 1px white,
+        -16px -16px 1px white;
+    }
+}
+@keyframes hover-border-out {
+    0%{
+        box-shadow: 
+        2px 2px 1px black,
+        2px -2px 1px black,
+        -2px -2px 1px black,
+        -2px 2px 1px black,
+        4px 4px 1px white,
+        -4px 4px 1px white,
+        4px -4px 1px white,
+        -4px -4px 1px white,
+        6px 6px 1px black,
+        6px -6px 1px black,
+        -6px -6px 1px black,
+        -6px 6px 1px black,
+        8px 8px 1px white,
+        -8px 8px 1px white,
+        8px -8px 1px white,
+        -8px -8px 1px white,
+        10px 10px 1px black,
+        10px -10px 1px black,
+        -10px -10px 1px black,
+        -10px 10px 1px black,
+        12px 12px 1px white,
+        -12px 12px 1px white,
+        12px -12px 1px white,
+        -12px -12px 1px white,
+        14px 14px 1px black,
+        14px -14px 1px black,
+        -14px -14px 1px black,
+        -14px 14px 1px black,
+        16px 16px 1px white,
+        -16px 16px 1px white,
+        16px -16px 1px white,
+        -16px -16px 1px white;
+    }
+    25%{
+        box-shadow:
+            2px 2px 1px black,
+            2px -2px 1px black,
+            -2px -2px 1px black,
+            -2px 2px 1px black,
+            4px 4px 1px white,
+            -4px 4px 1px white,
+            4px -4px 1px white,
+            -4px -4px 1px white,
+            6px 6px 1px black,
+            6px -6px 1px black,
+            -6px -6px 1px black,
+            -6px 6px 1px black,
+            8px 8px 1px white,
+            -8px 8px 1px white,
+            8px -8px 1px white,
+            -8px -8px 1px white,
+            10px 10px 1px black,
+            10px -10px 1px black,
+            -10px -10px 1px black,
+            -10px 10px 1px black,
+            12px 12px 1px white,
+            -12px 12px 1px white,
+            12px -12px 1px white,
+            -12px -12px 1px white;
+    }
+    50%{
+        box-shadow:
+            2px 2px 1px black,
+            2px -2px 1px black,
+            -2px -2px 1px black,
+            -2px 2px 1px black,
+            4px 4px 1px white,
+            -4px 4px 1px white,
+            4px -4px 1px white,
+            -4px -4px 1px white,
+            6px 6px 1px black,
+            6px -6px 1px black,
+            -6px -6px 1px black,
+            -6px 6px 1px black,
+            8px 8px 1px white,
+            -8px 8px 1px white,
+            8px -8px 1px white;
+    }
+    75%{
+        box-shadow:
+            2px 2px 1px black,
+            2px -2px 1px black,
+            -2px -2px 1px black,
+            -2px 2px 1px black,
+            4px 4px 1px white,
+            -4px 4px 1px white,
+            4px -4px 1px white,
+            -4px -4px 1px white;
+    }
+    100%{
+        box-shadow:none;
+    }
+}
+.educationPlacard img{
+    border-radius: 12px;;
+}
