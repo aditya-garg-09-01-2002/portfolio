@@ -7,16 +7,39 @@ export const projectList=[
         links:
         [
             {
+                target:"youtube",
+                url:"https://youtu.be/gQdrBmnemHY?feature=shared"
+            },
+            {
                 target:"linkedin",
                 url:"https://www.linkedin.com/posts/aditya-garg-3175a4236_github-aditya-garg-09-01-2002gameautomation-activity-7068908740049068032-6ArS?utm_source=share&utm_medium=member_desktop"
             },
             {
                 target:"github",
                 url:"https://github.com/aditya-garg-09-01-2002/game_automation"
-            }
+            },
         ],
         skills:["Python","Image Detection", "GitHub","Pyautogui","I/O Handling"],
         projectCategory:["Game Automation","Software Development"],
+    },
+    {
+        placardExpand:0,
+        title:"AnonChat - Anonymous Group Chatting App",
+        desc:"Enables authenticated users to chat over web socket implementations.<br>Users send and receive messages anonymously, i.e. no identity revelation, only in a chatroom they have either joined or create a new one.",
+        media:"<img src=\"./data/pictures/anonchat.png\" class=\"placard\"></iframe>",
+        links:
+        [
+            {
+                target:"globe",
+                url:"https://anonchat0.vercel.app/"
+            },
+            {
+                target:"github",
+                url:"https://github.com/aditya-garg-09-01-2002/AnonChat"
+            }
+        ],
+        skills:["Socket.io","ReactJS", "NodeJS","ExpressJS","MySQL","Google Console","REST APIs", "Tailwind CSS"],
+        projectCategory:["Web Development"],
     },
     {
         placardExpand:0,
@@ -25,10 +48,10 @@ export const projectList=[
         media:"<img src=\"portfolioRepo.png\" class=\"placard\"></iframe>",
         links:
         [
-            {
-                target:"linkedin",
-                url:"#"
-            },
+            // {
+            //     target:"linkedin",
+            //     url:"#"
+            // },
             {
                 target:"github",
                 url:"https://github.com/aditya-garg-09-01-2002/portfolio"
